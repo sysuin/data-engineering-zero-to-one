@@ -1,0 +1,14 @@
+case                                 accounts  drawn  chosen
+orders under an old CRM id                212      0       3
+  ...one IT's map missed                   25      0       2
+a cancelled order                       2,775     12       5
+an order on the depot's day before      5,153     25       6
+a contract on legacy terms              1,811      9       5
+a contract not renewed                  1,448      4       3
+handed to the Retention desk            1,089      3       2
+a segment that changed                    237      0       2
+a depot in the West                       907      4       2
+accounts in the slice                   6,058     30       8
+orders, drawn: 2,245
+orders, chosen: 1,996
+cases the drawn slice misses: 3 of 9

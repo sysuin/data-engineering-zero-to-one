@@ -1,0 +1,16 @@
+written to target/: index.html, manifest.json, catalog.json
+models described: 32 of 32; relations in the catalogue: 37
+
+upstream of fct_order_lines: 32 nodes
+  level 0: 14 seed/source
+  level 1:  9 model
+  level 2:  5 model
+  level 3:  3 model
+  level 4:  1 model
+  level 5:  1 model
+downstream: fct_orders, and 9 tests
+
+dim_region, as written:
+  {{ md5_key('r.region_id') }}                    AS region_key,
+compiled:
+  substr(md5(CAST(r.region_id AS VARCHAR)), 1, 16) AS region_key

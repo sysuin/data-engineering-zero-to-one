@@ -1,0 +1,24 @@
+ledger lines: 237; not the sales journal: 2,
+each described as 'Manual adjustment: ...'
+  2024-09 MW  -18,500.00  Halloway settlement credit
+  2025-11 SW  -12,400.00  Q3 volume rebate, key accounts
+
+Tradeline rows that could carry them:
+  lines with a negative quantity or price: 0
+  2024-09 MW: orders, days, accounts worth 18,500.00: 0, 0, 0
+  2025-11 SW: orders, days, accounts worth 12,400.00: 0, 0, 0
+
+November 2025       warehouse         ledger   difference
+MW               1,549,178.65   1,549,178.65         0.00
+NE               2,487,217.13   2,487,217.13         0.00
+SE               1,944,997.71   1,944,997.71         0.00
+SW               2,779,849.50   2,767,449.50   -12,400.00
+WE               1,575,142.83   1,575,142.83         0.00
+
+finance's register, ledger_journals.csv: 2 journals
+  2024-09 MW  -18,500.00  confirmed by finance (month-end close)
+  2025-11 SW  -12,400.00  confirmed by finance (month-end close)
+with the register: 235 of 235 cells reach the ledger
+  posted but not documented: none
+without its November line: 234 of 235 cells reach the ledger
+  posted but not documented: 2025-11 SW

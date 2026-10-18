@@ -1,0 +1,9 @@
+lines in the file 6,058; line edited:
+  101,Greymere Builders,Northeast,Public sector,Ines Varga,201
+
+edit                 rows cols  types that changed
+none                6,058   14  -
+quote opens name    6,058   14  -
+comma to newline    6,059    1  every column: one VARCHAR
+day 01 to 0l        6,058   14  customer_since VARCHAR
+false to fal5e      6,058   14  key_account VARCHAR

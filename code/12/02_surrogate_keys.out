@@ -1,0 +1,9 @@
+sequence  11,339 keys; 11,338 differ between the two loads
+md5[:16]  11,339 keys; 0 differ between the two loads
+dim_account's keys equal to the md5 rule: 11,339
+region 3: dim_region eccbc87e4b5ce2fe, the stream eccbc87e4b5ce2fe
+  dim_account    11,340 keys,  11,340 distinct
+  dim_product        53 keys,      53 distinct
+  dim_region          6 keys,       6 distinct
+  dim_supplier       21 keys,      21 distinct
+chance of a collision among 11,420 keys: about 1 in 282,914,718,038

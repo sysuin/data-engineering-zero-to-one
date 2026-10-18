@@ -1,0 +1,16 @@
+how many days after its day a change arrived, nights 2024-12-17 on
+source      changes     <0      0      1    2-7   8-30    31+   max
+tradeline    35,371    170 34,683    394    124      0      0     2
+frontline     5,001     74  1,408    309  2,030  1,180      0    12
+relay            63      0      0      0     12     36     15    40
+suppliers        48      0     32     10      6      0      0     5
+(tradeline: an order's changes; frontline: a ticket's; relay: a
+ contract's, after it ended; suppliers: a list's arrival, after
+ the day it took effect)
+
+window   tradeline changes inside it
+   0 d     34,853   98.54%      518 outside
+   1 d     35,247   99.65%      124 outside
+   3 d     35,371  100.00%        0 outside
+   7 d     35,371  100.00%        0 outside
+  30 d     35,371  100.00%        0 outside

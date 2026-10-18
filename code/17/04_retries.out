@@ -1,0 +1,27 @@
+flaky: retries 3, timeout none
+  try 1  06:00-06:01  up_for_retry
+         ConnectionError: connection reset by peer; again in 5 min
+  try 2  07:01-07:02  up_for_retry
+         ConnectionError: connection reset by peer; again in 10 min
+  try 3  07:32-07:33  succeeded   pulled on try 3
+broken: retries 3, timeout none
+  try 1  06:01-06:01  failed
+         fatal: relay.accounts: column 'region' missing
+hangs: retries 1, timeout 60 min
+  try 1  06:01-07:01  up_for_retry
+         timed out after 3,600 s; again in 5 min
+  try 2  07:33-08:33  failed
+         timed out after 3,600 s
+appended: retries 1, timeout 30 min
+  try 1  07:02-07:32  up_for_retry
+         timed out after 1,800 s; again in 5 min
+  try 2  08:33-08:37  succeeded   loaded
+replaced: retries 1, timeout 30 min
+  try 1  08:37-09:07  up_for_retry
+         timed out after 1,800 s; again in 5 min
+  try 2  09:12-09:16  succeeded   loaded
+run failed
+
+November's orders in Tradeline   12,194
+  rows in appended               24,388  (succeeded)
+  rows in replaced               12,194  (succeeded)

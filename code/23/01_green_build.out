@@ -1,0 +1,16 @@
+the change, dbt/groundwork/models/staging/stg_relay__contracts.sql:
+  - CAST(nullif(c.discount_pct, '') AS INTEGER) AS discount_pct,
+  + coalesce(CAST(nullif(c.discount_pct, '') AS INTEGER), 0)
+      AS discount_pct,
+
+dbt build --full-refresh, each into its own copy:
+  main    38 built, 48 tests passed, 0 failed, 0 warned, 0 errors
+  branch  38 built, 48 tests passed, 0 failed, 0 warned, 0 errors
+
+                                              main          branch
+  rows in the ten marts                  1,957,438       1,957,438
+  revenue, 2025                     127,348,346.46  127,348,346.46
+  contracts in force, 31 Dec 2025            4,651           4,651
+  contracts not renewed, 2025                  364             364
+
+the same in both: 4 of 4

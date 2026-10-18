@@ -1,0 +1,24 @@
+comments 5,414: by the ticket's requester 5,414, public 5,414
+
+FT-020844, at the nightly runs (06:00 UTC) that changed its row
+run        status  updated_at        row now holds
+Tue 04 Nov open    11-03 23:21       opened_at, first_reply_at
+Sun 09 Nov solved  11-09 04:15       solved_at
+Thu 13 Nov closed  11-13 04:15       closed_at
+10 runs; on the other 6 nothing new
+
+FT-020844 every ten minutes from its opening
+  03 Nov 13:00  new    low     -         updated_at 13:00
+  03 Nov 14:40  open   low     Priya N   updated_at 14:38
+  03 Nov 23:30  open   normal  Priya N   updated_at 23:21
+
+opened Oct-Nov 2025: 1,028 tickets, nightly pulls
+  first_reply_at  seen   979   never seen   49
+  solved_at       seen 1,028   never seen    0
+  closed_at       seen 1,028   never seen    0
+
+Groundwork's first pull (4 January 2026): fct_tickets
+status   tickets  first_reply  solved  closed
+closed    21,605            0       0  21,605
+solved        45            0      45       0
+open          18           18       0       0

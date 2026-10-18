@@ -1,0 +1,3 @@
+dbt build: 38 built, 48 tests passed
+11 of 11 tables and views identical
+--strict exit code: 0

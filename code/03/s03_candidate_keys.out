@@ -1,0 +1,2 @@
+orders          483,980 rows   candidate keys: id, order_number
+order_lines   1,243,789 rows   candidate keys: none

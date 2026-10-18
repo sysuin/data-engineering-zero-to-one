@@ -1,0 +1,11 @@
+operator                          rows out  estimated    scanned
+ORDER_BY                                 4
+  HASH_GROUP_BY                          4      1,646
+    HASH_JOIN                       32,232    425,508
+      SEQ_SCAN fct_order_lines      32,232    245,812  1,229,062
+      SEQ_SCAN dim_account          11,340     11,340     11,340
+
+Mid-market        3,975,441.40
+Small business    2,864,586.98
+Public sector     1,873,787.83
+Enterprise        1,791,014.15

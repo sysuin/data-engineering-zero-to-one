@@ -1,0 +1,9 @@
+                                          rows           revenue
+order lines                          1,229,062    402,018,545.16
++ versions, id only                  2,057,196    648,986,532.63
++ versions, id and day               1,229,062    402,018,545.16
++ contracts, id and day              1,229,062    402,018,545.16
+
+predicted, versions on id only:        2,057,196
+predicted, contracts on day only:  5,103,534,672  (not run)
+HASH_JOIN fed 1,229,062 and 11,339 rows, emitted 2,057,196

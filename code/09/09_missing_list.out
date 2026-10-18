@@ -1,0 +1,9 @@
+16 suppliers x 48 months = 768 lists expected; 767 present
+  no list: brackley-plastics 2023-08
+
+brackley-plastics: July and September 2023 lists, 2 and 2 products
+  same cost in both: 2 of 2
+  lists whose costs differ from the one before: 0 of 46
+
+month-end checks run: 47, alerts: 1
+  ALERT 2023-08: no list from brackley-plastics by month end

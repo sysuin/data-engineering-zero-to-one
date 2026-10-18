@@ -1,0 +1,17 @@
+768 lists, 2,034 rows, checked against version 1 of the contract:
+  broken    18 files    108 rows  0 parked
+  parked     1 file      2 rows  1 parked
+  passed   749 files  1,924 rows  0 parked
+landed 1,925 + parked 1 + in broken files 108 = 2,034
+load suppliers.price_lists.2026-01-04.1 succeeded; the table: broken
+
+audit.quarantine:
+  Aldridge Trade Prices Mar 2024.xlsx, row 1: cost: history
+  cost: 790.7 is 10.0 times the last list's 79.07
+  MRD-FAC-030 790.7 1 March 2024
+
+the file ledger's broken files:
+  18 failed, PEMBERTON-PRICES-202407.csv
+    to PEMBERTON-PRICES-202512.csv
+  header renamed?: expected pemberton's 'Cost (USD)',
+  found 'Unit Cost USD'

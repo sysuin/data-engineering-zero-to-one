@@ -1,0 +1,135 @@
+{
+ "pairs": [
+  [
+   "Aldridge and Co",
+   "Aldridge & Co",
+   2,
+   0
+  ],
+  [
+   "Brackley Plastics",
+   "Brackley Plastics",
+   2,
+   2
+  ],
+  [
+   "Halvard Group",
+   "Halvard Group",
+   1,
+   1
+  ],
+  [
+   "Ingleby Works",
+   "Ingleby Works",
+   3,
+   3
+  ],
+  [
+   "Kestrel",
+   "Kestrel Supply",
+   3,
+   0
+  ],
+  [
+   "Marlowe Fabrication",
+   "Marlowe Fabrication",
+   1,
+   1
+  ],
+  [
+   "Norfolk Paper",
+   "Norfolk Paper",
+   2,
+   2
+  ],
+  [
+   "Oakhurst Textiles",
+   "Oakhurst Textiles",
+   5,
+   5
+  ],
+  [
+   "Pemberton",
+   "Pemberton Mills",
+   6,
+   0
+  ],
+  [
+   "Penhale Rubber",
+   "Penhale Rubber",
+   1,
+   1
+  ],
+  [
+   "Quillon Metals",
+   "Quillon Metals",
+   6,
+   6
+  ],
+  [
+   "Ravensworth Ltd",
+   "Ravensworth Ltd",
+   3,
+   3
+  ],
+  [
+   "Tarbert Industries",
+   "Tarbert Industries",
+   2,
+   2
+  ],
+  [
+   "Ullswater Supply",
+   "Ullswater Supply",
+   3,
+   3
+  ],
+  [
+   "Voss Industrial ",
+   "Voss Industrial",
+   4,
+   0
+  ],
+  [
+   "Wrenfield Products",
+   "Wrenfield Products",
+   4,
+   4
+  ]
+ ],
+ "ladder": [
+  [
+   "as the old job joins",
+   33,
+   819589,
+   24819009119
+  ],
+  [
+   "SKUs trimmed, upper",
+   33,
+   860342,
+   25575622760
+  ],
+  [
+   "names trimmed too",
+   37,
+   961850,
+   30234127821
+  ],
+  [
+   "through the seed",
+   48,
+   1243789,
+   40686447620
+  ]
+ ],
+ "odd": [
+  "MRD-FAC-031 ",
+  "MRD-SAN-043 ",
+  "mrd-pac-022"
+ ],
+ "total": [
+  1243789,
+  40686447620
+ ]
+}

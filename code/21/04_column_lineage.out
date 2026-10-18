@@ -1,0 +1,18 @@
+33 models and snapshots; 490 value edges, 98 filter edges
+columns sqlglot could not follow: 4, all in
+  snapshots.snp_relay__accounts
+
+marts.fct_order_lines.revenue is computed from:
+  <- intermediate.int_order_lines: qty, unit_price_cents
+  <- staging.stg_tradeline__order_lines: qty, unit_price_cents
+  <- raw.tradeline_order_lines_current: qty, unit_price_cents
+  <- tradeline.order_lines: qty, unit_price_cents
+
+and its rows are chosen by:
+  staging.stg_tradeline__orders.status
+    in intermediate.int_order_lines
+  marts.dim_account.is_current
+    in marts.fct_order_lines
+  ... which is tradeline.orders.status
+
+built from it: marts.fct_orders.revenue

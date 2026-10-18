@@ -1,0 +1,82 @@
+{
+ "standard": {
+  "suppliers": [
+   "brackley-plastics",
+   "halvard-group",
+   "ingleby-works",
+   "marlowe-fabrication",
+   "norfolk-paper",
+   "oakhurst-textiles",
+   "penhale-rubber",
+   "quillon-metals",
+   "ravensworth-ltd",
+   "tarbert-industries",
+   "ullswater-supply",
+   "voss-industrial",
+   "wrenfield-products"
+  ],
+  "header": "sku,description,unit_cost,currency,effective_from",
+  "row": {
+   "supplier": "brackley-plastics",
+   "sku": "MRD-CLE-007",
+   "description": "Cleaning item 7",
+   "cost": "90.35",
+   "currency": "USD",
+   "effective_from": "2024-03-01",
+   "cost_unit": "dollars",
+   "layout": "standard"
+  },
+  "file": "suppliers/brackley-plastics/brackley-plastics_2024-03.csv"
+ },
+ "aldridge": {
+  "suppliers": [
+   "aldridge-co"
+  ],
+  "header": "(spreadsheet) Product Code | Description | Trade Price",
+  "row": {
+   "supplier": "aldridge-co",
+   "sku": "MRD-FAC-030",
+   "description": "Facilities item 1",
+   "cost": "790.7",
+   "currency": null,
+   "effective_from": "1 March 2024",
+   "cost_unit": "dollars",
+   "layout": "aldridge"
+  },
+  "file": "suppliers/aldridge-co/Aldridge Trade Prices Mar 2024.xlsx"
+ },
+ "kestrel": {
+  "suppliers": [
+   "kestrel-supply"
+  ],
+  "header": "sku,cost_cents,effective",
+  "row": {
+   "supplier": "kestrel-supply",
+   "sku": "MRD-PAC-022",
+   "description": null,
+   "cost": "5529",
+   "currency": null,
+   "effective_from": "2024-03-01",
+   "cost_unit": "cents",
+   "layout": "kestrel"
+  },
+  "file": "suppliers/kestrel-supply/kestrel_20240301.csv"
+ },
+ "pemberton": {
+  "suppliers": [
+   "pemberton-mills"
+  ],
+  "header": "Item Code,Item,Cost (USD),Valid From",
+  "row": {
+   "supplier": "pemberton-mills",
+   "sku": "MRD-CLE-001",
+   "description": "Cleaning item 1",
+   "cost": "58.50",
+   "currency": null,
+   "effective_from": "01/03/2024",
+   "cost_unit": "dollars",
+   "layout": "pemberton"
+  },
+  "file": "suppliers/pemberton-mills/PEMBERTON-PRICES-202403.csv"
+ }
+}

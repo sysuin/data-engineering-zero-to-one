@@ -1,0 +1,7 @@
+pages 28, rows received 276, distinct ids 273
+API total before 269, after 273: 269 <= 273 <= 273 is True
+  FT-020860 received 2x: 11-28T20:30, 12-02T20:30; kept 12-02T20:30
+  FT-021162 received 2x: 11-28T21:11, 12-02T21:11; kept 12-02T21:11
+  FT-020648 received: True
+  FT-021086 received: True
+standing desk at 21:24: 273; the pull holds 273 as they stood

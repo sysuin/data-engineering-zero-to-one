@@ -1,0 +1,15 @@
+the nights since 13 January, run with the change:
+  16 of 16 tests pass
+products whose cost ever changed: 4 of 48
+Voss's margin, %:    as built   as it should be
+  2024                   33.1             33.1
+  1-12 Jan               26.2             26.2
+  13-31 Jan              34.5             26.7
+  February               38.0             30.5
+  1-16 Mar               38.1             30.6
+
+written by those builds: 24,730 orders, on 65 days,
+  2025-01-12 to 2025-03-17; 1 of them before 13 January
+marts built from it: fct_order_lines, fct_orders
+  fct_order_lines   64,708 rows out,  64,708 in
+  fct_orders        25,074 rows out,  25,074 in

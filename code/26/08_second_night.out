@@ -1,0 +1,11 @@
+nightly.2026-01-04.2: succeeded; every task first try: True
+  ingest_tradeline 1,727,769 rows, 2 tables
+  ingest_frontline 93,398 rows, 3 tables
+  ingest_relay     0 rows, 4 tables
+  sessions         0 files, 0 rows written, 3 open
+  about 2 minutes
+against the first night: 23 of 23 tables and views identical,
+  5,054,322 rows in them
+
+the watch at 07:00 on 5 January opens 1:
+  ticket data engineering  suppliers.price_lists 1 parked

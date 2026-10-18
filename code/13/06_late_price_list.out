@@ -1,0 +1,25 @@
+Voss list effective   arrived (UTC)     
+2024-12   2024-12-01  2024-12-01 21:44
+2025-01   2025-01-01  2025-01-06 15:12
+2025-02   2025-02-01  2025-02-01 14:09
+
+day         lines    revenue  margin, as of    as loaded
+Wed 01 Jan   122     69,539   17,373 25.0%  22,963 33.0%
+Thu 02 Jan   109     61,262   16,096 26.3%  20,935 34.2%
+Fri 03 Jan   100     56,858   15,197 26.7%  19,660 34.6%
+Sat 04 Jan   105     51,021   13,451 26.4%  17,476 34.3%
+Sun 05 Jan   109     51,840   13,525 26.1%  17,630 34.0%
+Mon 06 Jan   100     63,628   17,315 27.2%  17,315 27.2%
+Tue 07 Jan   112     50,767   12,582 24.8%  12,582 24.8%
+Wed 08 Jan    90     54,865   14,537 26.5%  14,537 26.5%
+Thu 09 Jan   115     60,732   16,075 26.5%  16,075 26.5%
+Fri 10 Jan   102     49,101   12,693 25.9%  12,693 25.9%
+1-5 January: margin overstated by 23,022.76
+
+Voss margin, 1-5 January, in fct_order_lines
+  built before the list arrived       98,663.80
+  list arrived, facts untouched       98,663.80
+  facts.check: 545 not the version of order_date
+  after facts.incremental             75,641.04
+  orders restated: 443 stale, 0 changed, 0 unknown; 1335 lines
+  facts.check: every promise kept

@@ -1,0 +1,22 @@
+# raw.reference_suppliers: procurement's list of approved suppliers.
+table: reference.suppliers
+version: 1
+description: One row per supplier procurement deals with.
+producer:
+  who: procurement, by hand
+  contact: procurement@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per supplier
+key: [supplier_id]
+formats:
+  reference: [supplier_id, name, country, tier]
+columns:
+  supplier_id: {type: integer, min: 1}
+  name: {}
+  country: {pattern: '[A-Z]{2}'}
+  tier: {allowed: [Strategic, Preferred, Approved]}
+policy:
+  bad_rows: fail
+changes:
+  - version: 1
+    note: first written

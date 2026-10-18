@@ -1,0 +1,8 @@
+1,243,789 rows, 10 columns
+  JSON Lines          256,164,869 bytes  312.3% of the CSV
+  CSV                  82,034,500 bytes  100.0% of the CSV
+  CSV, gzip            14,293,254 bytes   17.4% of the CSV
+  Parquet, plain      109,556,542 bytes  133.5% of the CSV
+  Parquet, encoded     19,384,006 bytes   23.6% of the CSV
+  Parquet, snappy      16,078,296 bytes   19.6% of the CSV
+  Parquet, zstd        13,395,096 bytes   16.3% of the CSV

@@ -1,0 +1,28 @@
+1. The old CRM's ids: resolved in the marts, kept in compat
+  CRM records 6,270: Relay's own 6,058, IT's map 187, the rule 25
+  placed under an old id: 9,470 orders on 208 ids,
+    473 tickets on 171
+  Book 2's v_sales    3574 Bexham Estates   306 orders   209,162.96
+  Book 2's v_sales   90056 BEXHAM ESTATES   275 orders   196,619.83
+  Groundwork's marts  3574 Bexham Estates   581 orders   405,782.79
+  orders with the marts' ids instead: 18,940 rows differ
+
+2. The history's grain
+  dim_account versions 11,339, of which status alone 1,448
+  compat.account_history rows 9,891
+
+3. Columns the marts left out, read from staging
+  products.launched_on: 10 of 48 set
+  tickets the marts give the unknown product: 567;
+    with the desk's SKU in compat: 567
+
+4. Kept by Groundwork, never in Book 2
+  cancelled orders           5,738
+  ticket comments            5,414
+  contract month ends      195,635
+  portal sessions           91,296
+
+5. Money: the same 1,229,062 lines, added up three ways
+  the marts, DECIMAL                        402018545.16
+  compat.v_sales, DOUBLE, in DuckDB   402018545.15998536
+  Book 2's v_sales, REAL, in SQLite         402018545.16

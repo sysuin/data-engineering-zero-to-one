@@ -1,0 +1,13 @@
+approach               workers  seconds  speed-up
+python, one process          1     2.09      1.0x
+python, threads              4     3.35      0.6x
+python, threads              8     6.33      0.3x
+python, processes            2     0.68      3.1x
+python, processes            4     0.45      4.7x
+python, processes            8     0.42      4.9x
+duckdb                       1     0.52      4.0x
+duckdb                       8     0.23      8.9x
+groups: 143,704; same answer from all 8: True
+best threads beat one process: False
+best processes beat one process: True
+duckdb, 8 threads, fastest of all: True

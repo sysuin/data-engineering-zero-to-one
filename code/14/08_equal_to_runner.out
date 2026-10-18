@@ -1,0 +1,20 @@
+runner, --full: 35 of 35 built; its checks: 0 problems
+dbt build --full-refresh: 37 of 37 built, 29 of 29 tests passed
+
+                          rows  columns only dbt only runner
+dim_account             11,340     same        0           0
+dim_date                 2,191     same        0           0
+dim_product                 53     same        0           0
+dim_region                   6     same        0           0
+dim_supplier                21     same        0           0
+fct_contract_month     195,635     same        0           0
+fct_contracts           19,220     same        0           0
+fct_order_lines      1,229,062     same        0           0
+fct_orders             478,242     same        0           0
+fct_tickets             21,668     same        0           0
+
+seeds (4)                   66   4 same        0           0
+staging (17)         2,259,751  17 same        0           0
+intermediate (5)     1,255,876   5 same        0           0
+
+Chapters 12-13's checks on dbt's marts: every promise kept

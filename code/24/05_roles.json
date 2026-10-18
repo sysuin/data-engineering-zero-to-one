@@ -1,0 +1,41 @@
+{
+ "analyst": {
+  "views": 14,
+  "reads": [
+   "marts",
+   "masked"
+  ],
+  "hide": {
+   "fct_portal_sessions": [
+    "session_id"
+   ]
+  },
+  "region": null
+ },
+ "finance": {
+  "views": 10,
+  "reads": [
+   "marts",
+   "staging"
+  ],
+  "hide": {},
+  "region": null
+ },
+ "support": {
+  "views": 5,
+  "reads": [
+   "marts",
+   "staging"
+  ],
+  "hide": {},
+  "region": null
+ },
+ "manager_southwest": {
+  "views": 9,
+  "reads": [
+   "marts"
+  ],
+  "hide": {},
+  "region": "Southwest"
+ }
+}

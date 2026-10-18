@@ -1,0 +1,17 @@
+types= by name on accounts.csv:
+  Columns with names: "updated_at" do not exist in the CSV File
+
+columns= on PEMBERTON-PRICES-202407.csv
+  header Item Code,Item,Unit Cost USD,Valid From
+  row    sku='MRD-CLE-001', cost=58.50
+
+columns= on swapped.csv
+  header Item,Item Code,Cost (USD),Valid From
+  row    sku='Cleaning item 1', cost=58.50
+
+PEMBERTON-PRICES-202406.csv: 6 rows, sku='MRD-CLE-001', cost=58.50
+SchemaMismatch: PEMBERTON-PRICES-202407.csv: missing ['Cost (USD)'],
+  unexpected ['Unit Cost USD']
+swapped.csv: 6 rows, sku='MRD-CLE-001', cost=58.50
+account 1 updated_at, session in UTC        2024-06-30 21:23:00
+account 1 updated_at, session in Asia/Tokyo 2024-06-30 21:23:00

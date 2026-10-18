@@ -1,0 +1,36 @@
+nightly.2026-01-04.1: succeeded
+  06:00-06:00  wait_relay        succeeded
+  06:00-06:04  ingest_tradeline  succeeded
+  06:04-06:08  ingest_frontline  succeeded
+  06:08-06:12  ingest_suppliers  succeeded
+  06:12-06:16  ingest_catalogue  succeeded
+  06:16-06:20  ingest_ledger     succeeded
+  06:20-06:24  ingest_reference  succeeded
+  06:24-06:28  ingest_relay      succeeded
+  06:28-06:32  load_comments     succeeded
+  06:32-06:36  check_contracts   succeeded
+  06:36-06:40  check_quality     succeeded
+  06:40-06:44  dbt_build         succeeded
+  06:44-06:48  reconcile         succeeded
+  06:48-06:52  publish           succeeded
+
+nightly.2026-01-04.2  (scheduled, due 2026-01-05 06:00 UTC)
+task             state           tries  detail
+wait_relay       succeeded           1  1 poke, waited 0 s
+ingest_tradeline succeeded           1  4 min
+ingest_frontline succeeded           1  4 min
+ingest_suppliers succeeded           1  4 min
+ingest_catalogue succeeded           1  4 min
+ingest_ledger    failed              1  fatal: no header row
+ingest_reference succeeded           1  4 min
+ingest_relay     succeeded           1  4 min
+load_comments    succeeded           1  4 min
+check_contracts  upstream_failed     0
+check_quality    upstream_failed     0
+dbt_build        upstream_failed     0
+reconcile        upstream_failed     0
+publish          upstream_failed     0
+  ingest_ledger: fatal: no header row
+run failed
+
+RunInProgress: another nightly run

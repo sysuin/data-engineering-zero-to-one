@@ -1,0 +1,20 @@
+GET /metrics -> 200, 7 metrics
+  revenue            sum       finance
+  orders             sum       finance
+  gross_margin       sum       finance
+  margin_pct         ratio     finance
+  active_accounts    snapshot  sales operations
+  not_renewed_rate   ratio     sales operations
+  portal_conversion  ratio     the portal team
+GET /metrics/revenue?...&filter=region:Northeast -> 200
+  [{"region": "Northeast", "revenue": "2487217.13"}]
+  loaded through 2026-01-04, expected 2026-01-04, stale: False
+November 2025 revenue
+  dashboard, metrics.revenue_monthly         10,336,385.82
+  a program, GET /metrics/revenue              10336385.82
+  Clarity, a metric spec                     10,336,385.82
+  Chapter 1's dashboard query           10468688.559999792
+GET /metrics/revenue {'by': 'owner'} -> 400: revenue cannot be
+  broken down by 'owner'; it allows ['region', 'segment', 'channel',
+  'category']
+GET /metrics/active  -> 404: no metric called 'active'

@@ -1,0 +1,16 @@
+Catalogue spellings with no supplier of that name:
+  'Aldridge and Co'    2 products
+  'Kestrel'            3 products
+  'Pemberton'          6 products
+  'Voss Industrial '   4 products
+Catalogue SKUs Tradeline never writes:
+  'MRD-FAC-031 ', 'MRD-SAN-043 ', 'mrd-pac-022'
+
+                       products       lines                sales
+as the old job joins      33/48     819,589      $248,190,091.19
+SKUs trimmed, upper       33/48     860,342      $255,756,227.60
+names trimmed too         37/48     961,850      $302,341,278.21
+through the seed          48/48   1,243,789      $406,864,476.20
+every order line                  1,243,789      $406,864,476.20
+
+seed: 32 rows; spellings in raw it does not cover: 0

@@ -1,0 +1,15 @@
+2025-12-01  tasks_2025-12-01.csv  open 40  closed  0  b297cf286e95
+2026-01-05  tasks_2026-01-05.csv  open 40  closed 26  ea65545281d4
+2026-01-05  tasks_2026-01-05.csv  open 40  closed 26  ea65545281d4
+  on both lists 14, new 26, dropped 26
+  dropped because: contract ended 16, fell below the top 40 10
+one task, as Relay's import reads it:
+  external_id 009febe9ba2e5450
+  account_id  5716
+  assign_to   Marcus Hale
+  subject     Renewal call: Wickvale Engineering
+  due_date    2026-01-12
+  status      open
+  note        contract 15215 ends 2026-02-28; no order for 152 days
+Relay after three imports, keyed on external_id: 66 tasks, 40 open
+Relay after three imports, appending every row: 172 tasks, 120 open

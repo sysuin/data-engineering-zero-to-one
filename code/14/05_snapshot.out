@@ -1,0 +1,16 @@
+nights replayed 14, 2025-12-22 to 2026-01-04
+snapshot rows 6,177, accounts 6,058
+  opened on the first night    6,058
+  opened on a later night        119
+  current (dbt_valid_to NULL)  6,058
+
+dim_account versions beginning after 2025-12-22   119
+  the same account, day and values in the snapshot   119
+versions beginning before 2025-12-22: dim_account 11,220, snapshot 0
+
+account 123:
+              from        to          owner               status
+  snapshot    2025-12-22  2026-01-01  Hana Osei           active
+              2026-01-01              Dara Whitlock       active
+  dim_account 2022-04-01  2026-01-01  Hana Osei           active
+              2026-01-01              Dara Whitlock       active

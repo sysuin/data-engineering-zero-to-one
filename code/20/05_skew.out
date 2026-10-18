@@ -1,0 +1,22 @@
+hottest account: 1 (Halloway Healthcare), 11,774 lines, 59x the mean
+reducers  mean rows  largest  largest/mean
+       4    307,266  315,140          1.0x
+      16     76,816   85,131          1.1x
+      64     19,204   27,560          1.4x
+     256      4,801   15,155          3.2x
+    1024      1,200   12,814         10.7x
+
+                    by channel                salted
+ reducer        rows   seconds        rows   seconds
+       0     171,141     0.067     153,945     0.043
+       1           0     0.000     153,195     0.042
+       2     161,901     0.043     153,779     0.042
+       3     653,679     0.148     153,563     0.043
+       4           0     0.000     153,483     0.044
+       5     242,341     0.057     153,785     0.044
+       6           0     0.000     153,694     0.042
+       7           0     0.000     153,618     0.039
+by channel: busiest reducer holds 53% of the rows; 4 reducers idle
+slowest reducer faster after salting: True
+same medians both ways: True
+median order  FLD $660.79  PTR $626.00  TEL $620.00  WEB $613.06

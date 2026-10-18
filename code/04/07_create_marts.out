@@ -1,0 +1,16 @@
+table                 rows  one row per
+dim_account              0  account per version
+dim_date             2,191  calendar day, 2021-01-01 to 2026-12-31
+dim_product              0  SKU per cost version
+dim_region               0  region
+dim_supplier             0  supplier on procurement's list
+fct_contract_month       0  contract per month end it is in force
+fct_contracts            0  contract
+fct_order_lines          0  line of a placed, not-cancelled order
+fct_orders               0  placed, not-cancelled order
+fct_portal_sessions      0  portal session
+fct_tickets              0  ticket, from opened to closed
+
+same tables after a second run: True
+dim_date rows after two loads: 2,191
+money columns: 10, all DECIMAL(18,2)

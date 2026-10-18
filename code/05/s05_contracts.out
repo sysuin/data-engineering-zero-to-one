@@ -1,0 +1,12 @@
+rows read 11,143; data lines in the file 11,143
+in both exports 11,143; rows that differ, and of those, how
+many were empty on 29 February 2024:
+  account_id         0      0
+  start_date         0      0
+  end_date           0      0
+  term_months        0      0
+  legacy_terms       0      0
+  discount_pct       0      0
+  outcome        3,846  3,846
+  notice_date      240    240
+  reason           255    255

@@ -1,0 +1,18 @@
+placed orders in Tradeline           478,242
+placed orders with a depot           478,242
+UTC date is not the depot's date      49,309  (10.3%)
+  all placed between 00:00 and 07:59 UTC
+
+region     depot          orders    moved   share
+Northeast  Newark        116,860    9,282    7.9%
+Southeast  Atlanta        88,907    6,948    7.8%
+Midwest    Columbus       76,254    5,978    7.8%
+West       Sacramento     73,761   14,645   19.9%
+Southwest  Dallas        122,460   12,456   10.2%
+
+order 1402091 (West) placed 2026-01-01 06:50 UTC,
+which is 2025-12-31 22:50 at the depot
+
+2025, dated by       orders           revenue
+the UTC date        145,175    127,341,163.53
+the depot's date    145,185    127,348,346.46

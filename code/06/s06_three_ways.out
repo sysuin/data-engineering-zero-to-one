@@ -1,0 +1,21 @@
+delete_insert:
+  load_orders 1: replaced with 12,371
+  load_lines 1: replaced with 31,965; timed out
+  load_lines 2: replaced with 31,965
+  2025-11    $10,313,814.24
+  load_lines 1: replaced with 31,965
+  2025-11    $10,313,840.35
+merge:
+  load_orders 1: changed 12,371
+  load_lines 1: changed 31,965; timed out
+  load_lines 2: changed 0
+  2025-11    $10,313,814.24
+  load_lines 1: changed 1
+  2025-11    $10,313,840.35
+insert_new:
+  load_orders 1: inserted 12,371
+  load_lines 1: inserted 31,965; timed out
+  load_lines 2: inserted 0
+  2025-11    $10,313,814.24
+  load_lines 1: inserted 0
+  2025-11    $10,313,814.24

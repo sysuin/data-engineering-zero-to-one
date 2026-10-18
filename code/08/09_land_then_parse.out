@@ -1,0 +1,19 @@
+frontline.tickets.2025-12-02.1  succeeded
+  since 2025-12-01T00:00:00Z  watermark 2025-12-03T05:46:00Z
+  6 requests, 2 retried: 200 200 200 429 503 200
+  tickets 113 (API total 113), fields 226, tags 143
+frontline.tickets.2025-12-03.1  succeeded
+  since 2025-12-03T04:46:00Z  watermark 2025-12-04T05:59:00Z
+  3 requests, 0 retried: 200 200 200
+  tickets 58 (API total 58), fields 116, tags 68
+landed under raw/frontline/pages/:
+  load_date=2025-12-02/attempt-1/page-00001.json  54,856 B
+  load_date=2025-12-02/attempt-1/page-00002.json  7,246 B
+  load_date=2025-12-03/attempt-1/page-00001.json  31,686 B
+raw.frontline_tickets by load date:
+  2025-12-02   113 rows from attempt-1
+  2025-12-03    58 rows from attempt-1
+  6 tickets in both nights' partitions
+asked again on 5 January: 69 of 113 tickets have changed since
+reparsed 2 pages: 113 tickets, identical to the partition: True
+requests made while reparsing: 0

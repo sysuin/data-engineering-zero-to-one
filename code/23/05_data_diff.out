@@ -1,0 +1,14 @@
+main's build (A) against the branch's (B):
+
+marts.fct_contract_month  195,635 -> 195,635 rows
+  by key: 40,258 changed, 0 added, 0 removed
+  columns: discount_pct 40,258
+marts.fct_contracts  19,220 -> 19,220 rows
+  by key: 4,010 changed, 0 added, 0 removed
+  columns: discount_pct 4,010
+staging.stg_relay__contracts  276,453 -> 276,453 rows
+  by key: 59,278 changed, 0 added, 0 removed
+  columns: discount_pct 59,278
+30 of 33 tables and views identical
+
+rows compared in A: 5,473,065; in under five minutes: True

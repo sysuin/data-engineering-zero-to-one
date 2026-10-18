@@ -1,0 +1,16 @@
+mapper                   records out, by reducer      KB
+0           77,170    74,717    73,446    76,439   3,771
+1           78,237    82,505    73,302    74,967   3,774
+2           79,513    76,187    75,902    77,602   3,782
+3           80,220    74,667    76,312    77,876   3,782
+reducer   records in  accounts
+0            315,140     1,528
+1            308,076     1,533
+2            298,962     1,526
+3            306,884     1,526
+shuffled: 1,229,062 records, 15.1 MB
+accounts: 6,113 by hand, 6,113 in DuckDB
+revenue:  $402,018,545.16 by hand
+          $402,018,545.16 in DuckDB
+every account agrees: True
+shuffle files left behind: False

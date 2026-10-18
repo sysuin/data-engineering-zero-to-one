@@ -1,0 +1,13 @@
+137 lines, 4 sections, 4 copies of the same CTE
+Tradeline's order_lines read 4 times, the catalogue 3 times
+the catalogue's SKU, as each copy reads it:
+  upper(trim("SKU")), "SKU", "SKU"
+its list price, as each copy types it:
+  DECIMAL(10, 2), DECIMAL(10, 2), DOUBLE
+
+The pack's grand totals, every month added up:
+  section              lines               sales
+  channel          1,243,789     $406,864,476.20
+  category         1,243,789     $406,864,476.20
+  supplier           819,589     $248,190,091.19
+  realisation              -     $391,014,637.51

@@ -1,0 +1,22 @@
+# What supplier_names.csv is, and who answers for it. The runner loads
+# the CSV as seeds.supplier_names; this file is for people.
+seed: supplier_names
+description: >
+  Every spelling of a supplier that a Meridian source uses, mapped to
+  procurement's supplier_id (reference/suppliers.csv). One row per
+  source and spelling. Spellings are matched after trimming spaces at
+  either end, so "Voss Industrial " needs no row of its own.
+owner: procurement (the supplier master)
+contact: procurement@meridian.example
+reviewed_by: data engineering, in the change that adds a row
+grain: one row per source per spelling
+key: [source, spelling]
+columns:
+  source: the Groundwork source whose spelling this is (catalogue, suppliers)
+  spelling: the name as that source writes it, trimmed
+  supplier_id: procurement's id for the supplier
+how_to_change: >
+  When a staging test reports a spelling with no supplier, ask
+  procurement which supplier it is, add one row here, and say who
+  confirmed it in the change's description. Never map a spelling to a
+  supplier by guessing from the name.

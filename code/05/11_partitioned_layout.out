@@ -1,0 +1,13 @@
+raw/relay/accounts/load_date=2026-01-03/part-0.parquet
+raw/relay/accounts/load_date=2026-01-04/part-0.parquet
+partitions: 7
+['raw.relay_accounts']
+load_date   rows in raw  rows in file  _source_file
+2025-12-29        6,058         6,058  relay/2025-12-29/accounts.csv
+2025-12-30        6,058         6,058  relay/2025-12-30/accounts.csv
+2025-12-31        6,058         6,058  relay/2025-12-31/accounts.csv
+2026-01-01        6,058         6,058  relay/2026-01-01/accounts.csv
+2026-01-02        6,058         6,058  relay/2026-01-02/accounts.csv
+2026-01-03        6,058         6,058  relay/2026-01-03/accounts.csv
+2026-01-04        6,058         6,058  relay/2026-01-04/accounts.csv
+plan: Scanning Files: 1/7; Total Files Read: 1

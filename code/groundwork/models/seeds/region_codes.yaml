@@ -1,0 +1,19 @@
+# What region_codes.csv is, and who answers for it. The runner loads
+# the CSV as seeds.region_codes; this file is for people.
+seed: region_codes
+description: >
+  The code finance's ledger writes for each sales region (NE, SE, MW,
+  WE, SW), against operations' region_id in reference/regions.csv.
+  Neither file carries the other's identifier, so the mapping is a fact
+  someone has to state.
+owner: finance (the general ledger)
+contact: finance@meridian.example
+reviewed_by: data engineering, in the change that adds a row
+grain: one row per region
+key: [region_id]
+columns:
+  region_id: operations' id for the region
+  region_code: the ledger's code for it
+how_to_change: >
+  A new region needs a row in reference/regions.csv and one here, in
+  the same change, confirmed by finance.

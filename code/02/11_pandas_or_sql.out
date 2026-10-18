@@ -1,0 +1,15 @@
+12,615 orders in a DataFrame, 0.4 MB
+crosstab and PIVOT agree, cell for cell
+channel    FLD  PTR  TEL   WEB
+region                        
+Midwest    249  247  377   952
+Northeast  394  400  579  1607
+Southeast  360  340  463  1296
+Southwest  502  421  699  1873
+West       302  238  347   969
+each region's busiest channel:
+  Midwest    WEB  52.2%
+  Northeast  WEB  53.9%
+  Southeast  WEB  52.7%
+  Southwest  WEB  53.6%
+  West       WEB  52.2%

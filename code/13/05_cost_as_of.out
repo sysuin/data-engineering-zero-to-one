@@ -1,0 +1,14 @@
+sku          valid_from  valid_to     unit_cost    lines
+MRD-FAC-034  2022-01-01  2025-01-01       78.31   33,003
+MRD-FAC-034  2025-01-01                   87.71   11,114
+MRD-SAN-040  2024-04-01  2025-01-01       92.98    7,788
+MRD-SAN-040  2025-01-01                  104.14   11,097
+MRD-SAN-042  2024-04-01  2025-01-01       95.26    7,640
+MRD-SAN-042  2025-01-01                  106.69   11,073
+MRD-SAN-048  2024-04-01  2025-01-01       42.28    7,528
+MRD-SAN-048  2025-01-01                   47.35   11,078
+
+margin, cost as of the order's day   122,602,062.23
+margin, today's cost on every line   120,593,252.64
+lines whose cost differs 55,959; margin moved -2,008,809.59
+lines whose unit_cost differs from Book 2's: 0

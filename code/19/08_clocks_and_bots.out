@@ -1,0 +1,25 @@
+Events that happened after the portal received them: 2,117
+  in 279 sessions; furthest ahead 26.9 hours
+
+Sessions by their quickest event's delay
+  clock ahead, over 1 min        279  mobile
+  clock behind, over 1 min       275  mobile
+  within a minute             90,745  desktop, mobile
+
+order_submitted against Tradeline's placed_at
+  as sent           235 of 39,694 more than 5 s out; worst 26.9 h
+  clock corrected     0 of 39,694 more than 5 s out; worst 1.3 s
+
+The busiest accounts
+  account 2040   12,078 events in 15 sessions
+  account 57      1,953 events in 167 sessions
+  account 19      1,682 events in 149 sessions
+  2040 less its three biggest sessions: 78 events in 12 sessions
+
+Sessions of 100+ events at 30+ a minute
+  17 Nov 03:10 4,000 in 43 min (93/min), 0 not views
+    PriceWatchBot/2.1 (+https://pricewatch.example/bot)
+  18 Nov 03:10 4,000 in 43 min (93/min), 0 not views
+    PriceWatchBot/2.1 (+https://pricewatch.example/bot)
+  19 Nov 03:10 4,000 in 43 min (93/min), 0 not views
+    PriceWatchBot/2.1 (+https://pricewatch.example/bot)

@@ -1,0 +1,23 @@
+operator, top down                     rows out  estimated
+HASH_JOIN                               195,635     55,290
+HASH_JOIN                               195,635     55,290
+CROSS_PRODUCT                           195,635
+FILTER                                       80         45
+WINDOW                                       80
+SEQ_SCAN file_ledger                         80        225
+UNGROUPED_AGGREGATE                           1
+UNGROUPED_AGGREGATE                           1
+HASH_JOIN                               276,453     55,290
+READ_PARQUET                            276,453    276,453
+NESTED_LOOP_JOIN                        195,635     27,645
+HASH_JOIN                                19,220     55,290
+HASH_JOIN                                19,220     55,290
+HASH_JOIN                                19,220     55,290
+READ_PARQUET                             19,220    276,453
+SEQ_SCAN int_account_identity             6,270      6,270
+NESTED_LOOP_JOIN                             48          1
+INOUT_FUNCTION                               49          1
+SEQ_SCAN dim_account                          1          2
+SEQ_SCAN dim_account                     11,340     11,340
+SEQ_SCAN dim_account                      6,059      2,268
+furthest estimate: INOUT_FUNCTION, 1 for 49

@@ -1,0 +1,5 @@
+blocking key                   pairs  IT kept  max block
+region + month + postcode        221      187          2
+region + postcode              1,682      187          7
+first three of postcode      150,000      187        174
+normalised name                  212      187          2

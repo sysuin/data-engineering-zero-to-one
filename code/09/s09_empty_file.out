@@ -1,0 +1,10 @@
+1 Mar: succeeded, 423 new, 998 rows
+header only: succeeded, 1 new, 0 rows
+no bytes:    failed: no known layout has columns []
+
+the check over the ledger finds:
+  voss-industrial_2024-04.csv  50 bytes, rows 0, loaded
+  voss-industrial_2024-05.csv  0 bytes, rows None, failed
+
+with the strict reader, the April run again:
+  failed: voss-industrial_2024-04.csv: no rows

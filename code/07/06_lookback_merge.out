@@ -1,0 +1,8 @@
+                              no lookback  1 h lookback
+rows read in all                1,575,169    1,576,688
+orders the copy has wrong
+  deleted in Tradeline                  4            4
+  lines amended at 02:00              115            0
+nights it disagreed                    28           22
+  the first of them            2025-08-23   2025-08-29
+the last night run twice: the copy is unchanged

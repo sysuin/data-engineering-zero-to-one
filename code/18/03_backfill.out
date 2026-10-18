@@ -1,0 +1,45 @@
+before: relay.accounts 2024-02-29, 5,188 rows, 0 parked
+before: relay.contracts 2024-02-29, 11,143 rows, 0 parked
+first command: 60 nights, then the machine went down
+  during 2025-02-14's ingest_tradeline
+second command, the same:
+backfill 2024-12-16 to 2025-03-16: 91 nights
+  succeeded     31
+  kept          60
+backfill_build.2025-03-16.1  (scheduled, due 2025-03-17 06:00 UTC)
+task             state           tries  detail
+dbt_build        succeeded           1  built; 1 test(s) warned
+reconcile        succeeded           1  190 cells, 6 counts: all tie
+publish          succeeded           1  91 nights published
+run succeeded
+backfill succeeded
+no export in the archive, a gap: 2024-12-25
+
+2025-02-14, the night the machine went down:
+  backfill.2025-02-14.1      try 1  running
+  backfill.2025-02-14.2      try 1  succeeded
+  orders       2 loads; raw holds 435 rows; the last read 435
+  order_lines  2 loads; raw holds 1,083 rows; the last read 1,083
+
+what the backfill read, nights 2 to 91:
+  frontline.ticket_comments          851
+  frontline.tickets                5,001
+  relay.accounts                 494,336
+  relay.contracts              1,345,992
+  tradeline.order_lines           92,043
+  tradeline.orders                36,681
+desk requests: night 1 15,607; after it, a median of 53 a night
+
+the six counts, reconciled as of 06:00 on 17 March and today:
+  count                  marts         as of          today
+  Tradeline orders     362,007  366,286 ties   483,980 no
+  Tradeline lines      928,426  939,361 ties 1,243,789 no
+  Relay accounts         5,652    5,652 ties     6,058 no
+  Relay contracts       15,604   15,604 ties    19,220 no
+  Frontline tickets     16,914   16,914 ties    21,668 no
+  ledger lines             191      191 ties       237 no
+  (Tradeline's own counts include its cancelled orders: 4,279
+  as of 17 March, 5,738 today)
+
+night 1 took 3.6 min; the rest a median of 7.9 s
+at that rate, 1,465 nights: about 3.2 h

@@ -1,0 +1,29 @@
+# raw.tradeline_order_lines_log: changes to order lines, from the log.
+table: tradeline.order_lines_log
+version: 1
+description: >
+  One row per change to an order line, read from Tradeline's
+  replication log after the last position loaded.
+producer:
+  who: Tradeline (orders team), its replication log
+  contact: orders-team@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per logged change
+key: [lsn]
+columns:
+  lsn: {type: integer, min: 1}
+  committed_at: {type: timestamp, format: '%Y-%m-%d %H:%M:%S', unit: UTC}
+  op: {allowed: [I, U, D]}
+  order_id: {type: integer, min: 1}
+  line_no: {type: integer, min: 1}
+  sku: {pattern: 'MRD-[A-Z]{3}-[0-9]{3}', nullable: true}
+  qty: {type: integer, min: 1, nullable: true}
+  unit_price_cents: {type: integer, min: 1, nullable: true}
+  discount_pct: {type: integer, min: 0, max: 100, nullable: true}
+  created_at: {type: timestamp, format: '%Y-%m-%d %H:%M:%S', nullable: true}
+  updated_at: {type: timestamp, format: '%Y-%m-%d %H:%M:%S', nullable: true}
+policy:
+  bad_rows: fail
+changes:
+  - version: 1
+    note: first written

@@ -1,0 +1,23 @@
+# raw.frontline_ticket_fields: a ticket's custom fields, one per row.
+table: frontline.ticket_fields
+version: 1
+description: >
+  One row per custom field on a ticket in the pull, keyed by the
+  ticket and the version (updated_at) it belongs to.
+producer:
+  who: Frontline, the support desk (its API, v2)
+  contact: support-ops@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per ticket per custom field
+key: [ticket_id, field_id]
+columns:
+  ticket_id: {pattern: 'FT-[0-9]{6}'}
+  updated_at: {type: timestamp, format: '%Y-%m-%dT%H:%M:%SZ', unit: UTC}
+  field_id: {type: integer}
+  name: {allowed: [category, desk]}
+  value: {nullable: true}
+policy:
+  bad_rows: fail
+changes:
+  - version: 1
+    note: first written

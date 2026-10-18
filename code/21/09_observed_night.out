@@ -1,0 +1,30 @@
+nightly.2026-01-04.2  (scheduled, due 2026-01-05 06:00 UTC)
+task             state           tries  detail
+wait_relay       succeeded           1  1 poke, waited 0 s
+ingest_tradeline succeeded           1  1,727,769 rows, 2 tables
+ingest_frontline succeeded           1  93,398 rows, 3 tables
+ingest_suppliers succeeded           1  0 rows, 1 table
+ingest_catalogue succeeded           1  0 rows, 1 table
+ingest_ledger    succeeded           1  0 rows, 1 table
+ingest_reference succeeded           1  0 rows, 3 tables
+ingest_relay     succeeded           1  0 rows, 4 tables
+load_comments    succeeded           1  5,414 comments
+check_contracts  succeeded           1  827 batches, 1,849,396 rows
+check_quality    succeeded           1  26 checks, no errors
+dbt_build        succeeded           1  built, all tests passed
+reconcile        succeeded           1  235 cells, 6 counts: all tie
+observe          succeeded           1  17 signals, 0 in alarm
+publish          succeeded           1  2026-01-04 published
+run succeeded
+
+audit.metrics, recorded by the monitor:
+  distribution   2 measured, 0 in alarm
+  freshness      7 measured, 0 in alarm
+  schema         4 measured, 0 in alarm
+  volume         4 measured, 0 in alarm
+
+the watch at 07:00 on 5 January: 1 opened
+  07:00 ticket to data engineering: suppliers.price_lists: 1 of ...
+  07:00 copy to procurement: suppliers.price_lists: 1 of ...
+the watch again, same moment: 0 opened, 1 still open, 0 sent
+SLO since 2026-01-04: 1 on time, 0 late, budget left 1.5

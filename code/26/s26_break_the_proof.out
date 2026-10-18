@@ -1,0 +1,5 @@
+1. compat.orders with the marts' account ids
+  rows: Book 2 478,242, Groundwork 478,242; differing 18,940
+2. compat.account_history keeping status-only versions
+  rows: Book 2 under the rules 9,891, Groundwork 11,339;
+  differing 4,344

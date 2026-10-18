@@ -1,0 +1,14 @@
+stg_catalogue__products.sql: materialised view
+  refs    ['supplier_names']
+  sources ['audit.current_files', 'raw.catalogue_products']
+
+The lines compiling changed:
+  FROM {{ source('raw', 'catalogue_products') }} AS c
+  -> FROM raw.catalogue_products AS c
+  SEMI JOIN {{ source('audit', 'current_files') }} AS f
+  -> SEMI JOIN audit.current_files AS f
+  LEFT JOIN {{ ref('supplier_names') }} AS n
+  -> LEFT JOIN seeds.supplier_names AS n
+
+A model with a typo in its ref:
+  KeyError: stg_typo: ref('stg_catalogue__product') is not a model

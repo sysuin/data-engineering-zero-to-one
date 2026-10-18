@@ -1,0 +1,5 @@
+watermark      rows read  orders wrong  rows read twice
+second >       1,575,169           115                0
+second >=      1,575,380           115              211
+date >         1,532,534        11,879                0
+date >=        1,577,741             0            2,342

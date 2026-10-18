@@ -1,0 +1,28 @@
+{
+ "versions": [
+  [
+   "2022-01-01",
+   "2023-11-01",
+   "Priti Nair",
+   "active"
+  ],
+  [
+   "2023-11-01",
+   "2024-06-01",
+   "Owen Castell",
+   "active"
+  ],
+  [
+   "2024-06-01",
+   "2024-07-31",
+   "Retention desk",
+   "active"
+  ],
+  [
+   "2024-07-31",
+   null,
+   "Retention desk",
+   "closed"
+  ]
+ ]
+}

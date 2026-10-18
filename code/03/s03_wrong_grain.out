@@ -1,0 +1,4 @@
+key tried                        rows  distinct  most
+order_lines by order_id     1,243,789   483,980     5
+contracts by account_id        19,220     6,058     5
+13 alike lists by sku           1,558        37    48

@@ -1,0 +1,16 @@
+built                     rows  second source              rows
+fct_order_lines      1,229,062  Book 2's order_lines  1,229,062 =
+fct_orders             478,242  Book 2's orders         478,242 =
+fct_tickets             21,668  the API's total          21,668 =
+fct_contracts           19,220  Book 2's contracts       19,220 =
+fct_contract_month     195,635  counted from Book 2     195,635 =
+order lines in one and not the other, every column: 0
+
+sales journal: 235 months x regions, 235 equal to the cent
+October 2025    fct_order_lines           ledger
+MW                 1,571,058.73     1,571,058.73
+NE                 2,529,622.17     2,529,622.17
+SE                 1,965,510.99     1,965,510.99
+SW                 2,822,817.13     2,822,817.13
+WE                 1,605,694.89     1,605,694.89
+checks: every promise kept

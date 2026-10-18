@@ -1,0 +1,13 @@
+read 6,058 rows from relay/2026-01-04/accounts.csv
+  account_id      '1'
+  account_name    'Halloway Healthcare'
+  region          'Midwest'
+  key_account     'true'
+  customer_since  '2018-12-01'
+naive filter keeps 6,058; is_key keeps 58
+wrote 58 rows to key_accounts.csv, read back 58
+  Midwest     12
+  Northeast   11
+  Southeast   10
+  Southwest   13
+  West        12

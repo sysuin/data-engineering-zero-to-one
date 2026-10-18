@@ -1,0 +1,16 @@
+every model created as a view over the contracts' empty tables:
+  32 of 32 bind; raw rows read: 0; under five seconds: True
+  raw tables read with no contract: frontline_ticket_comments
+
+relay.contracts, discount_pct renamed discount:
+  compatible(old, new):
+    nobody     column discount added
+    consumers  column discount_pct removed
+    producer   format relay changed
+  models that no longer bind:
+    stg_relay__contracts:
+      Table "c" does not have a column named "discount_pct"
+    fct_contract_month: upstream failed
+    fct_contracts: upstream failed
+  version 1 -> 1: a change that can break consumers needs
+  a new version and a note, or the contract test fails

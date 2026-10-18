@@ -1,0 +1,23 @@
+rows 12,097: marks from 2022-11-02 to 2025-12-31
+  labelled (ended before 2026-01-05) 11,200; not yet ended 897
+check: every promise kept
+Book 2's rows 11,200, ours ending by 2025 11,200; rows that
+differ in
+  account 0, days since order 0, order counts 0, spend 0, tickets 0,
+  tenure 0, segment 0, label 0
+rows with no account version the day before the mark: 12
+contract 7332:
+  account_id        1678
+  as_of             2024-01-01
+  end_date          2024-03-31
+  days_since_order  27
+  orders_90d        1
+  orders_prev_90d   5
+  spend_365         13351.91
+  tickets_90d       0
+  tenure_days       275
+  segment           Small business
+  owner             Sara Quell
+  region            Southwest
+  term_months       12
+  not_renewed       True

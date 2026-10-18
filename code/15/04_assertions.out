@@ -1,0 +1,14 @@
+tagged quality: 19 tests and the seed ledger_journals
+  accepted_values   2 pass
+  between           2 pass
+  not_null          4 pass
+  singular         10 pass
+  unique            1 pass
+the whole suite, with Chapter 14's: 48 tests, 48 pass
+
+after four changes (83 lines re-dated): 4 fail, 14 pass, 1 warn
+  fail   2  facts_point_at_their_day
+  warn   1  ledger_journals_are_documented
+  fail   1  order_lines_are_in_range
+  fail  10  revenue_ties_to_the_sales_journal
+  fail   3  versions_tile_time

@@ -1,0 +1,8 @@
+715,444 records, 706,925 distinct event_ids: 8,519 second copies
+  identical but for received_at: 8,519
+  in a later hour's file than the first copy: 339
+  arrived 1.0 to 300.0 seconds after the first
+
+Archive, crashing once: 720,444 records read, 5,000 of them twice
+  an append-only table would hold 720,444 rows
+  stream.portal_events holds 706,925

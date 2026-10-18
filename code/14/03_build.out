@@ -1,0 +1,27 @@
+kind      schema         nodes  status
+seed      seeds              4  success 4
+model     staging           17  success 17
+model     intermediate       5  success 5
+model     marts             10  success 10
+snapshot  snapshots          1  success 1
+test                        29  pass 29
+
+node  1 of 66: model dim_date
+node 21: the first test, not_null_dim_date_date_key
+node 62: the last model, fct_orders
+
+rows in the marts it built:
+  dim_date                   2,191
+  dim_supplier                  21
+  dim_region                     6
+  dim_account               11,340
+  dim_product                   53
+  fct_contract_month       195,635
+  fct_contracts             19,220
+  fct_order_lines        1,229,062
+  fct_tickets               21,668
+  fct_orders               478,242
+
+state:modified+ after a space in a comment: 5
+  dim_product, fct_order_lines, fct_orders,
+  fct_tickets, stg_catalogue__products

@@ -1,0 +1,4 @@
+rows           csv  6,058   duckdb  6,058
+same ids:      True
+same segments: True
+customer_since: csv str, duckdb DATE

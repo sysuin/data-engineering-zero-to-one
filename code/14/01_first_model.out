@@ -1,0 +1,22 @@
+dbt debug: all checks passed
+
+               runner   dbt
+seeds               4     4
+staging            17    17
+intermediate        5     5
+marts               9    10
+sources            17    17
+snapshot            0     1
+test                0    29
+
+stg_relay__accounts.sql, the runner's file against dbt's:
+  lines only in the runner's: ['-- materialised: view']
+  lines only in dbt's:        []
+
+Compiled, the lines where the two differ:
+  runner FROM raw.relay_accounts AS a
+  dbt    FROM "warehouse"."raw"."relay_accounts" AS a
+  runner SEMI JOIN audit.current_files AS f
+  dbt    SEMI JOIN "warehouse"."audit"."current_files" AS f
+dbt run: success, view staging.stg_relay__accounts
+rows 90,000; only in dbt's 0; only in the runner's 0

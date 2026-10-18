@@ -1,0 +1,16 @@
+catalogue: 48 rows; its first two lines:
+  SKU,Product Name,Category,Supplier,List Price,Launched,Notes
+  MRD-CLE-001,Cleaning item 1,Cleaning,Pemberton,$88.64,,
+
+supplier names in the catalogue: 16
+  not written as procurement writes them: 4
+    'Aldridge and Co'
+    'Kestrel'
+    'Pemberton'
+    'Voss Industrial '
+
+SKUs in the catalogue: 48; Tradeline sells 48
+  not written as Tradeline writes them: 3
+    'MRD-FAC-031 '
+    'mrd-pac-022'
+    'MRD-SAN-043 '

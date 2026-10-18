@@ -1,0 +1,14 @@
+load_id                            status      written    source
+tradeline.orders.2025-12-01.1      succeeded   471,769   471,769
+tradeline.order_lines.2025-12-01.1 succeeded 1,212,177 1,212,177
+tradeline.orders.2025-12-02.1      succeeded   472,150   472,150
+tradeline.order_lines.2025-12-02.1 succeeded 1,213,124 1,213,124
+tradeline.orders.2025-12-03.1      succeeded   472,568   472,568
+tradeline.order_lines.2025-12-03.1 succeeded 1,214,232 1,214,232
+tradeline.orders.2025-12-03.2      succeeded   472,571   472,571
+tradeline.order_lines.2025-12-03.2 succeeded 1,214,246 1,214,246
+tradeline.orders.2025-12-03.3      failed                472,571
+  OSError: [Errno 28] No space left on device
+raw.tradeline_orders: 1,416,490 rows, 472,571 order ids
+November, joined across every night: 9.0 times
+November, last good load (2025-12-03): 31,503 lines, $10,313,814.24

@@ -1,0 +1,20 @@
+metrics.sales: One row per line of a placed, not-cancelled order,
+every name joined in.
+  order_date      DATE          the depot's date of the order
+  order_number    BIGINT        on the customer's paperwork
+  channel         VARCHAR       how the order came in
+  region          VARCHAR       the account's region today
+  account         VARCHAR       the account's name today
+  segment         VARCHAR       segment on the order's day
+  account_manager VARCHAR       manager on the order's day
+  sku             VARCHAR       product code, upper case, trimmed
+  product         VARCHAR       the catalogue's name
+  category        VARCHAR       the catalogue's category
+  supplier        VARCHAR       procurement's name for it
+  qty             INTEGER       units ordered
+  unit_price      DECIMAL(18,2) dollars a unit, after discount
+  revenue         DECIMAL(18,2) qty x unit_price
+  cost            DECIMAL(18,2) qty x unit cost on the day
+  gross_margin    DECIMAL(18,2) revenue - cost; NULL if no cost
+Northeast 2025 by segment and category: 20 cells from the star,
+  20 from the view, 0 differ; total $30,366,738.35

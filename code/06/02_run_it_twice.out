@@ -1,0 +1,12 @@
+append: FAILS
+                           after run 1       after run 2
+  orders rows                  483,980           967,960
+  order_lines rows           1,243,789         2,487,578
+  November              $10,313,814.24    $41,255,256.96
+    its orders                  12,194            12,194
+replace: passes
+                           after run 1       after run 2
+  orders rows                  483,980           483,980
+  order_lines rows           1,243,789         1,243,789
+  November              $10,313,814.24    $10,313,814.24
+    its orders                  12,194            12,194

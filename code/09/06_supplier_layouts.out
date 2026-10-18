@@ -1,0 +1,16 @@
+standard: 13 supplier(s), 29 rows
+  sku,description,unit_cost,currency,effective_from
+  -> MRD-CLE-007 | Cleaning item 7 | 90.35 dollars | 2024-03-01
+aldridge: 1 supplier(s), 2 rows
+  (spreadsheet) Product Code | Description | Trade Price
+  -> MRD-FAC-030 | Facilities item 1 | 790.7 dollars | 1 March 2024
+kestrel: 1 supplier(s), 3 rows
+  sku,cost_cents,effective
+  -> MRD-PAC-022 | None | 5529 cents | 2024-03-01
+pemberton: 1 supplier(s), 4 rows
+  Item Code,Item,Cost (USD),Valid From
+  -> MRD-CLE-001 | Cleaning item 1 | 58.50 dollars | 01/03/2024
+
+16 lists for March 2024, 38 rows, in columns
+  supplier, sku, description, cost, currency, effective_from,
+  cost_unit, layout

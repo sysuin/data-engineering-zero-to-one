@@ -1,0 +1,4 @@
+Chapter 12 listing    inner, as written     LEFT JOIN
+01 lines to owner     HASH_JOIN + FILTER    BLOCKWISE_NL_JOIN
+08 nights to version  HASH_JOIN + FILTER    BLOCKWISE_NL_JOIN
+12 list rows to cost  HASH_JOIN + FILTER    BLOCKWISE_NL_JOIN

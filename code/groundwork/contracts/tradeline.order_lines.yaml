@@ -1,0 +1,26 @@
+# raw.tradeline_order_lines: a line of an order, as Tradeline holds it.
+table: tradeline.order_lines
+version: 1
+description: >
+  One row per line of an order. The price is in cents, after the
+  line's discount.
+producer:
+  who: Tradeline (orders team)
+  contact: orders-team@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per order line
+key: [order_id, line_no]
+columns:
+  order_id: {type: integer, min: 1}
+  line_no: {type: integer, min: 1, max: 99}
+  sku: {pattern: 'MRD-[A-Z]{3}-[0-9]{3}'}
+  qty: {type: integer, min: 1, max: 10000}
+  unit_price_cents: {type: integer, min: 1, max: 1000000, unit: USD/100}
+  discount_pct: {type: integer, min: 0, max: 100, unit: percent}
+  created_at: {type: timestamp, format: '%Y-%m-%d %H:%M:%S', unit: UTC}
+  updated_at: {type: timestamp, format: '%Y-%m-%d %H:%M:%S', unit: UTC}
+policy:
+  bad_rows: fail
+changes:
+  - version: 1
+    note: first written, from Tradeline's schema and four years of rows

@@ -1,0 +1,29 @@
+1. quality.check at 07:00: 26 checks, 24 pass, 2 skip
+     skip: tradeline.orders 483,980; the first of its kind
+     skip: tradeline.order_lines 1,243,789; the first of its kind
+2. dbt build --select tag:quality: 19 pass, 1 success
+3. python -m groundwork.reconcile
+revenue  235 months x regions, 235 tie to the sales journal
+         journals posted by hand 2, in the register 2
+         warehouse + register = ledger in 235 of 235
+bridge   November 2025, the dashboard's number to the ledger's
+  the dashboard, as it printed                  10468688.559999846
+  floating-point dust                                  0.000000154
+  cancelled orders                     177             -154,874.32
+  UTC Nov, the depot's Oct              36              -26,091.53
+  UTC Dec, the depot's Nov              53               48,663.11
+  manual journal, SW                                    -12,400.00
+  the ledger                                         10,323,985.82
+  remaining                                                   0.00
+counts   6 of 6 tie, source = warehouse + what it leaves out
+  Tradeline orders     483,980 =   478,242 + 5,738 cancelled
+  Tradeline lines    1,243,789 = 1,229,062 + 14,727 cancelled
+  Relay accounts         6,058 =     6,058
+  Relay contracts       19,220 =    19,220
+  Frontline tickets     21,668 =    21,668
+  ledger lines             237 =       237
+recorded 247 rows in audit.reconciliations at 2026-01-05 07:00:00
+everything ties
+audit.quality_checks: 26 rows
+audit.reconciliations: 247 rows
+exit code 0

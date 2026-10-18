@@ -1,0 +1,9 @@
+stacked 84,812 rows from 2025-12-22 to 2026-01-04
+6,058 accounts; 6,178 distinct versions of them
+latest per account: CTE 6,058, QUALIFY 6,058; same rows: True
+identical to the 2026-01-04 export: True
+status changes between consecutive nights: 41, on 2025-12-31
+  account   438  active -> closed
+  account   807  active -> closed
+  account   857  active -> closed
+accounts whose newest updated_at is on several nights: 6,058

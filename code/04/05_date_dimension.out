@@ -1,0 +1,18 @@
+dim_date: 2,191 rows, 2021-01-01 to 2026-12-31, 0 gaps
+
+date_key  day         work  nth  iso week  month end
+20251231  Wednesday    yes   23  2026-W01        yes
+20260101  Thursday     yes    1  2026-W01
+20260102  Friday       yes    2  2026-W01
+20260103  Saturday      no       2026-W01
+20260104  Sunday        no       2026-W01
+20260105  Monday       yes    3  2026-W02
+20260106  Tuesday      yes    4  2026-W02
+20260107  Wednesday    yes    5  2026-W02
+
+orders joined on both dates                   478,242
+a different day of the week                    49,309
+a working day that UTC calls a weekend          6,855
+a weekend day that UTC calls a working day      7,199
+a different month                               1,566
+a different year                                  156

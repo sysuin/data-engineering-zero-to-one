@@ -1,0 +1,11 @@
+tally read to 4,000, committed 3,000, then crashed
+  portal-log/offsets/tally.json: {"offset": 3000}
+tally restarts at 3,000
+  records in the log up to 4,000; events counted 5,000
+careless: records up to 5,000; events counted 4,000
+
+group      committed       lag
+tally          4,000   711,444
+careless       5,000   710,444
+archive        1,000   714,444
+log end      715,444

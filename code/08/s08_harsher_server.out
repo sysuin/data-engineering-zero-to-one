@@ -1,0 +1,9 @@
+429 every 3rd, 503 every 4th: succeeded, 7 requests, 3 retried
+429 every 3rd, 503 every 2nd:
+  1 attempts: gave up after 1 attempts, last 503
+  2 attempts: gave up after 2 attempts, last 429
+  3 attempts: gave up after 3 attempts, last 503
+  4 attempts: succeeded, 11 requests
+budgeted run: budget of 0.5 s: 0.30 s spent
+load log: frontline.tickets.2025-12-02.1 failed
+  FrontlineError: budget of 0.5 s: 0.30 s spent

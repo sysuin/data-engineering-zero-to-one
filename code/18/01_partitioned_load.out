@@ -1,0 +1,13 @@
+raw.relay_accounts, one partition a night:
+  15 partitions; 14 are the same files as before;
+  written again: 2025-12-28
+  2025-12-28: 6,058 rows, as before
+
+marts.fct_order_lines, one partition a day:
+  1,461 days, 1,229,062 lines
+  2025-11-28: 1,090 lines taken out, 1,090 put back
+  November's 30 days hashed before and after: 0 differ
+  the table: 1,229,062 lines
+    2025-11-27  b64f396e327c  b64f396e327c  1,099 lines
+    2025-11-28  d2f5fd9f3f31  d2f5fd9f3f31  1,090 lines
+    2025-11-29  7df183e7727f  7df183e7727f    993 lines

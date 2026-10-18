@@ -1,0 +1,86 @@
+{
+ "request": [
+  "GET /api/v2/tickets?updated_since=2025-12-01T00:00:00Z&page=1&per_page=2 HTTP/1.1",
+  "Host: 127.0.0.1:<port>",
+  "Authorization: Bearer <token>",
+  "Accept: application/json",
+  "Connection: close"
+ ],
+ "status": "HTTP/1.0 200 OK",
+ "content_type": "application/json; charset=utf-8",
+ "content_length": "1180",
+ "body": {
+  "tickets": [
+   {
+    "id": "FT-020740",
+    "created_at": "2025-11-29T14:10:00Z",
+    "updated_at": "2025-12-01T00:31:00Z",
+    "status": "solved",
+    "priority": "normal",
+    "channel": "web",
+    "language": "en",
+    "requester": {
+     "account_id": 1258,
+     "name": "Brian Okafor",
+     "email": "brian.okafor@fairford-kitchens.example"
+    },
+    "assignee": "Tom H",
+    "description": "Morning, RMA for order 1392842 please pls advise",
+    "sku": null,
+    "custom_fields": [
+     {
+      "id": 360001,
+      "name": "desk",
+      "value": "north_desk"
+     },
+     {
+      "id": 360002,
+      "name": "category",
+      "value": "returns"
+     }
+    ],
+    "tags": [
+     "returns"
+    ]
+   },
+   {
+    "id": "FT-020686",
+    "created_at": "2025-11-24T14:31:00Z",
+    "updated_at": "2025-12-01T00:58:00Z",
+    "status": "solved",
+    "priority": "normal",
+    "channel": "email",
+    "language": "en",
+    "requester": {
+     "account_id": 578,
+     "name": "Laura Ó Briain",
+     "email": "laura.obriain@selford-storage.example"
+    },
+    "assignee": "Sam O",
+    "description": "MRD-PAC-022 came in a torn pack, half of it spilled regards",
+    "sku": "MRD-PAC-022",
+    "custom_fields": [
+     {
+      "id": 360001,
+      "name": "desk",
+      "value": "south_desk"
+     },
+     {
+      "id": 360002,
+      "name": "category",
+      "value": "delivery"
+     }
+    ],
+    "tags": [
+     "delivery",
+     "sku:MRD-PAC-022"
+    ]
+   }
+  ],
+  "meta": {
+   "page": 1,
+   "per_page": 2,
+   "total": 69
+  }
+ }
+}

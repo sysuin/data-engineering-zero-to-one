@@ -1,0 +1,18 @@
+SELECT r.region_name AS region, sum(f.revenue) AS revenue
+FROM marts.fct_order_lines AS f
+JOIN marts.dim_region AS r ON r.region_key = f.region_key
+WHERE f.order_date >= ?
+  AND f.order_date < ?
+GROUP BY ALL ORDER BY ALL
+[datetime.date(2025, 11, 1), datetime.date(2025, 12, 1)]
+  Midwest         1,549,178.65
+  Northeast       2,487,217.13
+  Southeast       1,944,997.71
+  Southwest       2,779,849.50
+  West            1,575,142.83
+  all            10,336,385.82
+month x region cells: ours 240, Book 2's 240, equal to the cent 240
+2025 not renewed: the layer 8.93%, mean of 4 segments' rates 6.33%
+2025 active accounts: the layer 4,651; 12 month ends summed 55,389
+refused: active_accounts cannot be broken down by 'channel'; it
+allows ['region', 'segment']

@@ -1,0 +1,33 @@
+# raw.frontline_tickets: a support ticket, as Frontline's API sends it.
+table: frontline.tickets
+version: 1
+description: >
+  One row per ticket that changed since the last pull, its latest
+  copy in the pull, flattened from the API's JSON; the whole ticket
+  is kept in payload.
+producer:
+  who: Frontline, the support desk (its API, v2)
+  contact: support-ops@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per ticket per pull
+key: [ticket_id]
+columns:
+  ticket_id: {pattern: 'FT-[0-9]{6}'}
+  created_at: {type: timestamp, format: '%Y-%m-%dT%H:%M:%SZ', unit: UTC}
+  updated_at: {type: timestamp, format: '%Y-%m-%dT%H:%M:%SZ', unit: UTC}
+  status: {allowed: [new, open, solved, closed]}
+  priority: {allowed: [low, normal, high, urgent]}
+  channel: {allowed: [email, voice, web]}
+  language: {allowed: [de, en, es, fr]}
+  requester_account_id: {type: integer, min: 1}
+  requester_name: {}
+  requester_email: {pattern: '[^@ ]+@[^@ ]+'}
+  assignee: {nullable: true}
+  description: {nullable: true}
+  sku: {pattern: 'MRD-[A-Z]{3}-[0-9]{3}', nullable: true}
+  payload: {}
+policy:
+  bad_rows: fail
+changes:
+  - version: 1
+    note: first written, from the API's documentation and its tickets

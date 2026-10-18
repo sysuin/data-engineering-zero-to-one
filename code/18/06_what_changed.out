@@ -1,0 +1,11 @@
+fct_order_lines: 928,426 rows on 1,172 days
+  before and after the fix: 7,749 rows differ, on 64 days,
+    2025-01-13 to 2025-03-17; 0 rows on one side only
+  moved: unit_cost 7,749, cost 7,749, gross_margin 7,749
+  against a full build: 0 columns differ, 0 rows on one side
+fct_orders: 362,007 rows on 1,172 days
+  before and after the fix: 6,077 rows differ, on 64 days,
+    2025-01-13 to 2025-03-17; 0 rows on one side only
+  moved: cost 6,077, gross_margin 6,077
+  against a full build: 0 columns differ, 0 rows on one side
+margin the change had added, and the fix took away: $341,014.89

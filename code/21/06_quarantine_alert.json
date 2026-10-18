@@ -1,0 +1,14 @@
+{
+ "first": {
+  "watch": "3 July 2024",
+  "local_watch": "03:00 New York",
+  "delivered": "12:00",
+  "local_delivered": "08:00 New York",
+  "lines": [
+   "suppliers.price_lists: PEMBERTON-PRICES-202407.csv broke its contract and",
+   "was held, 6 rows in 1 file. It will be tried again every night until the",
+   "contract or the file changes."
+  ],
+  "times": 14
+ }
+}

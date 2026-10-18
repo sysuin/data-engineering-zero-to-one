@@ -1,0 +1,23 @@
+5 in pack, 1 in seeds, 15 in staging | 16 sources, 12 refs
+
+The sales pack's part of the graph, in build order:
+  0  stg_reference__suppliers
+  0  stg_tradeline__order_lines
+  0  stg_tradeline__orders
+  0  supplier_names
+  1  int_pack__lines
+       <- stg_tradeline__order_lines, stg_tradeline__orders
+  1  stg_catalogue__products
+       <- supplier_names
+  2  pack_category
+       <- int_pack__lines, stg_catalogue__products
+  2  pack_channel
+       <- int_pack__lines
+  2  pack_realisation
+       <- int_pack__lines, stg_catalogue__products
+  2  pack_supplier
+       <- int_pack__lines, stg_catalogue__products,
+          stg_reference__suppliers
+
+int_pack__lines made to ref pack_channel:
+  a cycle: int_pack__lines refs pack_channel refs int_pack__lines

@@ -1,0 +1,16 @@
+November and December: offsets 468,206 to 715,443,
+  30,397 sessions, 244,343 distinct events
+
+lateness   too late  late, taken  rows written  sessions short
+0             2,051            0        30,342           1,543
+10 min        2,044            3        30,347           1,541
+1 hour        2,008           31        30,375           1,516
+6 hours       1,771          188        30,534           1,382
+1 day           972          730        31,066             897
+3 days            0        1,682        31,977               0
+
+The same 1 hour, trusting device clocks that run ahead:
+1 hour       39,149           52        25,885           6,052
+
+The late event saved for the figure: a search from 01 Nov 08:47,
+  received 02 Nov 12:35, watermark then 02 Nov 12:15

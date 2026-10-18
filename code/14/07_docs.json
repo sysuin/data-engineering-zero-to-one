@@ -1,0 +1,330 @@
+{
+ "upstream": {
+  "audit.current_files": [
+   "source",
+   0
+  ],
+  "raw.reference_regions": [
+   "source",
+   0
+  ],
+  "stg_reference__regions": [
+   "model",
+   1
+  ],
+  "raw.relay_accounts": [
+   "source",
+   0
+  ],
+  "stg_relay__accounts": [
+   "model",
+   1
+  ],
+  "raw.relay_field_history": [
+   "source",
+   0
+  ],
+  "stg_relay__field_history": [
+   "model",
+   1
+  ],
+  "int_account_changes": [
+   "model",
+   2
+  ],
+  "int_account_versions": [
+   "model",
+   3
+  ],
+  "dim_account": [
+   "model",
+   4
+  ],
+  "supplier_names": [
+   "seed",
+   0
+  ],
+  "raw.suppliers_price_lists": [
+   "source",
+   0
+  ],
+  "stg_suppliers__price_lists": [
+   "model",
+   1
+  ],
+  "int_product_costs": [
+   "model",
+   2
+  ],
+  "raw.catalogue_products": [
+   "source",
+   0
+  ],
+  "stg_catalogue__products": [
+   "model",
+   1
+  ],
+  "dim_product": [
+   "model",
+   3
+  ],
+  "region_codes": [
+   "seed",
+   0
+  ],
+  "dim_region": [
+   "model",
+   2
+  ],
+  "raw.reference_suppliers": [
+   "source",
+   0
+  ],
+  "stg_reference__suppliers": [
+   "model",
+   1
+  ],
+  "dim_supplier": [
+   "model",
+   2
+  ],
+  "raw.relay_migration_map": [
+   "source",
+   0
+  ],
+  "stg_relay__migration_map": [
+   "model",
+   1
+  ],
+  "account_matches": [
+   "seed",
+   0
+  ],
+  "int_account_identity": [
+   "model",
+   2
+  ],
+  "raw.tradeline_order_lines_current": [
+   "source",
+   0
+  ],
+  "stg_tradeline__order_lines": [
+   "model",
+   1
+  ],
+  "raw.tradeline_orders_current": [
+   "source",
+   0
+  ],
+  "stg_tradeline__orders": [
+   "model",
+   1
+  ],
+  "channel_codes": [
+   "seed",
+   0
+  ],
+  "int_order_lines": [
+   "model",
+   3
+  ],
+  "fct_order_lines": [
+   "model",
+   5
+  ]
+ },
+ "downstream": {
+  "fct_orders": "model"
+ },
+ "tests": 9,
+ "edges": [
+  [
+   "account_matches",
+   "int_account_identity"
+  ],
+  [
+   "audit.current_files",
+   "stg_catalogue__products"
+  ],
+  [
+   "audit.current_files",
+   "stg_reference__regions"
+  ],
+  [
+   "audit.current_files",
+   "stg_reference__suppliers"
+  ],
+  [
+   "audit.current_files",
+   "stg_relay__accounts"
+  ],
+  [
+   "audit.current_files",
+   "stg_relay__field_history"
+  ],
+  [
+   "audit.current_files",
+   "stg_relay__migration_map"
+  ],
+  [
+   "audit.current_files",
+   "stg_suppliers__price_lists"
+  ],
+  [
+   "channel_codes",
+   "int_order_lines"
+  ],
+  [
+   "dim_account",
+   "fct_order_lines"
+  ],
+  [
+   "dim_product",
+   "fct_order_lines"
+  ],
+  [
+   "dim_region",
+   "fct_order_lines"
+  ],
+  [
+   "dim_supplier",
+   "fct_order_lines"
+  ],
+  [
+   "int_account_changes",
+   "int_account_versions"
+  ],
+  [
+   "int_account_identity",
+   "int_order_lines"
+  ],
+  [
+   "int_account_versions",
+   "dim_account"
+  ],
+  [
+   "int_order_lines",
+   "fct_order_lines"
+  ],
+  [
+   "int_product_costs",
+   "dim_product"
+  ],
+  [
+   "raw.catalogue_products",
+   "stg_catalogue__products"
+  ],
+  [
+   "raw.reference_regions",
+   "stg_reference__regions"
+  ],
+  [
+   "raw.reference_suppliers",
+   "stg_reference__suppliers"
+  ],
+  [
+   "raw.relay_accounts",
+   "stg_relay__accounts"
+  ],
+  [
+   "raw.relay_field_history",
+   "stg_relay__field_history"
+  ],
+  [
+   "raw.relay_migration_map",
+   "stg_relay__migration_map"
+  ],
+  [
+   "raw.suppliers_price_lists",
+   "stg_suppliers__price_lists"
+  ],
+  [
+   "raw.tradeline_order_lines_current",
+   "stg_tradeline__order_lines"
+  ],
+  [
+   "raw.tradeline_orders_current",
+   "stg_tradeline__orders"
+  ],
+  [
+   "region_codes",
+   "dim_region"
+  ],
+  [
+   "stg_catalogue__products",
+   "dim_product"
+  ],
+  [
+   "stg_reference__regions",
+   "dim_account"
+  ],
+  [
+   "stg_reference__regions",
+   "dim_region"
+  ],
+  [
+   "stg_reference__regions",
+   "int_account_changes"
+  ],
+  [
+   "stg_reference__suppliers",
+   "dim_supplier"
+  ],
+  [
+   "stg_relay__accounts",
+   "dim_account"
+  ],
+  [
+   "stg_relay__accounts",
+   "int_account_changes"
+  ],
+  [
+   "stg_relay__accounts",
+   "int_account_identity"
+  ],
+  [
+   "stg_relay__accounts",
+   "int_account_versions"
+  ],
+  [
+   "stg_relay__field_history",
+   "int_account_changes"
+  ],
+  [
+   "stg_relay__migration_map",
+   "int_account_identity"
+  ],
+  [
+   "stg_suppliers__price_lists",
+   "int_product_costs"
+  ],
+  [
+   "stg_tradeline__order_lines",
+   "fct_order_lines"
+  ],
+  [
+   "stg_tradeline__order_lines",
+   "int_order_lines"
+  ],
+  [
+   "stg_tradeline__orders",
+   "fct_order_lines"
+  ],
+  [
+   "stg_tradeline__orders",
+   "int_order_lines"
+  ],
+  [
+   "supplier_names",
+   "stg_catalogue__products"
+  ],
+  [
+   "supplier_names",
+   "stg_suppliers__price_lists"
+  ],
+  [
+   "fct_order_lines",
+   "fct_orders"
+  ]
+ ]
+}

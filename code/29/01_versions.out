@@ -1,0 +1,32 @@
+Python 3.12.1 (CPython), macOS-14.5 on arm64
+
+package             at least   this book ran
+duckdb                   1.1           1.5.5
+pandas                   2.2           3.0.6
+numpy                    2.0           2.5.3
+pyarrow                 17.0          25.0.1
+python-dotenv            1.0           1.2.3
+pyyaml                   6.0           6.0.3
+httpx                   0.27          0.28.1
+openpyxl                 3.1           3.1.5
+pydantic                 2.7          2.13.5
+dbt-core                 1.8          1.12.5
+dbt-duckdb               1.8          1.11.0
+sqlglot                 25.0         30.19.0
+fastapi                0.115         0.141.1
+uvicorn                 0.30          0.54.0
+psutil                   5.9           7.2.2
+
+The repository's own toolchain:
+  pytest 9.1.1   ruff 0.16.9   matplotlib 3.11.2
+  pypdf 6.19.0   pdfplumber 0.11.10   fonttools 4.66.0
+  pillow 12.3.0
+
+DuckDB's engine: v1.5.5 (Variegata), build d8cdaa33fd
+extension          version      how it arrived
+core_functions      v1.5.5   statically_linked
+encodings          06295e7          repository
+icu                 v1.5.5   statically_linked
+json                v1.5.5   statically_linked
+parquet             v1.5.5   statically_linked
+sqlite_scanner     f79b1db          repository

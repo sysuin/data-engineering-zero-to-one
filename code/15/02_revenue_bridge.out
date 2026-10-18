@@ -1,0 +1,16 @@
+November 2025                orders           step          running
+the dashboard (Chapter 1)    12,371              10468688.559999792
+floating-point dust                   +0.000000208    10,468,688.56
+cancelled orders                177    -154,874.32    10,313,814.24
+UTC Nov, the depot's Oct         36     -26,091.53    10,287,722.71
+UTC Dec, the depot's Nov         53     +48,663.11    10,336,385.82
+manual journal, SW                      -12,400.00    10,323,985.82
+the ledger                                            10,323,985.82
+remaining                                                      0.00
+
+fct_order_lines, November by the depot's day: 10,336,385.82
+  order 1393052 (West): 01 Dec 07:47 UTC, 30 Nov 23:47 there
+  order 1382679 (Southwest): 01 Nov 04:42 UTC, 31 Oct 23:42 there
+
+calendar first:  -26,493.05  +48,663.11  -154,472.80
+same total: True

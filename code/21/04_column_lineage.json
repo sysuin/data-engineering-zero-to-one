@@ -1,0 +1,40 @@
+{
+ "column": "marts.fct_order_lines.revenue",
+ "steps": [
+  [
+   "intermediate.int_order_lines.qty",
+   "intermediate.int_order_lines.unit_price_cents"
+  ],
+  [
+   "staging.stg_tradeline__order_lines.qty",
+   "staging.stg_tradeline__order_lines.unit_price_cents"
+  ],
+  [
+   "raw.tradeline_order_lines_current.qty",
+   "raw.tradeline_order_lines_current.unit_price_cents"
+  ],
+  [
+   "tradeline.order_lines.qty",
+   "tradeline.order_lines.unit_price_cents"
+  ]
+ ],
+ "filters": [
+  [
+   "staging.stg_tradeline__orders.status",
+   "intermediate.int_order_lines"
+  ],
+  [
+   "marts.dim_account.is_current",
+   "marts.fct_order_lines"
+  ]
+ ],
+ "filter_sources": {
+  "staging.stg_tradeline__orders.status": [
+   "raw.tradeline_orders_current.status",
+   "tradeline.orders.status"
+  ]
+ },
+ "down": [
+  "marts.fct_orders.revenue"
+ ]
+}

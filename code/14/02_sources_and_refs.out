@@ -1,0 +1,21 @@
+                 runner   dbt  in both
+nodes                35    37       35
+ref() edges          43    46       43
+source() edges       29    29       29
+only in dbt: dim_date (model),
+  reads nothing
+only in dbt: snp_relay__accounts (snapshot),
+  reads stg_relay__accounts
+
+level  nodes  by schema
+    0     20  4 seeds, 15 staging, 1 marts
+    1      7  2 staging, 2 intermediate, 2 marts, 1 snapshots
+    2      3  3 intermediate
+    3      2  2 marts
+    4      4  4 marts
+    5      1  1 marts
+
+with a typo, dbt parse succeeded: False
+  Model 'model.groundwork.stg_typo' (models/staging/stg_typo.sql)
+  depends on a node named 'stg_catalogue__product'
+  which was not found

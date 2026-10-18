@@ -1,0 +1,24 @@
+Book 1's quarters (its manifest) and Groundwork's, key accounts
+quarter          revenue           cost  orders    units  same
+2023 Q1     7,360,833.67   5,077,830.93   4,965   93,857  yes
+2023 Q2     7,614,048.76   5,280,699.59   5,114   96,073  yes
+2023 Q3     7,774,027.48   5,291,867.54   5,169   96,206  yes
+2023 Q4     7,699,846.68   5,372,366.39   5,354  100,381  yes
+2024 Q1     8,062,598.92   5,546,900.44   5,331  103,094  yes
+2024 Q2     8,074,847.91   5,491,659.21   5,553  100,194  yes
+2024 Q3     8,461,841.81   5,662,117.85   5,579  102,433  yes
+2024 Q4     8,266,068.36   5,645,270.53   5,770  104,645  yes
+2025 Q1     9,079,541.73   6,226,274.54   5,847  114,345  yes
+2025 Q2     8,633,630.78   5,956,651.52   5,867  107,857  yes
+2025 Q3     8,896,126.93   6,032,068.15   6,009  109,171  yes
+2025 Q4     8,790,969.94   6,085,500.23   6,118  111,102  yes
+12 quarters, 98,714,382.97 of revenue; 0 differ
+
+Book 1's tables, as the slice of compat they are
+table                 Book 1  Groundwork  differing
+regions                    5           5          0
+suppliers                 20          20          0
+products                  48          48          0
+customers                 58          58          0
+orders                66,676      66,676          0
+order_lines          199,817     199,817          0

@@ -1,0 +1,28 @@
+# What account_matches.csv is, and who answers for it. The runner loads
+# the CSV as seeds.account_matches; this file is for people.
+seed: account_matches
+description: >
+  The old CRM's second records that IT's migration map (relay/
+  migration_map.csv) does not cover, each matched to the Relay account
+  it belongs to. groundwork.identity proposed every row by rule (same
+  region, month joined and postcode; names alike once normalised); a
+  person confirmed each one before it was added here. Together with
+  IT's map it resolves every old CRM id orders and tickets used.
+owner: sales operations (the CRM's owners)
+contact: salesops@meridian.example
+reviewed_by: sales operations, against the old CRM's last export
+grain: one row per old CRM id
+key: [old_crm_id]
+columns:
+  old_crm_id: the second record's id in the old CRM (90001-90212)
+  account_id: the Relay account it is a second record of
+  score: the rule's name score, 0 to 1, when it was proposed
+  old_name: the second record's name, as the old CRM wrote it
+  relay_name: the Relay account's name
+how_to_change: >
+  Run `python -m groundwork.identity`. It exits 1 when its proposal and
+  this file differ, and writes the proposal to
+  data/groundwork/review/account_matches.csv. Check each new row against
+  the old CRM's record and Relay's, add the ones you confirm here, and
+  say who confirmed them in the change's description. Never add a row
+  IT's map already has.

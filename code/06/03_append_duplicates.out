@@ -1,0 +1,13 @@
+1 November, October's run:
+  load_orders 1: appended
+  load_lines 1: appended 32,434
+1 December, November's run:
+  load_orders 1: appended
+  load_lines 1: appended 31,965; timed out
+  load_lines 2: appended 31,965
+  2025-10    $10,500,645.36
+  2025-11    $20,627,628.48
+order lines held twice: 31,965
+had the whole job been retried, orders too:
+  2025-10    $10,500,645.36
+  2025-11    $41,255,256.96

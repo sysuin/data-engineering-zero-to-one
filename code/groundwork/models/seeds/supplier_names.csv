@@ -1,0 +1,33 @@
+source,spelling,supplier_id
+catalogue,Aldridge and Co,3
+catalogue,Brackley Plastics,6
+catalogue,Halvard Group,7
+catalogue,Ingleby Works,8
+catalogue,Kestrel,4
+catalogue,Marlowe Fabrication,9
+catalogue,Norfolk Paper,10
+catalogue,Oakhurst Textiles,11
+catalogue,Pemberton,2
+catalogue,Penhale Rubber,12
+catalogue,Quillon Metals,13
+catalogue,Ravensworth Ltd,14
+catalogue,Tarbert Industries,16
+catalogue,Ullswater Supply,17
+catalogue,Voss Industrial,1
+catalogue,Wrenfield Products,19
+suppliers,aldridge-co,3
+suppliers,brackley-plastics,6
+suppliers,halvard-group,7
+suppliers,ingleby-works,8
+suppliers,kestrel-supply,4
+suppliers,marlowe-fabrication,9
+suppliers,norfolk-paper,10
+suppliers,oakhurst-textiles,11
+suppliers,pemberton-mills,2
+suppliers,penhale-rubber,12
+suppliers,quillon-metals,13
+suppliers,ravensworth-ltd,14
+suppliers,tarbert-industries,16
+suppliers,ullswater-supply,17
+suppliers,voss-industrial,1
+suppliers,wrenfield-products,19

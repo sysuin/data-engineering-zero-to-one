@@ -1,0 +1,27 @@
+list prices, US East, 4 October 2026
+  S3 Standard                    0.023  a GB-month
+  Cloud Storage Standard         0.023  a GiB-month
+  Azure Blob, hot               0.0208  a GB-month
+  BigQuery on-demand              6.25  a TiB scanned
+  Snowflake storage              23.00  a TB-month
+  Snowflake, Standard             2.00  a credit
+  Snowflake, Enterprise           3.00  a credit
+  Databricks SQL Serverless       0.70  a DBU
+  Snowflake bills by the second, at least 60 s a start,
+  and suspends after 600 s idle unless told otherwise
+
+dollars a unit               GB-month     TB scanned      core-hour
+BigQuery                       0.0214           5.68              -
+Snowflake Standard              0.023              -           0.25
+Snowflake Enterprise            0.023              -          0.375
+
+finance, a month                   storage     reading       total
+BigQuery, naive                       5.90    4,270.71    4,276.61
+BigQuery, designed                    5.90       51.36       57.25
+Snowflake Standard, naive             6.33    6,260.93    6,267.26
+Snowflake Standard, designed          6.33       75.29       81.62
+Snowflake Enterprise, naive           6.33    9,391.39    9,397.72
+Snowflake Enterprise, designed        6.33      112.94      119.27
+
+an X-Small woken hourly for a month: at least 132 hours,
+  or 264.00 dollars at Standard, when its work takes under a minute

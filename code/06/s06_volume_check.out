@@ -1,0 +1,7 @@
+load_id                                count    before  flag
+tradeline.orders.2025-12-01.1        471,769
+tradeline.orders.2025-12-02.1        472,150   471,769
+tradeline.orders.2025-12-03.1        396,529   472,150  FELL
+tradeline.order_lines.2025-12-01.1 1,212,177
+tradeline.order_lines.2025-12-02.1 1,213,124 1,212,177
+tradeline.order_lines.2025-12-03.1 1,017,380 1,213,124  FELL

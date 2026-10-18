@@ -1,0 +1,15 @@
+                           relations  columns  characters
+the whole catalogue               71      708      16,232
+the description                   11      147       7,779
+marts columns 147, described 147: 0 described and absent,
+  0 present and not described
+marts.fct_contracts: One row per contract.
+  contract_id INTEGER, account_key VARCHAR (version valid at
+    start), region_key VARCHAR, start_date_key INTEGER,
+    end_date_key INTEGER, notice_date_key INTEGER, start_date
+    DATE, end_date DATE, term_months SMALLINT, legacy_terms
+    BOOLEAN, discount_pct SMALLINT, outcome VARCHAR (NULL: not yet
+    ended; not_renewed | renewed), cancellation_reason VARCHAR
+    (Budget cuts | Business closed | Consolidated suppliers |
+    Moved to a competitor on price | Product quality | Service and
+    delivery problems)

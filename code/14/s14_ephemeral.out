@@ -1,0 +1,7 @@
+fct_order_lines, compiled with int_order_lines ephemeral:
+  reads intermediate.int_order_lines: False
+  carries it as a CTE named: __dbt__cte__int_order_lines
+  compiled lines: 123
+ephemeral models: ['int_order_lines']
+
+outside dbt, read by: code/groundwork/facts.py

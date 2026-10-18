@@ -1,0 +1,23 @@
+as held   kevin.anderson@bexham-estates.example
+redacted  [email]
+masked    k***@bexham-estates.example
+sha-256   66df427870a279c9...
+keyed     08c0f0420461f252
+token     tok_000001
+phone     (214) 555-0152 -> (***) ***-0152
+salted twice, same hash? False
+keyed twice, same?       True
+keyed, in capitals, same? True
+
+3 of his comments carry contact details:
+  Chasing this again. My direct line is [phone], ask for Kevin.
+  Thanks, that worked. You can reach me on [phone].
+  Any update on this? Best to email me at [email].
+
+masked tables, built from staging:
+  masked.stg_relay__accounts              90,000 rows
+  masked.stg_frontline__tickets           21,668 rows
+  masked.stg_frontline__ticket_comments    5,414 rows
+rows with an email or phone in them: 0
+personal columns left: requester_email_ref, assignee,
+  owner_name, contact_email_ref

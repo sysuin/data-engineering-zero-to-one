@@ -1,0 +1,15 @@
+source                     rows  distinct  key
+tradeline.orders        483,980   483,980  id
+tradeline.order_lines 1,243,789 1,243,789  order_id,line_no
+relay.accounts            6,058     6,058  account_id
+relay.contracts          19,220    19,220  contract_id
+frontline.tickets        21,668    21,668  id
+suppliers, 13 alike       1,558     1,558  filename,sku
+suppliers, kestrel          144       144  filename,sku
+suppliers, pemberton        234       234  filename,"Item Code"
+catalogue                    48        48  SKU
+ledger                      237       237  period,region,description
+reference.regions             5         5  region_id
+reference.suppliers          20        20  supplier_id
+
+Frontline says it holds 21,668 tickets

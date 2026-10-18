@@ -1,0 +1,96 @@
+{
+ "kinds": [
+  "as sent",
+  "added",
+  "removed",
+  "renamed",
+  "reordered",
+  "retyped"
+ ],
+ "grid": {
+  "as sent": {
+   "by name": [
+    "right",
+    "6 of 6"
+   ],
+   "by position": [
+    "right",
+    "6 of 6"
+   ],
+   "declared": [
+    "right",
+    "6 of 6"
+   ]
+  },
+  "added": {
+   "by name": [
+    "right",
+    "6 of 6"
+   ],
+   "by position": [
+    "stops",
+    "InvalidInput"
+   ],
+   "declared": [
+    "stops",
+    "ValueError"
+   ]
+  },
+  "removed": {
+   "by name": [
+    "wrong",
+    "0 of 6"
+   ],
+   "by position": [
+    "stops",
+    "InvalidInput"
+   ],
+   "declared": [
+    "stops",
+    "ValueError"
+   ]
+  },
+  "renamed": {
+   "by name": [
+    "wrong",
+    "0 of 6"
+   ],
+   "by position": [
+    "right",
+    "6 of 6"
+   ],
+   "declared": [
+    "stops",
+    "ValueError"
+   ]
+  },
+  "reordered": {
+   "by name": [
+    "right",
+    "6 of 6"
+   ],
+   "by position": [
+    "wrong",
+    "0 of 6"
+   ],
+   "declared": [
+    "right",
+    "6 of 6"
+   ]
+  },
+  "retyped": {
+   "by name": [
+    "wrong",
+    "0 of 6"
+   ],
+   "by position": [
+    "stops",
+    "Conversion"
+   ],
+   "declared": [
+    "stops",
+    "Conversion"
+   ]
+  }
+ }
+}

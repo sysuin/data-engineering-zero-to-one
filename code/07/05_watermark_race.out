@@ -1,0 +1,15 @@
+365 nights of the 02:00 job, 2025-01-01 to 2025-12-31
+  committed after the 02:05 extract     288 nights
+  ... with the watermark past 02:00     132 nights
+  its latest commit                02:12:00
+  rows it wrote                       7,410
+  rows the loader never read          2,666
+orders with wrong lines on 2026-01-01: 1,324 of 483,953 (0.27%)
+  deleted in Tradeline          16
+  cancelled since                0
+  lines amended at 02:00     1,324
+  only updated_at differs       18
+  other                          0
+night of 2025-01-04: 14 rows stamped 02:00:00, committed 02:11:47
+  other orders stamped by 02:05: 2, the last at 02:04:42
+  the watermark after the extract: 02:04:42

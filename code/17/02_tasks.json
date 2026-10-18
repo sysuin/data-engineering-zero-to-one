@@ -1,0 +1,206 @@
+{
+"levels": {
+"wait_relay": 0,
+"ingest_tradeline": 0,
+"ingest_frontline": 0,
+"ingest_suppliers": 0,
+"ingest_catalogue": 0,
+"ingest_ledger": 0,
+"ingest_reference": 0,
+"ingest_relay": 1,
+"load_comments": 1,
+"check_contracts": 2,
+"check_quality": 2,
+"dbt_build": 3,
+"reconcile": 4,
+"publish": 5
+},
+"order": [
+"wait_relay",
+"ingest_tradeline",
+"ingest_frontline",
+"ingest_suppliers",
+"ingest_catalogue",
+"ingest_ledger",
+"ingest_reference",
+"ingest_relay",
+"load_comments",
+"check_contracts",
+"check_quality",
+"dbt_build",
+"reconcile",
+"publish"
+],
+"edges": [
+[
+"wait_relay",
+"ingest_relay"
+],
+[
+"ingest_frontline",
+"load_comments"
+],
+[
+"ingest_relay",
+"check_contracts"
+],
+[
+"ingest_tradeline",
+"check_contracts"
+],
+[
+"ingest_frontline",
+"check_contracts"
+],
+[
+"ingest_suppliers",
+"check_contracts"
+],
+[
+"ingest_catalogue",
+"check_contracts"
+],
+[
+"ingest_ledger",
+"check_contracts"
+],
+[
+"ingest_reference",
+"check_contracts"
+],
+[
+"ingest_relay",
+"check_quality"
+],
+[
+"ingest_tradeline",
+"check_quality"
+],
+[
+"ingest_frontline",
+"check_quality"
+],
+[
+"ingest_suppliers",
+"check_quality"
+],
+[
+"ingest_catalogue",
+"check_quality"
+],
+[
+"ingest_ledger",
+"check_quality"
+],
+[
+"ingest_reference",
+"check_quality"
+],
+[
+"check_contracts",
+"dbt_build"
+],
+[
+"check_quality",
+"dbt_build"
+],
+[
+"load_comments",
+"dbt_build"
+],
+[
+"dbt_build",
+"reconcile"
+],
+[
+"reconcile",
+"publish"
+]
+],
+"tasks": {
+"wait_relay": {
+"sensor": true,
+"retries": 0,
+"timeout": 21600,
+"isolate": false
+},
+"ingest_relay": {
+"sensor": false,
+"retries": 2,
+"timeout": 3600,
+"isolate": true
+},
+"ingest_tradeline": {
+"sensor": false,
+"retries": 2,
+"timeout": 3600,
+"isolate": true
+},
+"ingest_frontline": {
+"sensor": false,
+"retries": 2,
+"timeout": 3600,
+"isolate": true
+},
+"load_comments": {
+"sensor": false,
+"retries": 2,
+"timeout": 3600,
+"isolate": true
+},
+"ingest_suppliers": {
+"sensor": false,
+"retries": 2,
+"timeout": 3600,
+"isolate": true
+},
+"ingest_catalogue": {
+"sensor": false,
+"retries": 2,
+"timeout": 3600,
+"isolate": true
+},
+"ingest_ledger": {
+"sensor": false,
+"retries": 2,
+"timeout": 3600,
+"isolate": true
+},
+"ingest_reference": {
+"sensor": false,
+"retries": 2,
+"timeout": 3600,
+"isolate": true
+},
+"check_contracts": {
+"sensor": false,
+"retries": 0,
+"timeout": 1800,
+"isolate": true
+},
+"check_quality": {
+"sensor": false,
+"retries": 0,
+"timeout": 900,
+"isolate": true
+},
+"dbt_build": {
+"sensor": false,
+"retries": 1,
+"timeout": 3600,
+"isolate": true
+},
+"reconcile": {
+"sensor": false,
+"retries": 0,
+"timeout": 1800,
+"isolate": true
+},
+"publish": {
+"sensor": false,
+"retries": 0,
+"timeout": 300,
+"isolate": false
+}
+}
+}

@@ -1,0 +1,14 @@
+# Groundwork's night. The server's clock is UTC. "gw STEP" runs
+# that Groundwork command with --day set to yesterday's date.
+# m  h  dom mon dow  command
+5    2  *   *   *    gw ingest --only tradeline
+20   2  *   *   *    gw ingest --only frontline
+35   2  *   *   *    gw comments
+40   2  *   *   *    gw ingest --only suppliers
+45   2  *   *   *    gw ingest --only catalogue
+50   2  *   *   *    gw ingest --only ledger
+55   2  *   *   *    gw ingest --only reference
+15   3  *   *   *    gw ingest --only relay
+30   3  *   *   *    gw contracts
+45   3  *   *   *    gw dbt build
+30   4  *   *   *    gw publish

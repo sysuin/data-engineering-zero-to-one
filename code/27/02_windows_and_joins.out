@@ -1,0 +1,14 @@
+rows in the stack of nights             84,812
+versions (LAG finds changes)             6,099
+latest row per account (QUALIFY)         6,058
+orders from 22 December, depot day       4,033
+matched by the range join                4,033
+matched by the ASOF join                 4,033
+rows the two joins disagree on               0
+orders by the account's status on the order's day:
+  active                                 4,032
+  closed                                     1
+  order 483956 placed 2025-12-31 23:38 UTC; account 1570
+    closed 2025-12-31 22:59 UTC
+plan, range join: FILTER > HASH_JOIN > SEQ_SCAN > SEQ_SCAN
+plan, ASOF join:  ASOF_JOIN > SEQ_SCAN > SEQ_SCAN

@@ -1,0 +1,18 @@
+replication_log at 2025-09-19 02:05: 10,427 entries
+  lsn 1,588,312 to 1,598,738
+  committed 2025-09-12 02:05:53 to 2025-09-19 02:03:21
+                  I      U      D
+orders        2,884    110      1
+order_lines   7,369     61      2
+order 440930, amended by the job:
+  1,596,916 2025-09-17 20:52:38 I order   placed, updated 20:52:38
+  1,596,917 2025-09-17 20:52:38 I line 1  qty 4, updated 20:52:38
+  1,597,212 2025-09-18 02:10:47 U order   placed, updated 02:00:00
+  1,597,213 2025-09-18 02:10:47 U line 1  qty 2, updated 02:00:00
+order 440723, a test order:
+  1,596,176 2025-09-17 13:37:00 I order   placed, updated 13:37:00
+  1,596,177 2025-09-17 13:37:00 I line 1  qty 1, updated 13:37:00
+  1,596,178 2025-09-17 13:37:00 I line 2  qty 1, updated 13:37:00
+  1,598,702 2025-09-19 01:37:00 D order
+  1,598,703 2025-09-19 01:37:00 D line 1
+  1,598,704 2025-09-19 01:37:00 D line 2

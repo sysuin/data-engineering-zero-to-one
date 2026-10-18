@@ -1,0 +1,20 @@
+tests/test_sql_models.py::
+  test_a_legacy_contract_keeps_no_discount
+  on main's model: passed
+  on branch's model: failed
+    contract  legacy terms  discount: main  branch
+           1         False              10      10
+           2          True            None       0
+           3          True            None       0
+
+Groundwork's earlier tests of the same model, on the branch:
+  test_staging.py::
+    test_relay_contracts_read_both_vocabularies
+    passed
+  test_dbt_project.py::
+    test_staging_and_intermediate_sql_is_unchanged_but_for_config
+    failed
+
+fills the discount with coalesce():
+  the runner's copy, which test_staging runs: False
+  dbt's, on the branch, which the night runs: True

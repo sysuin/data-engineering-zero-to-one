@@ -1,0 +1,22 @@
+{
+ "unit": {
+  "tests": 296,
+  "slow": 0,
+  "job": "fast: every push"
+ },
+ "contract": {
+  "tests": 36,
+  "slow": 2,
+  "job": "fast: every push"
+ },
+ "integration": {
+  "tests": 30,
+  "slow": 11,
+  "job": "diff: every pull request"
+ },
+ "diff": {
+  "tests": 15,
+  "slow": 2,
+  "job": "diff: every pull request"
+ }
+}

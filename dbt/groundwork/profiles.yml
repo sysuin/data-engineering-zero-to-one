@@ -1,0 +1,18 @@
+# Where dbt builds. Kept in the project, not in ~/.dbt, so the paths
+# travel with it; they are relative to this folder, so run dbt from
+# here. dev is a sandbox copy of the warehouse (the raw views read the
+# same Parquet files); prod is the warehouse itself.
+groundwork:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('GROUNDWORK_DBT_PATH',
+                '../../data/sandbox/ch14/warehouse.duckdb') }}"
+      schema: main
+      threads: 1
+    prod:
+      type: duckdb
+      path: ../../data/groundwork/warehouse.duckdb
+      schema: main
+      threads: 1

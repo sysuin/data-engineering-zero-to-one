@@ -1,0 +1,22 @@
+order_lines.parquet: 13,395,096 bytes, 1,243,789 rows, 10 columns
+starts b'PAR1', ends b'PAR1', footer 16,141 bytes
+13 row groups of 100,000 rows (the last 43,789)
+
+row group 0: 100,000 rows     plain   encoded  on disk
+  order_id         INT64      dict   800,000   503,814  200,550
+  line_no          INT64      dict   800,000    25,626   14,356
+  account_id       INT64      dict   800,000   180,913  159,757
+  placed_at        INT64      dict   800,000   503,246  413,634
+  channel          BYTE_ARRAY dict   700,000    23,042   17,275
+  status           BYTE_ARRAY dict 1,003,528     2,515    1,845
+  sku              BYTE_ARRAY dict 1,500,000    76,106   72,688
+  qty              INT64      dict   800,000    76,046   52,629
+  unit_price_cents INT64      dict   800,000   115,227  110,036
+  discount_pct     INT64      dict   800,000    37,923   28,293
+
+footer statistics    order_id          placed_at
+  group  0         1 .. 40088    2022-01-01 .. 2022-06-30
+  group  1     40089 .. 80119    2022-06-30 .. 2022-12-11
+  ...
+  group 11    428452 .. 467117   2025-08-18 .. 2025-11-20
+  group 12    467117 .. 484018   2025-11-20 .. 2026-01-01

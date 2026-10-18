@@ -1,0 +1,7 @@
+  asked at            cache loaded     expected   stale value
+  Mon 06:00           miss  2026-01-04 2026-01-04 False 10504830.36
+  Mon 06:00, again    hit   2026-01-04 2026-01-04 False 10504830.36
+  queries run for two answers: 1
+  Tue 07:00, run late miss  2026-01-04 2026-01-05 True  10504830.36
+  Tue 07:15, run done miss  2026-01-05 2026-01-05 False 10504830.36
+  Tue 07:15, portal   miss  None       2026-01-05 None  43.48

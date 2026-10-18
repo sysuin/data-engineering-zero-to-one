@@ -1,0 +1,10 @@
+region     timezone                orders  UTC differs
+Midwest    America/New_York        76,254   5,978   8%
+Northeast  America/New_York       116,860   9,282   8%
+Southeast  America/New_York        88,907   6,948   8%
+Southwest  America/Chicago        122,460  12,456  10%
+West       America/Los_Angeles     73,761  14,645  20%
+all                               478,242  49,309  10%
+orders the UTC date puts in the next month 1,566
+orders whose depot day is before the UTC day 49,309
+Book 2's 478,242 orders: our date differs on 0

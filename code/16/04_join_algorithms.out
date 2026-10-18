@@ -1,0 +1,9 @@
+probe: 1,229,062 lines; build: 11,340 versions
+join                algorithm            join out       rows seconds
+versions, coalesce  HASH_JOIN           1,229,062  1,229,062    0.02
+versions, OR        BLOCKWISE_NL_JOIN   1,229,062  1,229,062   10.91
+versions, OR, inner HASH_JOIN           1,567,382  1,229,062    0.06
+months, by range    IE_JOIN             1,229,062  1,229,062    0.21
+lines whose version differs, coalesce vs OR: 0
+pairs the nested loop tested: 13,937,563,080
+OR slower than coalesce: True (about 440 times, this run)

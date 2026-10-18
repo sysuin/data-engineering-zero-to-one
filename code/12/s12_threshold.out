@@ -1,0 +1,9 @@
+threshold             as written            normalised
+            precision     recall  precision     recall
+0.3             98.1%      74.5%      97.7%     100.0%
+0.5            100.0%      74.5%     100.0%     100.0%
+0.7            100.0%      74.5%     100.0%     100.0%
+0.8            100.0%      74.1%     100.0%     100.0%
+0.9            100.0%      25.5%     100.0%     100.0%
+0.95           100.0%      22.2%     100.0%     100.0%
+candidate pairs where one side is gone: 212

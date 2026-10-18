@@ -1,0 +1,15 @@
+nightly.crontab: 11 steps, 02:05 to 04:30 UTC
+replayed over the 365 runs due in 2025, 2024-12-31 to 2025-12-30
+
+ingest --only tradeline at 02:05
+  the 02:00 job still committing     288 nights
+  its latest commit             02:12:00
+ingest --only relay at 03:15
+  export arrived at 03:00           236 nights
+  export arrived at 04:00           127 nights
+  no export at all                     2 nights
+  found nothing to load              129 nights
+dbt build at 03:45, publish at 04:30, ran anyway  129 nights
+nights every step's timing held       47
+  from 2025-03-09: export at 03:00, step finds it
+  from 2025-11-02: export at 04:00, step misses it

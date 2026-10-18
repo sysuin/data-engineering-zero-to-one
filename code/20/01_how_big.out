@@ -1,0 +1,16 @@
+system                              MB
+Tradeline (orders database)      219.5
+Relay (CRM, its own store)         9.8
+Frontline (support desk)          17.8
+Portal events (landed)            35.1
+Relay exports (landed)            37.6
+Price lists, ledger, catalogue     0.2
+all of Meridian                  320.0
+
+order_lines: 1,243,789 rows
+  in memory (Arrow)       126.9 MB
+  on disk as Parquet       16.8 MB
+
+this machine: 8 GiB of memory, 8 cores
+order_lines in memory is 1.5% of it
+sandbox cleared: True

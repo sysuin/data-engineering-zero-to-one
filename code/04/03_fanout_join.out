@@ -1,0 +1,11 @@
+orders in 2025                         145,175
+COUNT(*) after joining lines           375,297
+
+revenue, 2025                       rows           dollars
+lines alone                      375,297    127,341,163.53
+join on account_id             1,427,805    485,504,817.50
+join to contract in force        375,297    127,341,163.53
+inflated 3.81 times by the first join
+
+account 60: 5 contracts on record; its $6,209.33
+is counted 5 times, as $31,046.65

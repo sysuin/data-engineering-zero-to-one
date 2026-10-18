@@ -1,0 +1,26 @@
+1. The first run
+  21 built, 0 skipped
+2. The same run again, nothing changed
+  0 built, 21 skipped
+3. pack_supplier joins on supplier_id, not on the name
+  1 built, 20 skipped
+  built: pack_supplier
+4. One space added to a comment in stg_catalogue__products
+  4 built, 17 skipped
+  built: stg_catalogue__products, pack_category, pack_realisation,
+         pack_supplier
+5. Tonight's Tradeline load, logged: tradeline.orders.2026-01-05.1
+  4 built, 17 skipped
+  built: pack_category, pack_channel, pack_realisation,
+         pack_supplier
+6. --full
+  21 built, 0 skipped
+
+audit.model_runs, by run:
+  run 1: 21 built,  0 skipped
+  run 2:  0 built, 21 skipped
+  run 3:  1 built, 20 skipped
+  run 4:  4 built, 17 skipped
+  run 5:  4 built, 17 skipped
+  run 6: 21 built,  0 skipped
+pack_supplier now totals $406,864,476.20

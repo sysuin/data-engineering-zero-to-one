@@ -1,0 +1,9 @@
+19,220 contracts; adding up their discounts
+Traceback (most recent call last):
+  File "code/02/02_a_traceback.py", line 20, in <module>
+    total = total + discount(row)
+                    ^^^^^^^^^^^^^
+  File "code/02/02_a_traceback.py", line 11, in discount
+    return int(row["discount_pct"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''

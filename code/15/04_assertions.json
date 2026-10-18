@@ -1,0 +1,33 @@
+{
+ "quality": 19,
+ "all": 48,
+ "kinds": {
+  "singular": 10,
+  "accepted_values": 2,
+  "between": 2,
+  "not_null": 4,
+  "unique": 1
+ },
+ "broken": {
+  "facts_point_at_their_day": [
+   "fail",
+   2
+  ],
+  "ledger_journals_are_documented": [
+   "warn",
+   1
+  ],
+  "order_lines_are_in_range": [
+   "fail",
+   1
+  ],
+  "revenue_ties_to_the_sales_journal": [
+   "fail",
+   10
+  ],
+  "versions_tile_time": [
+   "fail",
+   3
+  ]
+ }
+}

@@ -1,0 +1,15 @@
+contracts whose discount changed: 4,010; on legacy terms: 4,010
+  of 4,010 legacy contracts
+
+contracts in force on 31 Dec 2025:
+  main    4,651 in force, mean discount 6.12%, 829 at 0%
+  branch  4,651 in force, mean discount 5.70%, 1,147 at 0%
+
+contracts ended 2023 to 2025, by whether a discount is recorded:
+  main    none recorded   2,019 contracts  10.0% not renewed
+  main    recorded        9,181 contracts  6.7% not renewed
+  branch  none recorded       0 contracts
+  branch  recorded       11,200 contracts  7.3% not renewed
+
+features.renewal_snapshot, Foresight's rows: 12,097; changed 2,046
+  in discount_pct

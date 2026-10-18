@@ -1,0 +1,11 @@
+portal.events v1: 11 columns
+168 hours, 26,436 events: {'passed': 168}
+rules broken: none
+types used: ['integer', 'text', 'timestamp']
+properties' keys by event type:
+  add_to_cart       qty, sku                   613
+  checkout_started                             237
+  order_submitted   line_count, order_number   213
+  product_view      sku                      1,391
+  search            query                      539
+  session_start                                448

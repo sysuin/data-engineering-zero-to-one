@@ -1,0 +1,24 @@
+# raw.relay_migration_map: IT's map from old CRM ids to Relay's.
+table: relay.migration_map
+version: 1
+description: >
+  One row per old CRM account that IT matched to a Relay account
+  at the migration, and how it matched them.
+producer:
+  who: IT, once, on 1 March 2024
+  contact: it-servicedesk@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per old CRM id
+key: [old_crm_id]
+formats:
+  relay: [old_crm_id, relay_id, matched_by]
+columns:
+  old_crm_id: {type: integer, min: 1}
+  relay_id: {type: integer, min: 1}
+  matched_by: {}
+policy:
+  bad_rows: quarantine
+  max_bad_share: 0.05
+changes:
+  - version: 1
+    note: first written

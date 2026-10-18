@@ -1,0 +1,94 @@
+{
+ "months": [
+  {
+   "month": 1,
+   "cents": 1042196981,
+   "accounts": 3277,
+   "orders": 11351,
+   "in_force": 4438
+  },
+  {
+   "month": 2,
+   "cents": 1063132719,
+   "accounts": 3299,
+   "orders": 11584,
+   "in_force": 4482
+  },
+  {
+   "month": 3,
+   "cents": 1111552110,
+   "accounts": 3335,
+   "orders": 11745,
+   "in_force": 4519
+  },
+  {
+   "month": 4,
+   "cents": 1045788879,
+   "accounts": 3397,
+   "orders": 11994,
+   "in_force": 4551
+  },
+  {
+   "month": 5,
+   "cents": 1047729559,
+   "accounts": 3382,
+   "orders": 12159,
+   "in_force": 4599
+  },
+  {
+   "month": 6,
+   "cents": 1067855561,
+   "accounts": 3441,
+   "orders": 12189,
+   "in_force": 4615
+  },
+  {
+   "month": 7,
+   "cents": 1076207378,
+   "accounts": 3493,
+   "orders": 12328,
+   "in_force": 4672
+  },
+  {
+   "month": 8,
+   "cents": 1072269099,
+   "accounts": 3522,
+   "orders": 12396,
+   "in_force": 4719
+  },
+  {
+   "month": 9,
+   "cents": 1074510351,
+   "accounts": 3513,
+   "orders": 12458,
+   "in_force": 4749
+  },
+  {
+   "month": 10,
+   "cents": 1049470391,
+   "accounts": 3494,
+   "orders": 12308,
+   "in_force": 4710
+  },
+  {
+   "month": 11,
+   "cents": 1033638582,
+   "accounts": 3452,
+   "orders": 12211,
+   "in_force": 4684
+  },
+  {
+   "month": 12,
+   "cents": 1050483036,
+   "accounts": 3477,
+   "orders": 12462,
+   "in_force": 4651
+  }
+ ],
+ "year": {
+  "cents": 12734834646,
+  "accounts": 4934,
+  "orders": 145185,
+  "contracts": 8305
+ }
+}

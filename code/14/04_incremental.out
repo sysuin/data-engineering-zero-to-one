@@ -1,0 +1,11 @@
+full build, Tradeline at Mon 10 Feb 2025 02:05: 348,097 orders
+Tradeline at Tue 11 Feb 02:05: orders to take again
+  changed since 02:05 the night before, 413 of them new   415
+  changed since an hour before that                    430
+  on an unknown member                                   0
+  no longer placed: gone, for the post_hook              2
+
+fct_order_lines              lines        revenue  wrong orders
+incremental, no lookback   893,485 288,783,533.01      9      6
+incremental, 1 h lookback  893,488 288,782,891.91      0      0
+full rebuild               893,488 288,782,891.91      0      0

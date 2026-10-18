@@ -1,0 +1,15 @@
+volume     tradeline.orders         skip
+    483,980; the first of its kind
+volume     tradeline.order_lines    skip
+    1,243,789; the first of its kind
+volume     relay.accounts           pass  6,058; band 5,755-6,361
+volume     relay.contracts          pass  19,220; band 17,901-19,785
+
+after:
+volume     tradeline.orders         error 0 rows for 2026-01-04
+volume     tradeline.order_lines    skip
+    1,243,789; the first of its kind
+volume     relay.accounts           error 3,029; band 5,755-6,361
+
+partitions: 12 of 13 tables whole
+partitions relay.contracts          error missing 2025-12-28

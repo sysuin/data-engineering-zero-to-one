@@ -1,0 +1,21 @@
+run (UTC)          new  changed  lookback only
+Sun 02 Feb 02:05   424      451             24
+Mon 03 Feb 02:05   410      435             22
+Tue 04 Feb 02:05   417      449             27
+Wed 05 Feb 02:05   408      430             20
+Thu 06 Feb 02:05   406      434             23
+Fri 07 Feb 02:05   455      481             20
+Sat 08 Feb 02:05   405      432             24
+Sun 09 Feb 02:05   411      435             20
+Mon 10 Feb 02:05   405      439             29
+Tue 11 Feb 02:05   412      430             15
+Wed 12 Feb 02:05   399      427             23
+Thu 13 Feb 02:05   420      446             24
+Fri 14 Feb 02:05   439      460             17
+Sat 15 Feb 02:05   429      458             23
+
+after 14 nights         lines        revenue  lines wrong
+rebuild                44,183  15,720,258.64            0
+append                 44,264  15,760,614.96          357
+merge, no lookback     44,143  15,722,879.56          234
+merge, 1 h lookback    44,183  15,720,258.64            0

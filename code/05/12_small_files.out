@@ -1,0 +1,4 @@
+layout       files       bytes   full scan   one month
+one_file         1   8,329,692        9 ms        2 ms
+by_month        49   8,954,433       19 ms        7 ms
+by_day       1,462  12,995,606      174 ms      136 ms

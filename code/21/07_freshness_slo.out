@@ -1,0 +1,13 @@
+SLO: published by 07:00 UTC, on 95% of days in any 30
+  error budget: 1.5 late days a window
+
+2022-01-01 to 2025-12-31: 1,461 days, 8 with no Relay export
+  most in any 30 days: 1; budget spent on 0 days
+
+July 2024, the window ending on the 31st:
+  unwatched  16 on time, 14 late, 53.3%; budget left -12.5
+             late: 2 Jul to 15 Jul
+             spent on the morning after 3 Jul
+  watched    28 on time, 2 late, 93.3%; budget left -0.5
+             late: 2 Jul, 4 Jul
+             spent on the morning after 4 Jul

@@ -1,0 +1,14 @@
+Meridian, measured        rows/day    sent B  stored B   ratio
+tradeline                    1,443       213      17.9    11.9
+portal                       3,833       365      40.7     9.0
+relay                       25,278       100      20.9     4.8
+frontline tickets a day: 14.8; portal's busiest hour: 2.6x its mean
+
+                  Meridian    Clicks       CDC       IoT   Finance
+rows a day           30.6k      300M       60M     34.6G      3.2M
+peak rows/s          0.903     10.4k     2.78k      480k       185
+sent MB/day           4.23      240k       42k     1.38M     1.28k
+stored MB/day        0.711     26.8k     3.53k      104k       108
+stored GB kept        1.04     19.5k     1.29k     9.33k       275
+backlog MB            8.46      480k       84k     2.76M     2.56k
+catch-up rows/s       3.18     31.2k     6.25k      3.6M       333

@@ -1,0 +1,12 @@
+accounts updated on 31 December 2025, by session time zone
+  UTC                  TIMESTAMPTZ   31   TIMESTAMP   31
+  America/Los_Angeles  TIMESTAMPTZ   41   TIMESTAMP   31
+  types= and strptime agree on 6,058 rows
+revenue as cents 40,686,447,620  DECIMAL 406864476.20
+        as DOUBLE 406864476.19991916
+  CAST(9999 AS DECIMAL(18, 2)) / 100  DOUBLE         99.99
+  CAST(9999 AS DECIMAL(18, 2)) * 0.01 DECIMAL(18,4)  99.9900
+  9999 // 100                         INTEGER        99
+  9999 / 100                          DOUBLE         99.99
+CAST: Could not convert string "$88.64" to DECIMAL(12,2)
+TRY_CAST: NULL for 48 of 48 list prices; 0 once '$' is gone

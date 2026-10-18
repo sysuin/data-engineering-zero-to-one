@@ -1,0 +1,37 @@
+make data, into data/sandbox/ch26/world
+  Book 1's Meridian        67 files     43.4 MB
+  Book 2's                  4 files    121.0 MB
+  the seven sources     5,349 files    441.6 MB
+  identical to data/: 5,420 of 5,420 files;
+  landing zone arrival times the same: 5,339 of 5,339
+  verify_ml.py        exit 0: All checks passed.
+  verify_sources.py   exit 0: All checks passed.
+  about 6 minutes
+
+make warehouse, on an empty folder: nightly.2026-01-04.1, succeeded
+task              try   sec  detail
+wait_relay          1     0  1 poke, waited 0 s
+ingest_tradeline    1    22  1,727,769 rows, 2 tables
+ingest_frontline    1    41  93,398 rows, 3 tables
+ingest_suppliers    1    55  2,033 rows, 1 table, 1 parked
+ingest_catalogue    1     1  48 rows, 1 table
+ingest_ledger       1     2  237 rows, 1 table
+ingest_reference    1     1  28 rows, 3 tables
+restore_old_crm     1     1  5,188 accounts restored
+ingest_relay        1     2  67,982 rows, 4 tables
+load_comments       1    38  5,414 comments
+check_contracts     1    38  876 batches, 1,891,495 rows
+check_quality       1     1  26 checks, no errors
+dbt_build           1    15  built, all tests passed
+reconcile           1     7  235 cells, 6 counts: all tie
+observe             1     1  26 signals, 0 in alarm
+sessions            1    30  4,445 files, 95,943 rows written, 3...
+compat              1     0  11 views
+serve               1     4  7 metrics, 12,097 feature rows
+govern              1     5  548 columns, 0 retention due
+publish             1     0  2026-01-04 published
+slowest dbt node: fct_order_lines, 5 s
+  fct_order_lines        1,229,062 rows
+  dim_account               11,340 rows
+  fct_portal_sessions       91,296 rows
+from nothing to published: about 4 minutes, 157 MB on disk

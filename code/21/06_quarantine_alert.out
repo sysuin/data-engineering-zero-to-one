@@ -1,0 +1,29 @@
+ 3 Jul 07:00  opened 2, still open 0, resolved 0
+    page   night_failed: nightly.2024-07-02.1 failed
+    page   held_rows: PEMBERTON-PRICES-202407.csv
+ 4 Jul 07:00  opened 1, still open 2, resolved 0
+    ticket budget_spent: freshness budget spent
+ 5 Jul 07:00  opened 1, still open 3, resolved 0
+    ticket signal: freshness relay
+ 6 Jul 07:00  opened 0, still open 3, resolved 1
+17 Jul 07:00  opened 0, still open 1, resolved 2
+26 other mornings: nothing opened, nothing resolved
+
+what reached people on 3 July:
+  12:00 UTC (08:00 New York): page to data engineering, 2 alerts
+  12:00 UTC (08:00 New York): copy to procurement, 1 alert
+  > suppliers.price_lists: PEMBERTON-PRICES-202407.csv broke its
+  > contract and was held, 6 rows in 1 file. It will be tried
+  > again every night until the contract or the file changes.
+
+over the month:
+  held:suppliers.price_lists:df4a4ba seen 14, open 14 days
+  night:nightly                      seen 14, open 14 days
+  slo:freshness                      seen 29, still open
+  signal:freshness:relay             seen  1, open 1 day
+  notifications: 2 copy, 2 page, 3 resolved, 2 ticket; 7 messages
+
+today's warehouse, judged at 07:00 on 5 January 2026:
+  ticket to data engineering, copied to procurement
+  > suppliers.price_lists: 1 of 2,034 rows parked in
+  > audit.quarantine for 2026-01-04, 0.05%.

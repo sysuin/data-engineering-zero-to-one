@@ -1,0 +1,9 @@
+tile computed from   rows a refresh     rows a day (96)
+the lines                 1,229,062         117,989,952
+the orders                  478,242          45,911,232
+a monthly rollup                240           1,252,102
+the same 240 cells all three ways: True
+(the rollup's day includes its one build: 1,229,062 rows)
+
+reading int_order_lines ranks 1,243,789 rows again
+reading int_order_lines ranks   483,980 rows again

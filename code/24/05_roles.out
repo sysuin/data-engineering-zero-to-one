@@ -1,0 +1,15 @@
+analyst            14 views, 6 personal columns allowed
+finance            10 views, 4 personal columns allowed
+support             5 views, 11 personal columns allowed
+manager_southwest   9 views, 4 personal columns allowed
+problems: none
+problem: analyst can read
+  role_analyst.stg_frontline__tickets.requester_email
+  21,668 rows hold contact details
+fct_orders   all   478,242   Southwest's  122,460
+fct_tickets  all    21,668   Southwest's    5,313
+
+analyst.duckdb: 14 tables, 2,074,520 rows,
+  0 holding an email or phone
+personal columns in it: assignee, contact_email_ref, owner,
+  owner_name, requester_email_ref

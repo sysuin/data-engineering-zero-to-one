@@ -1,0 +1,72 @@
+# Chapter 15's quality suite: what it adds to the project besides the
+# SQL files in tests/quality/. dbt lets a model be described in one
+# file only, and Chapter 14's _marts.yml and _staging.yml describe
+# every model, so tests on models are singular tests in tests/quality/.
+# This file describes the two things the chapter adds: finance's
+# register of manual journals (a seed) and the load log (a source).
+# Everything here is tagged quality, so it can be run on its own:
+#     dbt build --select tag:quality
+version: 2
+
+seeds:
+  - name: ledger_journals
+    description: >
+      Every journal finance posts to sales revenue by hand, which no
+      source system holds: the ledger's own description of it, and
+      finance's reason. The reconciliation adds these, and only these,
+      to the warehouse's revenue to reach the ledger. Chapter 15.
+    meta: {owner: finance}
+    config:
+      tags: [quality]
+      column_types: {period: varchar, region: varchar,
+                     amount: "decimal(18, 2)", description: varchar,
+                     reason: varchar, confirmed_by: varchar}
+    columns:
+      - name: period
+        data_tests:
+          - not_null:
+              config: {tags: [quality]}
+      - name: region
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [NE, SE, MW, WE, SW]
+              config: {tags: [quality]}
+      - name: amount
+        data_tests:
+          - not_null:
+              config: {tags: [quality]}
+          - between:
+              arguments: {min_value: -1000000, max_value: 1000000}
+              config: {tags: [quality]}
+      - name: reason
+        data_tests:
+          - not_null:
+              config: {tags: [quality]}
+
+sources:
+  - name: loads
+    schema: audit
+    description: >
+      Groundwork's record of every load (Chapter 6), read by the
+      quality checks for freshness and volume.
+    tables:
+      - name: load_log
+        columns:
+          - name: load_id
+            data_tests:
+              - unique:
+                  config: {tags: [quality]}
+              - not_null:
+                  config: {tags: [quality]}
+          - name: status
+            data_tests:
+              - accepted_values:
+                  arguments:
+                    values: [running, succeeded, failed]
+                  config: {tags: [quality]}
+          - name: rows_written
+            data_tests:
+              - between:
+                  arguments: {min_value: 0}
+                  config: {tags: [quality]}

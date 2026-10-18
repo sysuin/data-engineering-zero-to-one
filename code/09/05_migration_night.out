@@ -1,0 +1,19 @@
+The old loader:
+  2024-02-28  5,188 accounts
+  2024-02-29  5,188 accounts
+  2024-03-01  KeyError: 'Acct ID'
+
+Groundwork's Relay loader:
+  2024-02-27  legacy  accounts 5,188  contracts 11,143
+  2024-02-28  legacy  accounts 5,188  contracts 11,143
+  2024-02-29  legacy  accounts 5,188  contracts 11,143
+  2024-03-01  relay   accounts 5,037  contracts 11,408
+  2024-03-02  MISSING: load failed, logged
+  2024-03-03  relay   accounts 5,037  contracts 11,408
+
+only on 29 Feb: 212, ids 90001 to 90212
+only on 1 Mar: 61, customer_since 2024-03-01
+
+Account 2485 in raw.relay_accounts, either side:
+29 Feb legacy 1498  04/01/2022  Brennan, Zoë  None
+01 Mar relay  01498  2022-04-01  Zoë Brennan  2022-04-01T13:38:09Z

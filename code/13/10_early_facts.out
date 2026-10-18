@@ -1,0 +1,11 @@
+run of 1 January 2023, 06:00 UTC: 84,256 orders in the fact
+on the unknown member:
+  85260  account  2  20230101  a78696f1dbbc1057  Unknown   557.88
+  85261  account 23  20230101  a78696f1dbbc1057  Unknown   480.46
+facts.check: []
+
+next run: restated 2 orders: 2 unknown, 0 changed, 0 stale
+the same orders now:
+  85260  account  2  20230101  e8e880f6f30f74f6  Northeast 557.88
+  85261  account 23  20230101  cce87e404c22bfbd  Midwest   480.46
+facts.check: every promise kept

@@ -1,0 +1,44 @@
+nightly.2026-01-04.1  (scheduled, due 2026-01-05 06:00 UTC)
+task             state           tries  detail
+wait_relay       succeeded           1  1 poke, waited 0 s
+ingest_tradeline succeeded           1  1,727,769 rows, 2 tables
+ingest_frontline failed              3  RuntimeError: frontline.t...
+ingest_suppliers succeeded           1  0 rows, 1 table
+ingest_catalogue succeeded           1  0 rows, 1 table
+ingest_ledger    succeeded           1  0 rows, 1 table
+ingest_reference succeeded           1  0 rows, 3 tables
+ingest_relay     succeeded           1  0 rows, 4 tables
+load_comments    upstream_failed     0
+check_contracts  upstream_failed     0
+check_quality    upstream_failed     0
+dbt_build        upstream_failed     0
+reconcile        upstream_failed     0
+publish          upstream_failed     0
+  ingest_frontline: RuntimeError: frontline.tickets failed:
+    FrontlineError: gave up after 6 attempts, last 503
+run failed
+
+nightly.2026-01-04.2  (rerun, due 2026-01-05 09:30 UTC)
+task             state           tries  detail
+wait_relay       kept                0  done in run 1
+ingest_tradeline kept                0  done in run 1
+ingest_frontline succeeded           1  93,398 rows, 3 tables
+ingest_suppliers kept                0  done in run 1
+ingest_catalogue kept                0  done in run 1
+ingest_ledger    kept                0  done in run 1
+ingest_reference kept                0  done in run 1
+ingest_relay     kept                0  done in run 1
+load_comments    succeeded           1  5,414 comments
+check_contracts  succeeded           1  827 batches, 1,849,396 rows
+check_quality    succeeded           1  26 checks, no errors
+dbt_build        succeeded           1  built, all tests passed
+reconcile        succeeded           1  235 cells, 6 counts: all tie
+publish          succeeded           1  2026-01-04 published
+run succeeded
+
+audit.task_runs for 2026-01-04: 30 rows, of which
+  run task              try state         detail
+  1   ingest_frontline  1   up_for_retry  again in 5 s
+  1   ingest_frontline  2   up_for_retry  again in 10 s
+  1   ingest_frontline  3   failed        (the error above)
+  2   ingest_frontline  1   succeeded     93,398 rows, 3 tables

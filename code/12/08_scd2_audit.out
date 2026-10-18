@@ -1,0 +1,24 @@
+account 1130 in today's export:
+  Small business | Retention desk | closed
+its audit, newest first:
+  2024-07-31 21:58 closed_on -              -> 2024-07-31
+  2024-07-31 21:58 status    active         -> closed
+  2024-06-01 14:37 owner     Owen Castell   -> Retention desk
+  2023-11-01 14:44 owner     Priti Nair     -> Owen Castell
+its versions:
+  2022-01-01 to 2023-11-01 Small business Priti Nair     active
+  2023-11-01 to 2024-06-01 Small business Owen Castell   active
+  2024-06-01 to 2024-07-31 Small business Retention desk active
+  2024-07-31 to (current)  Small business Retention desk closed
+
+all accounts:
+  audit rows, owner                              3,603
+  audit rows, created                            2,417
+  audit rows, closed_on                          1,448
+  audit rows, status                             1,448
+  audit rows, segment                              237
+  accounts created since 1 January 2022          2,417
+  accounts older, known from the first night     3,641
+  versions                                      11,339
+staged account-nights 84,812; the version valid that night
+agrees on 84,812

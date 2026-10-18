@@ -1,0 +1,15 @@
+--- sent (the first line wrapped to fit)
+GET /api/v2/tickets?updated_since=2025-12-01T00:00:00Z
+    &page=1&per_page=2 HTTP/1.1
+Host: 127.0.0.1:<port>
+Authorization: Bearer <token sha256:3af3f8e80ea6>
+Accept: application/json
+--- received
+HTTP/1.0 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 1180
+(and 2 more: Server and Date)
+body: 1180 bytes of JSON, keys ['tickets', 'meta']
+  FT-020740  updated 2025-12-01T00:31:00Z  solved
+  FT-020686  updated 2025-12-01T00:58:00Z  solved
+  meta {'page': 1, 'per_page': 2, 'total': 69}

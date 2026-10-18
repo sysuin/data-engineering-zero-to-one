@@ -1,0 +1,2937 @@
+{
+"steps": {
+"ingest --only tradeline": "02:05:00",
+"ingest --only frontline": "02:20:00",
+"comments": "02:35:00",
+"ingest --only suppliers": "02:40:00",
+"ingest --only catalogue": "02:45:00",
+"ingest --only ledger": "02:50:00",
+"ingest --only reference": "02:55:00",
+"ingest --only relay": "03:15:00",
+"contracts": "03:30:00",
+"dbt build": "03:45:00",
+"publish": "04:30:00"
+},
+"nights": [
+{
+"day": "2024-12-31",
+"commit": "02:06:02",
+"export": "2025-01-01 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-01",
+"commit": "02:05:36",
+"export": "2025-01-02 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-02",
+"commit": "02:09:35",
+"export": "2025-01-03 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-03",
+"commit": "02:11:47",
+"export": "2025-01-04 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-04",
+"commit": "02:06:27",
+"export": "2025-01-05 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-05",
+"commit": "02:07:03",
+"export": "2025-01-06 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-06",
+"commit": "02:03:43",
+"export": "2025-01-07 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-07",
+"commit": "02:07:18",
+"export": "2025-01-08 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-08",
+"commit": "02:07:52",
+"export": "2025-01-09 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-09",
+"commit": "02:11:28",
+"export": "2025-01-10 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-10",
+"commit": "02:04:23",
+"export": "2025-01-11 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-11",
+"commit": "02:08:42",
+"export": "2025-01-12 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-12",
+"commit": "02:04:23",
+"export": "2025-01-13 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-13",
+"commit": "02:07:42",
+"export": "2025-01-14 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-14",
+"commit": "02:03:09",
+"export": "2025-01-15 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-15",
+"commit": "02:04:56",
+"export": "2025-01-16 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-16",
+"commit": "02:10:03",
+"export": "2025-01-17 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-17",
+"commit": "02:03:49",
+"export": "2025-01-18 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-18",
+"commit": "02:11:47",
+"export": "2025-01-19 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-19",
+"commit": "02:08:35",
+"export": "2025-01-20 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-20",
+"commit": "02:11:03",
+"export": "2025-01-21 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-21",
+"commit": "02:03:32",
+"export": "2025-01-22 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-22",
+"commit": "02:09:24",
+"export": "2025-01-23 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-23",
+"commit": "02:05:28",
+"export": "2025-01-24 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-24",
+"commit": "02:11:46",
+"export": "2025-01-25 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-25",
+"commit": "02:07:39",
+"export": "2025-01-26 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-26",
+"commit": "02:04:25",
+"export": "2025-01-27 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-27",
+"commit": "02:03:19",
+"export": "2025-01-28 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-28",
+"commit": "02:07:12",
+"export": "2025-01-29 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-29",
+"commit": "02:03:54",
+"export": "2025-01-30 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-30",
+"commit": "02:08:26",
+"export": "2025-01-31 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-01-31",
+"commit": "02:09:04",
+"export": "2025-02-01 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-01",
+"commit": "02:07:05",
+"export": "2025-02-02 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-02",
+"commit": "02:10:57",
+"export": "2025-02-03 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-03",
+"commit": "02:07:58",
+"export": "2025-02-04 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-04",
+"commit": "02:04:29",
+"export": "2025-02-05 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-05",
+"commit": "02:11:26",
+"export": "2025-02-06 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-06",
+"commit": "02:10:52",
+"export": "2025-02-07 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-07",
+"commit": "02:11:40",
+"export": "2025-02-08 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-08",
+"commit": "02:10:55",
+"export": "2025-02-09 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-09",
+"commit": "02:06:45",
+"export": "2025-02-10 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-10",
+"commit": "02:08:45",
+"export": "2025-02-11 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-11",
+"commit": "02:04:54",
+"export": "2025-02-12 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-12",
+"commit": "02:11:20",
+"export": "2025-02-13 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-13",
+"commit": "02:06:33",
+"export": "2025-02-14 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-14",
+"commit": "02:03:49",
+"export": "2025-02-15 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-15",
+"commit": "02:10:59",
+"export": "2025-02-16 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-16",
+"commit": "02:05:02",
+"export": "2025-02-17 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-17",
+"commit": "02:10:32",
+"export": "2025-02-18 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-18",
+"commit": "02:08:13",
+"export": "2025-02-19 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-19",
+"commit": "02:07:33",
+"export": "2025-02-20 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-20",
+"commit": "02:04:28",
+"export": "2025-02-21 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-21",
+"commit": "02:11:07",
+"export": "2025-02-22 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-22",
+"commit": "02:07:40",
+"export": "2025-02-23 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-23",
+"commit": "02:11:06",
+"export": "2025-02-24 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-24",
+"commit": "02:05:26",
+"export": "2025-02-25 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-25",
+"commit": "02:09:04",
+"export": "2025-02-26 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-26",
+"commit": "02:08:34",
+"export": "2025-02-27 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-27",
+"commit": "02:06:13",
+"export": "2025-02-28 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-02-28",
+"commit": "02:10:37",
+"export": "2025-03-01 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-03-01",
+"commit": "02:10:25",
+"export": "2025-03-02 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-03-02",
+"commit": "02:07:17",
+"export": "2025-03-03 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-03-03",
+"commit": "02:04:52",
+"export": "2025-03-04 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-03-04",
+"commit": "02:08:04",
+"export": "2025-03-05 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-03-05",
+"commit": "02:05:45",
+"export": "2025-03-06 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-03-06",
+"commit": "02:10:19",
+"export": "2025-03-07 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-03-07",
+"commit": "02:04:09",
+"export": "2025-03-08 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-03-08",
+"commit": "02:08:38",
+"export": "2025-03-09 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-03-09",
+"commit": "02:10:31",
+"export": "2025-03-10 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-10",
+"commit": "02:03:19",
+"export": "2025-03-11 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-11",
+"commit": "02:11:34",
+"export": "2025-03-12 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-12",
+"commit": "02:04:01",
+"export": "2025-03-13 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-13",
+"commit": "02:05:06",
+"export": "2025-03-14 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-14",
+"commit": "02:10:30",
+"export": "2025-03-15 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-15",
+"commit": "02:06:31",
+"export": "2025-03-16 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-16",
+"commit": "02:10:33",
+"export": "2025-03-17 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-17",
+"commit": "02:09:52",
+"export": "2025-03-18 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-18",
+"commit": "02:08:41",
+"export": "2025-03-19 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-19",
+"commit": "02:10:31",
+"export": "2025-03-20 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-20",
+"commit": "02:10:04",
+"export": "2025-03-21 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-21",
+"commit": "02:03:57",
+"export": "2025-03-22 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-22",
+"commit": "02:06:00",
+"export": "2025-03-23 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-23",
+"commit": "02:07:02",
+"export": "2025-03-24 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-24",
+"commit": "02:03:34",
+"export": "2025-03-25 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-25",
+"commit": "02:04:11",
+"export": "2025-03-26 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-26",
+"commit": "02:11:01",
+"export": "2025-03-27 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-27",
+"commit": "02:06:58",
+"export": "2025-03-28 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-28",
+"commit": "02:09:24",
+"export": "2025-03-29 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-29",
+"commit": "02:10:00",
+"export": "2025-03-30 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-30",
+"commit": "02:07:58",
+"export": "2025-03-31 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-03-31",
+"commit": "02:11:33",
+"export": "2025-04-01 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-01",
+"commit": "02:06:44",
+"export": "2025-04-02 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-02",
+"commit": "02:11:06",
+"export": "2025-04-03 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-03",
+"commit": "02:09:47",
+"export": "2025-04-04 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-04",
+"commit": "02:04:49",
+"export": "2025-04-05 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-05",
+"commit": "02:11:20",
+"export": "2025-04-06 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-06",
+"commit": "02:11:02",
+"export": "2025-04-07 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-07",
+"commit": "02:05:56",
+"export": "2025-04-08 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-08",
+"commit": "02:06:10",
+"export": "2025-04-09 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-09",
+"commit": "02:11:03",
+"export": "2025-04-10 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-10",
+"commit": "02:03:20",
+"export": "2025-04-11 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-11",
+"commit": "02:11:38",
+"export": "2025-04-12 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-12",
+"commit": "02:05:17",
+"export": "2025-04-13 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-13",
+"commit": "02:09:24",
+"export": "2025-04-14 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-14",
+"commit": "02:05:17",
+"export": "2025-04-15 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-15",
+"commit": "02:08:25",
+"export": "2025-04-16 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-16",
+"commit": "02:06:05",
+"export": "2025-04-17 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-17",
+"commit": "02:10:23",
+"export": "2025-04-18 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-18",
+"commit": "02:08:38",
+"export": "2025-04-19 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-19",
+"commit": "02:09:45",
+"export": "2025-04-20 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-20",
+"commit": "02:11:20",
+"export": "2025-04-21 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-21",
+"commit": "02:04:50",
+"export": "2025-04-22 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-22",
+"commit": "02:09:08",
+"export": "2025-04-23 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-23",
+"commit": "02:03:23",
+"export": "2025-04-24 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-24",
+"commit": "02:10:58",
+"export": "2025-04-25 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-25",
+"commit": "02:05:43",
+"export": "2025-04-26 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-26",
+"commit": "02:04:47",
+"export": "2025-04-27 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-27",
+"commit": "02:03:20",
+"export": "2025-04-28 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-28",
+"commit": "02:05:00",
+"export": "2025-04-29 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-29",
+"commit": "02:09:10",
+"export": "2025-04-30 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-04-30",
+"commit": "02:10:44",
+"export": "2025-05-01 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-01",
+"commit": "02:10:10",
+"export": "2025-05-02 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-02",
+"commit": "02:06:05",
+"export": "2025-05-03 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-03",
+"commit": "02:09:24",
+"export": "2025-05-04 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-04",
+"commit": "02:09:57",
+"export": "2025-05-05 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-05",
+"commit": "02:06:10",
+"export": "2025-05-06 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-06",
+"commit": "02:04:39",
+"export": "2025-05-07 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-07",
+"commit": "02:08:01",
+"export": "2025-05-08 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-08",
+"commit": "02:09:00",
+"export": "2025-05-09 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-09",
+"commit": "02:10:26",
+"export": "2025-05-10 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-10",
+"commit": "02:07:08",
+"export": "2025-05-11 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-11",
+"commit": "02:08:23",
+"export": "2025-05-12 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-12",
+"commit": "02:04:19",
+"export": "2025-05-13 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-13",
+"commit": "02:04:40",
+"export": "2025-05-14 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-14",
+"commit": "02:11:02",
+"export": "2025-05-15 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-15",
+"commit": "02:06:47",
+"export": "2025-05-16 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-16",
+"commit": "02:05:05",
+"export": "2025-05-17 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-17",
+"commit": "02:05:15",
+"export": "2025-05-18 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-18",
+"commit": "02:04:03",
+"export": null,
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-05-19",
+"commit": "02:09:59",
+"export": "2025-05-20 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-20",
+"commit": "02:08:28",
+"export": "2025-05-21 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-21",
+"commit": "02:11:27",
+"export": "2025-05-22 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-22",
+"commit": "02:09:11",
+"export": "2025-05-23 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-23",
+"commit": "02:08:47",
+"export": "2025-05-24 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-24",
+"commit": "02:06:14",
+"export": "2025-05-25 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-25",
+"commit": "02:10:51",
+"export": "2025-05-26 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-26",
+"commit": "02:04:27",
+"export": "2025-05-27 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-27",
+"commit": "02:03:48",
+"export": "2025-05-28 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-28",
+"commit": "02:06:24",
+"export": "2025-05-29 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-29",
+"commit": "02:10:22",
+"export": "2025-05-30 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-30",
+"commit": "02:06:09",
+"export": "2025-05-31 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-05-31",
+"commit": "02:10:10",
+"export": "2025-06-01 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-01",
+"commit": "02:04:27",
+"export": "2025-06-02 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-02",
+"commit": "02:09:03",
+"export": "2025-06-03 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-03",
+"commit": "02:10:50",
+"export": "2025-06-04 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-04",
+"commit": "02:06:59",
+"export": "2025-06-05 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-05",
+"commit": "02:05:30",
+"export": "2025-06-06 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-06",
+"commit": "02:06:43",
+"export": "2025-06-07 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-07",
+"commit": "02:11:08",
+"export": "2025-06-08 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-08",
+"commit": "02:08:02",
+"export": "2025-06-09 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-09",
+"commit": "02:10:54",
+"export": "2025-06-10 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-10",
+"commit": "02:05:32",
+"export": "2025-06-11 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-11",
+"commit": "02:07:21",
+"export": "2025-06-12 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-12",
+"commit": "02:07:05",
+"export": "2025-06-13 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-13",
+"commit": "02:11:07",
+"export": "2025-06-14 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-14",
+"commit": "02:08:09",
+"export": "2025-06-15 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-15",
+"commit": "02:06:46",
+"export": "2025-06-16 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-16",
+"commit": "02:05:14",
+"export": "2025-06-17 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-17",
+"commit": "02:09:18",
+"export": "2025-06-18 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-18",
+"commit": "02:03:08",
+"export": "2025-06-19 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-19",
+"commit": "02:03:16",
+"export": "2025-06-20 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-20",
+"commit": "02:04:24",
+"export": "2025-06-21 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-21",
+"commit": "02:04:46",
+"export": "2025-06-22 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-22",
+"commit": "02:09:46",
+"export": "2025-06-23 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-23",
+"commit": "02:11:50",
+"export": "2025-06-24 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-24",
+"commit": "02:11:07",
+"export": "2025-06-25 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-25",
+"commit": "02:04:37",
+"export": "2025-06-26 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-26",
+"commit": "02:11:02",
+"export": "2025-06-27 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-27",
+"commit": "02:06:34",
+"export": "2025-06-28 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-28",
+"commit": "02:07:16",
+"export": "2025-06-29 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-29",
+"commit": "02:10:35",
+"export": "2025-06-30 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-06-30",
+"commit": "02:03:22",
+"export": "2025-07-01 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-01",
+"commit": "02:07:12",
+"export": "2025-07-02 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-02",
+"commit": "02:08:13",
+"export": "2025-07-03 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-03",
+"commit": "02:05:46",
+"export": "2025-07-04 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-04",
+"commit": "02:07:04",
+"export": "2025-07-05 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-05",
+"commit": "02:06:36",
+"export": "2025-07-06 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-06",
+"commit": "02:06:30",
+"export": "2025-07-07 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-07",
+"commit": "02:12:00",
+"export": "2025-07-08 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-08",
+"commit": "02:08:15",
+"export": "2025-07-09 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-09",
+"commit": "02:07:28",
+"export": "2025-07-10 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-10",
+"commit": "02:08:37",
+"export": "2025-07-11 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-11",
+"commit": "02:04:06",
+"export": "2025-07-12 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-12",
+"commit": "02:10:22",
+"export": "2025-07-13 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-13",
+"commit": "02:05:30",
+"export": "2025-07-14 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-14",
+"commit": "02:05:19",
+"export": "2025-07-15 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-15",
+"commit": "02:09:05",
+"export": "2025-07-16 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-16",
+"commit": "02:10:25",
+"export": "2025-07-17 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-17",
+"commit": "02:07:50",
+"export": "2025-07-18 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-18",
+"commit": "02:06:57",
+"export": "2025-07-19 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-19",
+"commit": "02:06:07",
+"export": "2025-07-20 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-20",
+"commit": "02:04:44",
+"export": "2025-07-21 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-21",
+"commit": "02:06:54",
+"export": "2025-07-22 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-22",
+"commit": "02:06:21",
+"export": "2025-07-23 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-23",
+"commit": "02:05:19",
+"export": "2025-07-24 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-24",
+"commit": "02:06:37",
+"export": "2025-07-25 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-25",
+"commit": "02:05:03",
+"export": "2025-07-26 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-26",
+"commit": "02:04:10",
+"export": "2025-07-27 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-27",
+"commit": "02:07:52",
+"export": "2025-07-28 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-28",
+"commit": "02:07:15",
+"export": "2025-07-29 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-29",
+"commit": "02:11:01",
+"export": "2025-07-30 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-30",
+"commit": "02:11:14",
+"export": "2025-07-31 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-07-31",
+"commit": "02:10:10",
+"export": "2025-08-01 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-01",
+"commit": "02:10:48",
+"export": "2025-08-02 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-02",
+"commit": "02:10:19",
+"export": "2025-08-03 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-03",
+"commit": "02:03:49",
+"export": "2025-08-04 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-04",
+"commit": "02:07:13",
+"export": "2025-08-05 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-05",
+"commit": "02:03:34",
+"export": "2025-08-06 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-06",
+"commit": "02:11:37",
+"export": "2025-08-07 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-07",
+"commit": "02:03:35",
+"export": "2025-08-08 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-08",
+"commit": "02:04:41",
+"export": "2025-08-09 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-09",
+"commit": "02:08:33",
+"export": "2025-08-10 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-10",
+"commit": "02:10:06",
+"export": "2025-08-11 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-11",
+"commit": "02:09:40",
+"export": "2025-08-12 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-12",
+"commit": "02:06:37",
+"export": "2025-08-13 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-13",
+"commit": "02:11:29",
+"export": "2025-08-14 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-14",
+"commit": "02:04:34",
+"export": "2025-08-15 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-15",
+"commit": "02:09:43",
+"export": "2025-08-16 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-16",
+"commit": "02:03:55",
+"export": "2025-08-17 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-17",
+"commit": "02:10:46",
+"export": "2025-08-18 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-18",
+"commit": "02:07:19",
+"export": "2025-08-19 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-19",
+"commit": "02:11:06",
+"export": "2025-08-20 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-20",
+"commit": "02:04:47",
+"export": "2025-08-21 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-21",
+"commit": "02:05:42",
+"export": "2025-08-22 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-22",
+"commit": "02:11:49",
+"export": "2025-08-23 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-23",
+"commit": "02:11:25",
+"export": "2025-08-24 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-24",
+"commit": "02:03:47",
+"export": "2025-08-25 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-25",
+"commit": "02:09:26",
+"export": "2025-08-26 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-26",
+"commit": "02:03:08",
+"export": "2025-08-27 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-27",
+"commit": "02:06:14",
+"export": "2025-08-28 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-28",
+"commit": "02:09:01",
+"export": "2025-08-29 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-29",
+"commit": "02:08:07",
+"export": "2025-08-30 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-30",
+"commit": "02:03:42",
+"export": "2025-08-31 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-08-31",
+"commit": "02:05:26",
+"export": "2025-09-01 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-01",
+"commit": "02:11:02",
+"export": "2025-09-02 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-02",
+"commit": "02:08:21",
+"export": "2025-09-03 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-03",
+"commit": "02:05:38",
+"export": "2025-09-04 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-04",
+"commit": "02:05:47",
+"export": "2025-09-05 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-05",
+"commit": "02:07:18",
+"export": "2025-09-06 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-06",
+"commit": "02:03:53",
+"export": "2025-09-07 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-07",
+"commit": "02:03:19",
+"export": null,
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-09-08",
+"commit": "02:08:59",
+"export": "2025-09-09 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-09",
+"commit": "02:04:07",
+"export": "2025-09-10 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-10",
+"commit": "02:06:46",
+"export": "2025-09-11 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-11",
+"commit": "02:06:24",
+"export": "2025-09-12 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-12",
+"commit": "02:05:05",
+"export": "2025-09-13 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-13",
+"commit": "02:09:58",
+"export": "2025-09-14 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-14",
+"commit": "02:08:13",
+"export": "2025-09-15 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-15",
+"commit": "02:08:09",
+"export": "2025-09-16 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-16",
+"commit": "02:10:27",
+"export": "2025-09-17 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-17",
+"commit": "02:10:47",
+"export": "2025-09-18 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-18",
+"commit": "02:03:21",
+"export": "2025-09-19 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-19",
+"commit": "02:06:29",
+"export": "2025-09-20 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-20",
+"commit": "02:04:10",
+"export": "2025-09-21 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-21",
+"commit": "02:10:53",
+"export": "2025-09-22 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-22",
+"commit": "02:05:09",
+"export": "2025-09-23 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-23",
+"commit": "02:11:22",
+"export": "2025-09-24 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-24",
+"commit": "02:06:16",
+"export": "2025-09-25 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-25",
+"commit": "02:05:50",
+"export": "2025-09-26 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-26",
+"commit": "02:09:13",
+"export": "2025-09-27 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-27",
+"commit": "02:05:49",
+"export": "2025-09-28 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-28",
+"commit": "02:10:17",
+"export": "2025-09-29 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-29",
+"commit": "02:08:48",
+"export": "2025-09-30 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-09-30",
+"commit": "02:03:32",
+"export": "2025-10-01 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-01",
+"commit": "02:05:04",
+"export": "2025-10-02 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-02",
+"commit": "02:08:22",
+"export": "2025-10-03 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-03",
+"commit": "02:11:54",
+"export": "2025-10-04 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-04",
+"commit": "02:05:54",
+"export": "2025-10-05 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-05",
+"commit": "02:03:32",
+"export": "2025-10-06 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-06",
+"commit": "02:11:38",
+"export": "2025-10-07 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-07",
+"commit": "02:08:15",
+"export": "2025-10-08 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-08",
+"commit": "02:09:31",
+"export": "2025-10-09 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-09",
+"commit": "02:03:14",
+"export": "2025-10-10 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-10",
+"commit": "02:07:12",
+"export": "2025-10-11 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-11",
+"commit": "02:09:56",
+"export": "2025-10-12 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-12",
+"commit": "02:05:40",
+"export": "2025-10-13 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-13",
+"commit": "02:11:01",
+"export": "2025-10-14 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-14",
+"commit": "02:06:57",
+"export": "2025-10-15 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-15",
+"commit": "02:03:28",
+"export": "2025-10-16 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-16",
+"commit": "02:07:41",
+"export": "2025-10-17 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-17",
+"commit": "02:07:44",
+"export": "2025-10-18 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-18",
+"commit": "02:11:50",
+"export": "2025-10-19 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-19",
+"commit": "02:06:55",
+"export": "2025-10-20 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-20",
+"commit": "02:07:54",
+"export": "2025-10-21 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-21",
+"commit": "02:06:09",
+"export": "2025-10-22 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-22",
+"commit": "02:04:14",
+"export": "2025-10-23 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-23",
+"commit": "02:10:21",
+"export": "2025-10-24 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-24",
+"commit": "02:07:55",
+"export": "2025-10-25 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-25",
+"commit": "02:10:56",
+"export": "2025-10-26 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-26",
+"commit": "02:09:52",
+"export": "2025-10-27 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-27",
+"commit": "02:11:48",
+"export": "2025-10-28 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-28",
+"commit": "02:11:46",
+"export": "2025-10-29 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-29",
+"commit": "02:09:47",
+"export": "2025-10-30 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-30",
+"commit": "02:07:48",
+"export": "2025-10-31 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-10-31",
+"commit": "02:03:51",
+"export": "2025-11-01 03:00:00",
+"overlap": false,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-11-01",
+"commit": "02:08:44",
+"export": "2025-11-02 03:00:00",
+"overlap": true,
+"no_relay": false,
+"build_first": false
+},
+{
+"day": "2025-11-02",
+"commit": "02:10:38",
+"export": "2025-11-03 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-03",
+"commit": "02:06:47",
+"export": "2025-11-04 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-04",
+"commit": "02:08:09",
+"export": "2025-11-05 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-05",
+"commit": "02:08:54",
+"export": "2025-11-06 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-06",
+"commit": "02:07:46",
+"export": "2025-11-07 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-07",
+"commit": "02:03:36",
+"export": "2025-11-08 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-08",
+"commit": "02:04:01",
+"export": "2025-11-09 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-09",
+"commit": "02:09:49",
+"export": "2025-11-10 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-10",
+"commit": "02:05:07",
+"export": "2025-11-11 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-11",
+"commit": "02:04:33",
+"export": "2025-11-12 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-12",
+"commit": "02:06:25",
+"export": "2025-11-13 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-13",
+"commit": "02:09:53",
+"export": "2025-11-14 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-14",
+"commit": "02:11:24",
+"export": "2025-11-15 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-15",
+"commit": "02:10:20",
+"export": "2025-11-16 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-16",
+"commit": "02:09:11",
+"export": "2025-11-17 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-17",
+"commit": "02:07:41",
+"export": "2025-11-18 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-18",
+"commit": "02:11:07",
+"export": "2025-11-19 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-19",
+"commit": "02:05:11",
+"export": "2025-11-20 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-20",
+"commit": "02:09:40",
+"export": "2025-11-21 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-21",
+"commit": "02:09:02",
+"export": "2025-11-22 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-22",
+"commit": "02:05:36",
+"export": "2025-11-23 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-23",
+"commit": "02:07:26",
+"export": "2025-11-24 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-24",
+"commit": "02:07:53",
+"export": "2025-11-25 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-25",
+"commit": "02:03:12",
+"export": "2025-11-26 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-26",
+"commit": "02:08:56",
+"export": "2025-11-27 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-27",
+"commit": "02:07:05",
+"export": "2025-11-28 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-28",
+"commit": "02:04:03",
+"export": "2025-11-29 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-29",
+"commit": "02:05:22",
+"export": "2025-11-30 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-11-30",
+"commit": "02:06:07",
+"export": "2025-12-01 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-01",
+"commit": "02:09:04",
+"export": "2025-12-02 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-02",
+"commit": "02:10:11",
+"export": "2025-12-03 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-03",
+"commit": "02:11:44",
+"export": "2025-12-04 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-04",
+"commit": "02:06:23",
+"export": "2025-12-05 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-05",
+"commit": "02:11:43",
+"export": "2025-12-06 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-06",
+"commit": "02:06:58",
+"export": "2025-12-07 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-07",
+"commit": "02:08:58",
+"export": "2025-12-08 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-08",
+"commit": "02:04:27",
+"export": "2025-12-09 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-09",
+"commit": "02:07:17",
+"export": "2025-12-10 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-10",
+"commit": "02:07:18",
+"export": "2025-12-11 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-11",
+"commit": "02:10:31",
+"export": "2025-12-12 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-12",
+"commit": "02:07:06",
+"export": "2025-12-13 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-13",
+"commit": "02:04:37",
+"export": "2025-12-14 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-14",
+"commit": "02:04:48",
+"export": "2025-12-15 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-15",
+"commit": "02:03:41",
+"export": "2025-12-16 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-16",
+"commit": "02:05:04",
+"export": "2025-12-17 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-17",
+"commit": "02:05:11",
+"export": "2025-12-18 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-18",
+"commit": "02:06:17",
+"export": "2025-12-19 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-19",
+"commit": "02:10:11",
+"export": "2025-12-20 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-20",
+"commit": "02:05:44",
+"export": "2025-12-21 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-21",
+"commit": "02:09:19",
+"export": "2025-12-22 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-22",
+"commit": "02:03:22",
+"export": "2025-12-23 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-23",
+"commit": "02:05:12",
+"export": "2025-12-24 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-24",
+"commit": "02:08:01",
+"export": "2025-12-25 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-25",
+"commit": "02:04:03",
+"export": "2025-12-26 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-26",
+"commit": "02:03:55",
+"export": "2025-12-27 04:00:00",
+"overlap": false,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-27",
+"commit": "02:09:19",
+"export": "2025-12-28 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-28",
+"commit": "02:06:48",
+"export": "2025-12-29 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-29",
+"commit": "02:09:31",
+"export": "2025-12-30 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+},
+{
+"day": "2025-12-30",
+"commit": "02:07:27",
+"export": "2025-12-31 04:00:00",
+"overlap": true,
+"no_relay": true,
+"build_first": true
+}
+]
+}

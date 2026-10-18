@@ -1,0 +1,7 @@
+revenue, 03 Mar to 10 Mar 2025: placed_at, qty, unit_price_cents
+file, 13 row groups each read  bytes read  file bytes   share
+order_lines.parquet         1     584,079  13,395,096    4.4%
+order_lines_by_sku.parquet 13  11,284,450  18,441,036   61.2%
+  by time       255,147,080 cents
+  by sku        255,147,080 cents
+  tradeline     255,147,080 cents

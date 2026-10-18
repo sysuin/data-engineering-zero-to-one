@@ -1,0 +1,41 @@
+nightly.2026-01-04.1  (scheduled, due 2026-01-05 06:00 UTC)
+task             state           tries  detail
+wait_relay       succeeded           1  1 poke, waited 0 s
+ingest_tradeline succeeded           1  1,727,769 rows, 2 tables
+ingest_frontline succeeded           1  93,398 rows, 3 tables
+ingest_suppliers succeeded           1  0 rows, 1 table
+ingest_catalogue succeeded           1  0 rows, 1 table
+ingest_ledger    succeeded           1  0 rows, 1 table
+ingest_reference succeeded           1  0 rows, 3 tables
+ingest_relay     succeeded           1  0 rows, 4 tables
+load_comments    succeeded           1  5,414 comments
+check_contracts  succeeded           1  827 batches, 1,849,396 rows
+check_quality    succeeded           1  26 checks, no errors
+dbt_build        succeeded           1  built, all tests passed
+reconcile        succeeded           1  235 cells, 6 counts: all tie
+publish          succeeded           1  2026-01-04 published
+run succeeded
+dbt was told: night=2026-01-04
+  since=none: no build in the history yet
+
+loads this run wrote to audit.load_log: 14
+  catalogue   1 loads,  1 succeeded
+  frontline   2 loads,  2 succeeded
+  ledger      1 loads,  1 succeeded
+  reference   3 loads,  3 succeeded
+  relay       4 loads,  4 succeeded
+  suppliers   1 loads,  1 succeeded
+  tradeline   2 loads,  2 succeeded
+audit.published: 2026-01-04 by nightly.2026-01-04.1
+audit.quality_checks: 26 rows at 05 Jan 07:00, 0 errors
+audit.reconciliations: 247 rows at 05 Jan 07:00, 0 differ
+
+relation                   before      after
+  dim_account              11,340     11,340
+  dim_product                  53         53
+  fct_order_lines       1,229,062  1,229,062
+  fct_orders              478,242    478,242
+  fct_tickets              21,668     21,668
+  fct_contract_month      195,635    195,635
+  snapshot, current         6,058      6,058
+logs/nightly.2026-01-04.1/: 12 files, one a try

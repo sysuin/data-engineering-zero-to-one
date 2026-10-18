@@ -1,0 +1,11 @@
+layer         tests  slow   job (slow ones: nightly)
+unit            296     0   fast: every push
+contract         36     2   fast: every push
+integration      30    11   diff: every pull request
+diff             15     2   diff: every pull request
+all             377    15
+every test in exactly one layer: True
+
+run here, without the generated data:
+  (unit or contract) and not slow      330 passed, 0 failed,   26 s
+  (integration or diff) and not slow    32 passed, 0 failed,   34 s

@@ -1,0 +1,30 @@
+{
+ "catalogue": {
+  "files": 1,
+  "bytes": 3284
+ },
+ "ledger": {
+  "files": 47,
+  "bytes": 18685
+ },
+ "portal": {
+  "files": 4445,
+  "bytes": 35126582
+ },
+ "relay/<night>": {
+  "files": 28,
+  "bytes": 34982237
+ },
+ "relay/audit": {
+  "files": 49,
+  "bytes": 2591480
+ },
+ "relay/migration_map.csv": {
+  "files": 1,
+  "bytes": 4858
+ },
+ "suppliers": {
+  "files": 768,
+  "bytes": 212041
+ }
+}

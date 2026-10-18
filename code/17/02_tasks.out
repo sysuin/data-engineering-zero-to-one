@@ -1,0 +1,30 @@
+nightly: 14 tasks, 21 edges, 6 levels
+level 0: 7 tasks
+  wait_relay        sensor     after -
+  ingest_tradeline  retries 2  after -
+  ingest_frontline  retries 2  after -
+  ingest_suppliers  retries 2  after -
+  ingest_catalogue  retries 2  after -
+  ingest_ledger     retries 2  after -
+  ingest_reference  retries 2  after -
+level 1: 2 tasks
+  ingest_relay      retries 2  after wait_relay
+  load_comments     retries 2  after ingest_frontline
+level 2: 2 tasks
+  check_contracts   retries 0  after 7 tasks
+  check_quality     retries 0  after 7 tasks
+level 3: 1 task
+  dbt_build         retries 1  after 3 tasks
+level 4: 1 task
+  reconcile         retries 0  after dbt_build
+level 5: 1 task
+  publish           retries 0  after reconcile
+
+what waits for ingest_frontline:
+  check_contracts, check_quality, dbt_build, load_comments,
+  publish, reconcile
+
+ValueError: dbt_build waits for check_contract, which is not a task
+CycleError: a cycle among:
+  ingest_relay, check_contracts, check_quality, dbt_build,
+  reconcile, publish

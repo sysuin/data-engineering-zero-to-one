@@ -1,0 +1,16 @@
+load date    new  rows  ledger  kept  run at
+2024-02-28   415   986     415   415  02-29 06:00
+2024-02-29     0     0     415   415  03-01 06:00
+2024-03-01     8    12     423   423  03-02 06:00
+2024-03-02     5    15     428   428  03-03 06:00
+2024-03-03     3    11     431   431  03-04 06:00
+2024-03-04     1     2     432   432  03-05 06:00
+rerun suppliers.price_lists.2024-03-04.2: 0 new, 0 rows written
+
+The ledger's rows for Aldridge's March list:
+  Aldridge Trade Prices Mar 2024.xlsx loaded, 2 rows
+    arrived 03-01 21:15, load date 2024-03-01, c4d025cbd665
+  Aldridge Trade Prices Mar 2024 (corrected).xlsx loaded, 2 rows
+    arrived 03-04 23:15, load date 2024-03-04, f0bf3c4646d4
+raw rows from those two files: 4
+load log: 7 attempts, 7 reconciled

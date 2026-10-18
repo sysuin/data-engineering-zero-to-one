@@ -1,0 +1,26 @@
+received 602 characters of text
+  ticket.id                      str      'FT-020866'
+  ticket.created_at              str      '2025-11-20T16:34:00Z'
+  ticket.status                  str      'closed'
+  ticket.requester.account_id    int      2673
+  ticket.requester.name          str      'Michael Johnson'
+  ticket.requester.email         str      ...
+  ticket.custom_fields[0].id     int      360001
+  ticket.custom_fields[0].name   str      'desk'
+  ticket.custom_fields[0].value  str      'south_desk'
+  ticket.custom_fields[1].id     int      360002
+  ticket.custom_fields[1].name   str      'category'
+  ticket.custom_fields[1].value  str      'delivery'
+  ticket.tags[0]                 str      'delivery'
+  ticket.tags[1]                 str      'sku:MRD-FAC-030'
+ticket.get('closed_at') -> None
+wrote 1 line to tickets.jsonl; read back:
+{'ticket_id': 'FT-020866',
+ 'account_id': 2673,
+ 'status': 'closed',
+ 'desk': 'south_desk',
+ 'category': 'delivery'}
+three texts json.loads refuses:
+  cut    Unterminated string starting at (char 117)
+  quotes Expecting property name enclosed in double quotes (char 1)
+  empty  Expecting value (char 0)

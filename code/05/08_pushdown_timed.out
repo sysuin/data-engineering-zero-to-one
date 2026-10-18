@@ -1,0 +1,4 @@
+file                 bytes on disk   answer (cents)  best of 5
+csv                     82,034,500      255,147,080   358.7 ms
+parquet, by time        13,395,096      255,147,080     1.4 ms
+parquet, by sku         18,441,036      255,147,080    20.3 ms

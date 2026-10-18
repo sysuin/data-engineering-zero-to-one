@@ -1,0 +1,1 @@
+{"view": "10336385.82", "api": "10336385.82", "spec": "10336385.82", "old": 10468688.559999792, "sql": "SELECT sum(f.revenue) AS revenue\nFROM marts.fct_order_lines AS f\nWHERE f.order_date >= ?\n  AND f.order_date < ?"}

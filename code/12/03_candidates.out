@@ -1,0 +1,8 @@
+records 6,270: in today's export 6,058, gone since 1 March 2024 212
+every pair compared: 19,653,315 pairs
+
+blocking key                   pairs  old-new  new-new  IT kept
+postcode                       1,682      315    1,367      187
+region + month joined         27,283    1,709   25,574      187
+region + month + postcode        221      212        9      187
+  postcode as sent               166      157        9      138

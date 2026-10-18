@@ -1,0 +1,13 @@
+Active accounts on 2025-12-31, three ways
+  sales: ordered in the last 90 days     4,425
+  CRM: status is active                  4,610
+  account team: under contract           4,651
+  in all three                           4,356
+  in at least one                        4,686
+Where they part:
+  under contract, no order in 90 days      261
+  ordered, no contract in force             35
+  under contract, CRM says closed           41
+  CRM active, no order in 90 days          254
+Month ends from 2024-01-31 to 2025-12-31: the three differ by
+  213 to 272 accounts

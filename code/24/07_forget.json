@@ -1,0 +1,164 @@
+{
+ "places": [
+  [
+   "landed",
+   "landed/relay (account exports)",
+   5,
+   "redact"
+  ],
+  [
+   "raw",
+   "raw.relay_accounts",
+   16,
+   "redact"
+  ],
+  [
+   "raw",
+   "raw.frontline_tickets",
+   29,
+   "redact"
+  ],
+  [
+   "raw",
+   "raw.frontline_ticket_comments",
+   10,
+   "redact"
+  ],
+  [
+   "raw",
+   "raw.portal_events",
+   516,
+   "delete"
+  ],
+  [
+   "raw files",
+   "raw pages 2026-01-04 attempt-1 (28 files)",
+   29,
+   "redact"
+  ],
+  [
+   "raw files",
+   "raw pages 2026-01-04 attempt-2 (28 files)",
+   29,
+   "redact"
+  ],
+  [
+   "warehouse",
+   "masked.* (rebuilt)",
+   117082,
+   "rebuild"
+  ]
+ ],
+ "before": {
+  "raw.frontline_ticket_comments": {
+   "email": 1,
+   "phone": 3,
+   "name": 11
+  },
+  "raw.frontline_tickets": {
+   "email": 29,
+   "name": 43
+  },
+  "raw.portal_events": {
+   "portal login": 516
+  },
+  "raw.relay_accounts": {
+   "email": 15,
+   "phone": 177,
+   "name": 60
+  },
+  "staging.stg_frontline__ticket_comments": {
+   "email": 1,
+   "phone": 3,
+   "name": 11
+  },
+  "staging.stg_frontline__tickets": {
+   "email": 29,
+   "name": 43
+  },
+  "staging.stg_relay__accounts": {
+   "email": 15,
+   "phone": 177,
+   "name": 60
+  },
+  "raw/frontline/pages/load_date=2026-01-04/attempt-1": {
+   "email": 28,
+   "name": 40
+  },
+  "raw/frontline/pages/load_date=2026-01-04/attempt-2": {
+   "email": 28,
+   "name": 40
+  },
+  "landed/relay/0a": {
+   "email": 1,
+   "phone": 1,
+   "name": 1
+  },
+  "landed/relay/11": {
+   "email": 1,
+   "phone": 1,
+   "name": 1
+  },
+  "landed/relay/93": {
+   "email": 1,
+   "phone": 1,
+   "name": 1
+  },
+  "landed/relay/f4": {
+   "email": 1,
+   "phone": 1,
+   "name": 1
+  }
+ },
+ "after": {
+  "raw.frontline_ticket_comments": {
+   "phone": 1,
+   "name": 1
+  },
+  "raw.frontline_tickets": {
+   "name": 14
+  },
+  "raw.relay_accounts": {
+   "phone": 161,
+   "name": 44
+  },
+  "staging.stg_frontline__ticket_comments": {
+   "phone": 1,
+   "name": 1
+  },
+  "staging.stg_frontline__tickets": {
+   "name": 14
+  },
+  "staging.stg_relay__accounts": {
+   "phone": 161,
+   "name": 44
+  },
+  "raw/frontline/pages/load_date=2026-01-04/attempt-1": {
+   "name": 13
+  },
+  "raw/frontline/pages/load_date=2026-01-04/attempt-2": {
+   "name": 13
+  },
+  "landed/relay/0a": {
+   "phone": 1,
+   "name": 1
+  },
+  "landed/relay/11": {
+   "phone": 1,
+   "name": 1
+  },
+  "landed/relay/93": {
+   "phone": 1,
+   "name": 1
+  },
+  "landed/relay/f4": {
+   "phone": 1,
+   "name": 1
+  }
+ },
+ "outside": {
+  "/Users/sunny/Downloads/Codex Projects/Zero to One Series/data-engineering-zero-to-one/data/meridian-sources/landing/relay": 14,
+  "/Users/sunny/Downloads/Codex Projects/Zero to One Series/data-engineering-zero-to-one/data/meridian-sources/landing/portal": 72
+ },
+ "suppress": 4
+}

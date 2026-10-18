@@ -1,0 +1,13 @@
+                      source   warehouse  left out, and why
+Tradeline orders     483,980 =   478,242  5,738 cancelled
+Tradeline lines    1,243,789 = 1,229,062  14,727 cancelled
+Relay accounts         6,058 =     6,058
+Relay contracts       19,220 =    19,220
+Frontline tickets     21,668 =    21,668
+ledger lines             237 =       237
+
+revenue, 2022-01 to 2025-11: 235 months x regions
+  warehouse = ledger's total:  233
+    2024-09 MW  warehouse  1,425,724.53  ledger  1,407,224.53
+    2025-11 SW  warehouse  2,779,849.50  ledger  2,767,449.50
+  warehouse = sales journal:   235

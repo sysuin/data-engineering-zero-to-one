@@ -1,0 +1,35 @@
+# The seeds: small facts people decide, each with its owner. dbt loads
+# each CSV as a table in schema seeds; every column is text, as the
+# runner loaded them, and the models cast what they read.
+version: 2
+
+seeds:
+  - name: supplier_names
+    description: >
+      Every spelling of a supplier any source uses (the catalogue's
+      Supplier column, the price lists' folder names), mapped to
+      procurement's supplier_id. Chapter 11.
+    meta: {owner: procurement, reviewed_by: data engineering}
+    config:
+      column_types: {source: varchar, spelling: varchar,
+                     supplier_id: varchar}
+  - name: account_matches
+    description: >
+      The old CRM's second records that IT's migration map does not
+      cover, each matched to its Relay account by rule and confirmed
+      by a person. Chapter 12.
+    meta: {owner: sales operations}
+    config:
+      column_types: {old_crm_id: varchar, account_id: varchar,
+                     score: varchar, old_name: varchar,
+                     relay_name: varchar}
+  - name: region_codes
+    description: The ledger's code for each region. Chapter 12.
+    meta: {owner: finance}
+    config:
+      column_types: {region_id: varchar, region_code: varchar}
+  - name: channel_codes
+    description: The name of each Tradeline channel code. Chapter 13.
+    meta: {owner: the orders team}
+    config:
+      column_types: {code: varchar, channel: varchar}

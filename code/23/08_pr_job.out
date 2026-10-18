@@ -1,0 +1,24 @@
+land the raw layer, as make ingest does:
+  15 tables, 1,891,495 rows, 1 parked, 0 failed
+  the old CRM's last night, restored: 5,188 accounts
+  ticket comments: 5,414
+build each project from it, with dbt build --full-refresh:
+  main    38 built, 48 tests passed, 0 failed
+  branch  38 built, 48 tests passed, 0 failed
+
+make diff:
+marts.fct_contract_month  195,635 -> 195,635 rows
+  by key: 40,258 changed, 0 added, 0 removed
+  columns: discount_pct 40,258
+marts.fct_contracts  19,220 -> 19,220 rows
+  by key: 4,010 changed, 0 added, 0 removed
+  columns: discount_pct 4,010
+staging.stg_relay__contracts  30,363 -> 30,363 rows
+  by key: 7,388 changed, 0 added, 0 removed
+  columns: discount_pct 7,388
+29 of 32 tables and views identical
+
+main here against main on production's raw layer:
+  15 of 16 intermediate and mart tables identical
+  marts.fct_portal_sessions: only in production's, 0 rows
+  fct_order_lines: 1,229,062 rows

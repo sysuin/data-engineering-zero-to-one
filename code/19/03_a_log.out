@@ -1,0 +1,21 @@
+Replayed 4,445 files: offsets 0 to 715,443
+  00000000000000000000.log  100,000 records   35.4 MB
+  00000000000000100000.log  100,000 records   35.4 MB
+  00000000000000200000.log  100,000 records   35.4 MB
+  00000000000000300000.log  100,000 records   35.8 MB
+  00000000000000400000.log  100,000 records   36.2 MB
+  00000000000000500000.log  100,000 records   36.7 MB
+  00000000000000600000.log  100,000 records   36.5 MB
+  00000000000000700000.log   15,444 records    5.7 MB
+
+Three records, read back by offset
+        0  2025-07-01T04:06:38.513Z  session_start    328 bytes
+        1  2025-07-01T04:09:38.033Z  search           337 bytes
+  500,000  2025-11-09T14:39:40.166Z  checkout_started 370 bytes
+
+Replaying the same files again appended 0 records
+
+After a torn write, the small log ends at offset 5;
+  the next append gets offset 5
+Retention dropped 2 segments; oldest offset now 4
+Reading offset 0: OffsetOutOfRange: offset 0 is outside 4..6

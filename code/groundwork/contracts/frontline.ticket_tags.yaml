@@ -1,0 +1,22 @@
+# raw.frontline_ticket_tags: a ticket's tags, one per row, in order.
+table: frontline.ticket_tags
+version: 1
+description: >
+  One row per tag on a ticket in the pull, in the order the API
+  lists them.
+producer:
+  who: Frontline, the support desk (its API, v2)
+  contact: support-ops@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per ticket per tag
+key: [ticket_id, position]
+columns:
+  ticket_id: {pattern: 'FT-[0-9]{6}'}
+  updated_at: {type: timestamp, format: '%Y-%m-%dT%H:%M:%SZ', unit: UTC}
+  position: {type: integer, min: 0}
+  tag: {}
+policy:
+  bad_rows: fail
+changes:
+  - version: 1
+    note: first written

@@ -1,0 +1,108 @@
+name: code guarantee
+
+# Three jobs, each run when its answer is worth its time (Chapter 23 explains the split).
+#
+#   fast      every push and pull request: lint, no captured output stale, and the
+#             unit and contract layers, which need no generated data. A few minutes.
+#   diff      every pull request: the integration and diff layers on the tiny Meridian
+#             the tests write; then Meridian generated, its raw layer landed as
+#             production's was (the last night, the old CRM's night Chapter 12
+#             restores, the ticket comments), and the warehouse built twice from it,
+#             once with main's dbt project and once with the branch's, and compared
+#             table by table. The diff goes to the run's summary, for the reviewer.
+#   nightly   every night: Meridian and its sources generated from their seeds and
+#             verified, every test, and every listing run twice, which is the book's
+#             determinism rule.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+
+env:
+  PYTHONPATH: ${{ github.workspace }}/code
+
+jobs:
+  fast:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # main's contracts, for the contract test
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: install
+        run: pip install -r requirements.txt
+      - name: lint
+        run: python3 -m ruff check code/ tests/
+      - name: nothing stale
+        run: python3 code/_runner.py --check
+      - name: unit and contract tests
+        run: |
+          python3 -m pytest tests/ -q \
+            -m "(unit or contract) and not slow"
+
+  diff:
+    if: github.event_name == 'pull_request'
+    needs: fast
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # main, to build it beside the branch
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: install
+        run: pip install -r requirements.txt
+      - name: integration and diff tests, on the tiny Meridian
+        run: |
+          python3 -m pytest tests/ -q \
+            -m "(integration or diff) and not slow"
+      - name: generate and verify Meridian and its sources
+        run: make data PY=python3
+      - name: land the raw layer production has
+        run: |
+          cp .env.example .env
+          make ingest PY=python3 DAY=2026-01-04
+          python3 -m groundwork.identity --restore
+          python3 -m groundwork.ingest.frontline_comments
+      - name: build main and the branch, and diff every table
+        run: |
+          make diff PY=python3 BASE=origin/main \
+            ARGS="--json diff.json" | tee diff.txt
+          { echo '```'; cat diff.txt; echo '```'; } \
+            >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: data-diff
+          path: diff.json
+
+  nightly:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: install
+        run: pip install -r requirements.txt
+      - name: generate and verify Meridian and its sources
+        run: make data PY=python3
+      - name: every test, every layer
+        run: python3 -m pytest tests/ -q
+      - name: every listing, twice
+        run: python3 code/_runner.py --check --twice

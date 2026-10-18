@@ -1,0 +1,11 @@
+Delay, received_at - occurred_at, every event as delivered
+  device     events  median    99th  longest  > 1 hour  future
+  desktop   503,589   1.3 s  50.4 s    5.0 m         0       0
+  mobile    211,855   1.4 s  48.1 h   84.0 h     8,337   2,141
+
+Events filed under an hour they did not happen in: 11,091 of 715,444
+The hour from 16:00 UTC on 9 December 2025:
+  220 events in its file; 209 happened in it
+  13 in the file happened earlier; 2 that happened in it came later
+
+Saved 463 points from 8-10 December for a figure

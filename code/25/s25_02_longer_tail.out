@@ -1,0 +1,2 @@
+rebuild  3 days: runs read 9.33 TB, compute 43.5k core-h a month
+rebuild 30 days: runs read 93.3 TB, compute 46.3k core-h a month

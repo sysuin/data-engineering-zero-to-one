@@ -1,0 +1,24 @@
+today 2026-01-05, sources stand at 2026-01-05T06:00:00Z
+generated from Book 2's warehouse 4274085d784b...
+
+  tradeline_orders               484,018
+  cancelled_orders                 5,738
+  test_orders_deleted                 38
+  amended_orders                  11,969
+  amend_job_nights                 1,461
+  relay_accounts                   6,270
+  legacy_ids                         212
+  migration_map_rows                 187
+  missing_nights                       8
+  tickets                         21,668
+  ticket_comments                  5,414
+  price_list_files                   768
+  ledger_months                       47
+  portal_events                  715,444
+  portal_files                     4,445
+  portal_duplicates                8,519
+  portal_late                      6,310
+  portal_skewed_sessions             554
+  portal_bot_events               12,000
+
+planted problems: 28

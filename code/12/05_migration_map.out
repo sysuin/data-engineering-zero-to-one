@@ -1,0 +1,10 @@
+arrived 1 March 2024 14:30 UTC, 187 rows, matched_by name+postcode
+  int_account_identity: relay   6,058 ids
+  int_account_identity: it_map    187 ids
+  int_account_identity: rule       25 ids
+
+on old ids    rows      ids              last   map alone
+orders       9,470      208  2024-03-01 03:40     948 lost
+tickets        473      171  2024-02-28 15:38      54 lost
+placed sales on the ids the map misses: $664,759.83
+ids unresolved with the map and the seed together: 0

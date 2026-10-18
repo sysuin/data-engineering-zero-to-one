@@ -1,0 +1,21 @@
+column           DuckDB       pandas   written     pandas made
+accounts.csv, row 2
+  account_id     BIGINT       int64    2           2
+  postcode       VARCHAR      int64    01838       1838
+  customer_since DATE         str      2015-11-01  2015-11-01
+  key_account    BOOLEAN      bool     true        True
+  updated_at     TIMESTAMPTZ  str
+contracts.csv, row 5
+  discount_pct   BIGINT       float64  10          10.0
+  notice_date    DATE         str      (empty)     nan
+
+pandas postcodes now under five digits: 1,501
+account 1's updated_at, as DuckDB shows it:
+  session in UTC              2024-06-30 21:23:00+00:00
+  session in America/New_York 2024-06-30 17:23:00-04:00
+  session in Asia/Tokyo       2024-07-01 06:23:00+09:00
+
+one comma made a newline, on line 101:
+  DuckDB  6,059 rows, 1 column, VARCHAR; no error
+  pandas  6,059 rows, 14 columns, all str; no error
+          account_id on row 102: 'Greymere Builders'

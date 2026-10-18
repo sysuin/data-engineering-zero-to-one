@@ -1,0 +1,64 @@
+{
+ "start": "10468688.559999792",
+ "ledger": "10323985.82",
+ "orders": 12371,
+ "steps": [
+  [
+   "floating-point dust",
+   "2.08E-7",
+   null,
+   "10468688.560000000",
+   "the same rows, summed in cents"
+  ],
+  [
+   "cancelled orders",
+   "-154874.32",
+   177,
+   "10313814.240000000",
+   "never happened; finance never booked them"
+  ],
+  [
+   "UTC Nov, the depot's Oct",
+   "-26091.53",
+   36,
+   "10287722.710000000",
+   "placed in the first hours of the month"
+  ],
+  [
+   "UTC Dec, the depot's Nov",
+   "48663.11",
+   53,
+   "10336385.820000000",
+   "placed in the first hours of the next"
+  ],
+  [
+   "manual journal, SW",
+   "-12400.00",
+   null,
+   "10323985.820000000",
+   "Manual adjustment: Q3 volume rebate, key accounts"
+  ]
+ ],
+ "warehouse": "10336385.82",
+ "swapped": [
+  "-26493.05",
+  "48663.11",
+  "-154472.80"
+ ],
+ "examples": [
+  [
+   "in",
+   1393052,
+   "West",
+   "2025-12-01 07:47",
+   "2025-11-30 23:47"
+  ],
+  [
+   "out",
+   1382679,
+   "Southwest",
+   "2025-11-01 04:42",
+   "2025-10-31 23:42"
+  ]
+ ]
+}

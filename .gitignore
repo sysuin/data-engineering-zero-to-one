@@ -1,0 +1,36 @@
+# Secrets — never commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated
+# Meridian and its sources are regenerable in about two minutes from fixed seeds (make
+# data), so they do not belong in version control. Nor does anything Groundwork builds
+# from them: a warehouse in git is a warehouse nobody can review.
+/data/
+# dbt's build output and logs, from Chapter 14.
+dbt/**/target/
+dbt/**/logs/
+dbt/**/dbt_packages/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
+
+# The runner's per-call usage log. `_report.json` next to it IS committed — it is the
+# staleness cache, and a fresh clone needs it to know the captured output is current.
+code/_usage.jsonl
+code/_deps.*.jsonl
+code/_report.json.lock

@@ -1,0 +1,5 @@
+version  files  rows    cents          operation
+      0      1 1,117    37,044,036  append 1 Dec
+      1      2 2,065    67,134,409  append 2 Dec
+      2      2 2,052    66,768,480  rewrite 1 Dec, less cancelled
+live now part-d596e797.parquet, part-c22f0d16.parquet (3 on disk)

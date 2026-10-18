@@ -1,0 +1,13 @@
+tradeline.orders          483,980 rows   key: id
+tradeline.order_lines   1,243,789 rows   key: order_id, line_no
+relay accounts.csv          6,058 rows   key: account_id
+regions.csv                     5 rows   key: region_id
+
+region          orders             revenue
+Southwest       38,672       34,624,102.02
+Northeast       34,977       30,360,146.07
+Southeast       27,530       24,041,628.83
+West            22,324       19,640,000.91
+Midwest         21,672       18,675,285.70
+total          145,175      127,341,163.53
+lines alone                 127,341,163.53

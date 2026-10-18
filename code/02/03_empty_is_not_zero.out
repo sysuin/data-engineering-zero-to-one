@@ -1,0 +1,7 @@
+contracts                 19,220
+  discount of 0            3,023
+  discount above 0        12,187
+  field left empty         4,010
+    of which legacy terms  4,010
+mean discount, empty skipped   6.02%
+mean discount, empty as 0      4.76%

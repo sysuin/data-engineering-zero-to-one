@@ -1,0 +1,20 @@
+# What channel_codes.csv is, and who answers for it. The runner loads
+# the CSV as seeds.channel_codes; this file is for people.
+seed: channel_codes
+description: >
+  The name of each sales channel against the code Tradeline stores on
+  an order (WEB, TEL, FLD, PTR). Tradeline keeps the same four rows in
+  its own channels table, which Groundwork does not load: four rows
+  that change once in years are a seed, not a nightly extract.
+owner: the orders team (Tradeline)
+contact: orders-team@meridian.example
+reviewed_by: data engineering, in the change that adds a row
+grain: one row per channel
+key: [code]
+columns:
+  code: Tradeline's code for the channel
+  channel: the name reports use
+how_to_change: >
+  A new channel in Tradeline needs a row here in the same week, or its
+  orders reach the marts with no channel and the build fails its
+  NOT NULL check.

@@ -1,0 +1,7 @@
+dbt build: 38 built, 48 tests passed, 0 failed
+unit test of fct_contract_month: failed
+marts.fct_contract_month  195,635 -> 181,021 rows
+  by key: 0 changed, 0 added, 14,614 removed
+10 of 11 tables and views identical
+active_accounts' contracts in force, 31 Dec 2025, main: 4,651
+active_accounts' contracts in force, 31 Dec 2025, half-open: 4,229

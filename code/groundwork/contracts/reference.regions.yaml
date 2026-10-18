@@ -1,0 +1,23 @@
+# raw.reference_regions: Meridian's five regions and their depots.
+table: reference.regions
+version: 1
+description: One row per sales region, its depot and the depot's time zone.
+producer:
+  who: operations, by hand
+  contact: operations@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per region
+key: [region_id]
+formats:
+  reference: [region_id, name, depot, timezone]
+columns:
+  region_id: {type: integer, min: 1, max: 5}
+  name: {}
+  depot: {}
+  timezone: {allowed: [America/New_York, America/Chicago,
+                       America/Los_Angeles]}
+policy:
+  bad_rows: fail
+changes:
+  - version: 1
+    note: first written

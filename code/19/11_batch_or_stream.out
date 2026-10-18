@@ -1,0 +1,9 @@
+One batch query over every file: 91,299 sessions
+  rows that differ from the stream's: 2
+  batch  s-eb9ae3e4beb4  5 events, started 2025-08-17 18:48:15
+  stream s-eb9ae3e4beb4  4 events, started 2025-08-17 18:48:15
+  its last event: phone clock 22.6 h slow, then 61.4 h in the queue
+
+At 15:00 UTC on 9 December:
+  the newest file: portal/2025/12/09/13.jsonl.gz, arrived 14:05
+  the log's newest event: received 14:59:52

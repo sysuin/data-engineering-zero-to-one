@@ -1,0 +1,38 @@
+{
+ "lines": {
+  "2024-02-29": [
+   "Acct ID;Account Name;Region;Segment;Owner;Customer Since;Zip;Key Acct;Status;Closed Date;Primary Contact;Contact Email;Contact Phone",
+   "2485;Easby Dental;Northeast;Mid-market;Tom Ashby;04/01/2022;1498;N;Active;;Brennan, Zoë;zoe.brennan@easby-dental.example;(973) 555-0191"
+  ],
+  "2024-03-01": [
+   "account_id,account_name,region,segment,owner,customer_since,postcode,key_account,status,closed_on,contact_name,contact_email,contact_phone,updated_at",
+   "2485,Easby Dental,Northeast,Mid-market,Tom Ashby,2022-04-01,01498,false,active,,Zoë Brennan,zoe.brennan@easby-dental.example,(973) 555-0191,2022-04-01T13:38:09Z"
+  ]
+ },
+ "raw": [
+  [
+   "2024-02-29",
+   "legacy",
+   "1498",
+   "04/01/2022",
+   "Brennan, Zoë",
+   "None"
+  ],
+  [
+   "2024-03-01",
+   "relay",
+   "01498",
+   "2022-04-01",
+   "Zoë Brennan",
+   "2022-04-01T13:38:09Z"
+  ]
+ ],
+ "columns": [
+  "load_date",
+  "source_format",
+  "postcode",
+  "customer_since",
+  "contact_name",
+  "updated_at"
+ ]
+}

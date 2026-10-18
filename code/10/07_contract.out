@@ -1,0 +1,30 @@
+suppliers.price_lists, version 1: 10 columns, 4 formats
+  producer: sixteen suppliers, saved by procurement
+  owner:    data engineering (Groundwork ingest)
+  cost in dollars scale 2, min 0.5, max 1000.0, unit USD
+  cost in cents   type integer, min 50, max 100000, unit USD/100
+
+the six changes, through Chapter 9's reader and the contract:
+  as sent    passed  6 rows
+  added      passed
+    added 'Pack Size': not loaded
+  removed    broken
+    header removed: pemberton's 'Item' missing
+  renamed    broken
+    header renamed?: expected pemberton's 'Cost (USD)', found
+      'Unit Cost USD'
+  reordered  passed
+    columns in a new order
+  retyped    broken
+    6 of 6 rows fail (over 50%), most often cost: type
+
+Kestrel as sent: passed with 3 rows
+Kestrel's cents under the dollar header:
+  3 of 3 rows fail (over 50%), most often cost: range
+
+Wrenfield's December list, written in cents:
+  MRD-CLE-004   235  range: ok     history: 100.0 times
+  MRD-SAF-014  3983  range: range  history: 100.0 times
+  MRD-SAN-039  8418  range: range  history: 100.0 times
+  MRD-SAN-045  1402  range: range  history: 100.0 times
+  with history: 4 of 4 rows fail (over 50%), most often cost: range

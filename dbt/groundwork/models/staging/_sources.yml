@@ -1,0 +1,68 @@
+# What the loaders of Part II made, declared once. A model reads these
+# with source('raw', '...'), and a name not listed here is an error
+# when the project is parsed, before anything is built.
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: >
+      What each source sent, as the source typed it: views over the
+      Parquet files under data/groundwork/raw/, written by
+      groundwork.ingest (Chapters 6-10). Never edited.
+    meta:
+      owner: data engineering (the loaders)
+    tables:
+      - name: tradeline_orders_current
+        description: >
+          Tradeline's orders as they stand after the last load
+          (Chapter 7).
+      - name: tradeline_order_lines_current
+        description: >
+          Tradeline's order lines as they stand after the last load.
+      - name: frontline_tickets
+        description: >
+          Every ticket version each nightly pull returned (Chapter 8).
+      - name: frontline_ticket_fields
+        description: Custom fields of each pulled ticket version.
+      - name: frontline_ticket_tags
+        description: Tags of each pulled ticket version.
+      - name: frontline_ticket_comments
+        description: >
+          Comments on the tickets each pull wrote (Chapter 13).
+      - name: relay_accounts
+        description: >
+          Relay's nightly account export, every night kept (Chapter
+          9).
+      - name: relay_contracts
+        description: Relay's nightly contract export, every night kept.
+      - name: relay_field_history
+        description: >
+          Relay's audit of changes to account and contract fields.
+      - name: relay_migration_map
+        description: >
+          IT's map of old CRM ids to Relay accounts, 1 March 2024.
+      - name: suppliers_price_lists
+        description: >
+          Every supplier price list that arrived (Chapters 9-10).
+      - name: catalogue_products
+        description: Merchandising's product catalogue.
+      - name: ledger_gl_revenue
+        description: >
+          Finance's revenue journal, one file per closed month.
+      - name: reference_regions
+        description: Operations' list of regions, depots and time zones.
+      - name: reference_suppliers
+        description: Procurement's supplier master.
+      - name: reference_price_events
+        description: The commercial team's record of price changes.
+
+  - name: audit
+    schema: audit
+    description: >
+      Groundwork's own records of what was loaded (Chapter 9).
+    tables:
+      - name: current_files
+        description: >
+          The file ledger's view of which file is in force for each
+          name; a file that was replaced drops out.

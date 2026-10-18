@@ -1,0 +1,19 @@
+$ python -m groundwork.govern
+classified 559 columns: 28 personal, 93 confidential, 438 public
+masked: 3 tables, 117,082 rows
+roles: analyst 14, finance 10, support 5, manager_southwest 9
+retention: 99 due (run with --retain), 28.2 MB
+access as written
+exit 0
+
+$ python -m groundwork.govern forget 3574 --request FR-2026-0001
+  redact         5  landed/relay (account exports)
+  redact        16  raw.relay_accounts
+  redact        29  raw.frontline_tickets
+  redact        10  raw.frontline_ticket_comments
+  delete       516  raw.portal_events
+  redact        29  raw pages 2026-01-04 attempt-1 (28 files)
+  redact        29  raw pages 2026-01-04 attempt-2 (28 files)
+  rebuild  117,082  masked.* (rebuilt)
+FR-2026-0001: 8 places; left that is theirs alone: 0
+exit 0

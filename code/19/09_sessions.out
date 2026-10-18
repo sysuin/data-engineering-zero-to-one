@@ -1,0 +1,27 @@
+First run stopped at offset 350,000 with 1,601 sessions open
+Second run resumed from its checkpoint and read to 715,444
+  events 715,444: duplicates 8,519, late but taken 4,929, too late 1
+
+fct_portal_sessions: 91,299 rows holding 706,924 events
+  stream.portal_events: 91,299 session ids, 706,925 events
+  bots 3, clocks corrected 554, rows revised by late events 4,413
+
+One row: the session whose search arrived a day late
+  session_id         s-7d09eab930c9
+  account_key        None
+  region_key         e4da3b7fbbce2345
+  date_key           20251101
+  started_at         2025-11-01 08:39:04.839000
+  ended_at           2025-11-01 08:55:49.744000
+  device             mobile
+  event_count        5
+  searches           2
+  product_views      2
+  add_to_carts       0
+  checkouts_started  0
+  orders_submitted   0
+  account_id         3396
+  is_bot             False
+  late_events        1
+  clock_offset_s     0
+Rows that differ from one uninterrupted run: 0

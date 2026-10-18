@@ -1,0 +1,17 @@
+version 1 to 2:
+  breaks nobody    format pemberton-2024 added
+three other changes someone might ask for:
+  breaks nobody    column pack_size added
+  breaks producer  description: may no longer be empty
+  breaks consumers currency: new values ['CAD']
+
+Pemberton's July 2024 list under version 2:
+  Chapter 9's reader  broken
+    read as pemberton, but the header is pemberton-2024's
+  price_lists.read    passed, 6 rows, cost 58.50
+
+repairing what Chapter 9 loaded:
+  audit    48 lists, 18 broken, 108 empty costs in raw
+  reopened 18 lists
+  reloaded suppliers.price_lists.2026-01-04.2: 234 rows, passed
+  audit    48 lists, 0 broken, 0 empty costs in raw

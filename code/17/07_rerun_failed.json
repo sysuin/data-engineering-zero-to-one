@@ -1,0 +1,212 @@
+[
+[
+"nightly.2026-01-04.1",
+"wait_relay",
+1,
+"succeeded",
+"1 poke, waited 0 s"
+],
+[
+"nightly.2026-01-04.1",
+"ingest_tradeline",
+1,
+"succeeded",
+"1,727,769 rows, 2 tables"
+],
+[
+"nightly.2026-01-04.1",
+"ingest_frontline",
+1,
+"up_for_retry",
+"RuntimeError: frontline.tickets failed: FrontlineError: gave up after 6 attempts, last 503; again in 5 s"
+],
+[
+"nightly.2026-01-04.1",
+"ingest_suppliers",
+1,
+"succeeded",
+"0 rows, 1 table"
+],
+[
+"nightly.2026-01-04.1",
+"ingest_catalogue",
+1,
+"succeeded",
+"0 rows, 1 table"
+],
+[
+"nightly.2026-01-04.1",
+"ingest_ledger",
+1,
+"succeeded",
+"0 rows, 1 table"
+],
+[
+"nightly.2026-01-04.1",
+"ingest_reference",
+1,
+"succeeded",
+"0 rows, 3 tables"
+],
+[
+"nightly.2026-01-04.1",
+"ingest_relay",
+1,
+"succeeded",
+"0 rows, 4 tables"
+],
+[
+"nightly.2026-01-04.1",
+"ingest_frontline",
+2,
+"up_for_retry",
+"RuntimeError: frontline.tickets failed: FrontlineError: gave up after 6 attempts, last 503; again in 10 s"
+],
+[
+"nightly.2026-01-04.1",
+"ingest_frontline",
+3,
+"failed",
+"RuntimeError: frontline.tickets failed: FrontlineError: gave up after 6 attempts, last 503"
+],
+[
+"nightly.2026-01-04.1",
+"load_comments",
+0,
+"upstream_failed",
+""
+],
+[
+"nightly.2026-01-04.1",
+"check_contracts",
+0,
+"upstream_failed",
+""
+],
+[
+"nightly.2026-01-04.1",
+"check_quality",
+0,
+"upstream_failed",
+""
+],
+[
+"nightly.2026-01-04.1",
+"dbt_build",
+0,
+"upstream_failed",
+""
+],
+[
+"nightly.2026-01-04.1",
+"reconcile",
+0,
+"upstream_failed",
+""
+],
+[
+"nightly.2026-01-04.1",
+"publish",
+0,
+"upstream_failed",
+""
+],
+[
+"nightly.2026-01-04.2",
+"wait_relay",
+0,
+"kept",
+"done in run 1"
+],
+[
+"nightly.2026-01-04.2",
+"ingest_tradeline",
+0,
+"kept",
+"done in run 1"
+],
+[
+"nightly.2026-01-04.2",
+"ingest_suppliers",
+0,
+"kept",
+"done in run 1"
+],
+[
+"nightly.2026-01-04.2",
+"ingest_catalogue",
+0,
+"kept",
+"done in run 1"
+],
+[
+"nightly.2026-01-04.2",
+"ingest_ledger",
+0,
+"kept",
+"done in run 1"
+],
+[
+"nightly.2026-01-04.2",
+"ingest_reference",
+0,
+"kept",
+"done in run 1"
+],
+[
+"nightly.2026-01-04.2",
+"ingest_relay",
+0,
+"kept",
+"done in run 1"
+],
+[
+"nightly.2026-01-04.2",
+"ingest_frontline",
+1,
+"succeeded",
+"93,398 rows, 3 tables"
+],
+[
+"nightly.2026-01-04.2",
+"load_comments",
+1,
+"succeeded",
+"5,414 comments"
+],
+[
+"nightly.2026-01-04.2",
+"check_contracts",
+1,
+"succeeded",
+"827 batches, 1,849,396 rows"
+],
+[
+"nightly.2026-01-04.2",
+"check_quality",
+1,
+"succeeded",
+"26 checks, no errors"
+],
+[
+"nightly.2026-01-04.2",
+"dbt_build",
+1,
+"succeeded",
+"built, all tests passed"
+],
+[
+"nightly.2026-01-04.2",
+"reconcile",
+1,
+"succeeded",
+"235 cells, 6 counts: all tie"
+],
+[
+"nightly.2026-01-04.2",
+"publish",
+1,
+"succeeded",
+"2026-01-04 published"
+]
+]

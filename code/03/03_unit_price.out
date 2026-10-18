@@ -1,0 +1,16 @@
+MRD-CLE-001: list price $88.64 in the catalogue
+
+lines placed in December 2025, by discount
+disc   lines   lowest paid   list less disc   below that
+  0%     237          8864             8864            0
+  3%      48          8598             8598            0
+  5%     116          8421             8421            0
+  8%      93          8155             8155            0
+ 10%      76          7978             7978            0
+ 12%      43          7800             7800            0
+ 15%      31          7534             7534            0
+
+November 2025, placed orders, SUM(qty * unit_price_cents)
+  as stored               1,031,381,424 cents
+  discount taken again      984,643,496 cents
+  understated by                  4.53%

@@ -1,0 +1,27 @@
+# raw.tradeline_orders: an order as Tradeline holds it.
+table: tradeline.orders
+version: 1
+description: >
+  One row per order in Tradeline, the orders application, typed as
+  its database declares them. Cancelled orders stay, with status
+  'cancelled'.
+producer:
+  who: Tradeline (orders team)
+  contact: orders-team@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per order
+key: [id]
+columns:
+  id: {type: integer, min: 1}
+  order_number: {type: integer, min: 1}
+  account_id: {type: integer, min: 1}
+  placed_at: {type: timestamp, format: '%Y-%m-%d %H:%M:%S', unit: UTC}
+  channel: {allowed: [FLD, PTR, TEL, WEB]}
+  status: {allowed: [placed, cancelled]}
+  created_at: {type: timestamp, format: '%Y-%m-%d %H:%M:%S', unit: UTC}
+  updated_at: {type: timestamp, format: '%Y-%m-%d %H:%M:%S', unit: UTC}
+policy:
+  bad_rows: fail            # the system of record: stop, never drop
+changes:
+  - version: 1
+    note: first written, from Tradeline's schema and four years of rows

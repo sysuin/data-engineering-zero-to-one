@@ -1,0 +1,24 @@
+{
+ "account": 274,
+ "gone": "2025-10-01",
+ "moved": 118,
+ "orders": 6,
+ "audit": [
+  [
+   "2023-12-01",
+   "Rhea Lindqvist"
+  ],
+  [
+   "2025-10-01",
+   "Ines Varga"
+  ]
+ ],
+ "changes": [
+  [
+   "2025-10-01 14:02:00",
+   "owner",
+   "Rhea Lindqvist",
+   "Ines Varga"
+  ]
+ ]
+}

@@ -1,0 +1,10 @@
+21,668 tickets from 5,177 people; the CRM lists 6,058 contacts
+
+hidden as        tickets joined  people undone
+plain text               21,668          5,177
+sha-256                  21,668          5,177
+sha-256 salted                0              0
+keyed (hmac)             21,668              0
+token (vault)            21,668              0
+
+one guess, one hash: is kevin.anderson a requester? True

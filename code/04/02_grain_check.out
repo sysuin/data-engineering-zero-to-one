@@ -1,0 +1,12 @@
+table                 one row per              rows      keys
+tradeline.orders      id                    483,980   483,980
+tradeline.order_lines order_id, line_no   1,243,789 1,243,789
+tradeline.order_lines order_id            1,243,789   483,980  no
+accounts              account_id              6,058     6,058
+contracts             contract_id            19,220    19,220
+contracts             account_id             19,220     6,058  no
+
+the sheet: 375,297 lines, 145,175 orders, 4,934 accounts
+active accounts with no order in December
+  asked of the sheet              1,147
+  asked of the accounts table     1,154

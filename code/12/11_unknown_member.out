@@ -1,0 +1,10 @@
+orders replayed through the nightly run 483,980
+orders whose account the run's export lacked: 2
+    order  account  placed (UTC)      export used  account first in
+    85260        2  2023-01-01 05:44  2022-12-31   2023-01-01
+    85261       23  2023-01-01 05:53  2022-12-31   2023-01-01
+
+with IT's map alone, placed orders with no account: 948
+each would point at the unknown member:
+  a78696f1dbbc1057 | -1 | Unknown account | Unknown | unknown
+  valid_from 2021-01-01, valid_to None

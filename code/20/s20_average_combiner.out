@@ -1,0 +1,5 @@
+Halloway's lines: 11,774 by hand, 11,774 in SQLite
+average line, cents, (sum, count) combined: 48,795.82
+average line, cents, straight from SQLite:  48,795.82
+average of the mappers' averages:           48,686.24
+combined equals the truth exactly: True

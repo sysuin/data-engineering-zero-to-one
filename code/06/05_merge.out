@@ -1,0 +1,14 @@
+1 November, October's run:
+  load_orders 1: inserted 12,485, updated 0
+  load_lines 1: inserted 32,434, updated 0
+1 December, November's run:
+  load_orders 1: inserted 12,371, updated 0
+  load_lines 1: inserted 31,965, updated 0; timed out
+  load_lines 2: inserted 0, updated 0
+  2025-10    $10,500,645.36
+  2025-11    $10,313,814.24
+the whole job again:
+  load_orders 1: inserted 0, updated 0
+  load_lines 1: inserted 0, updated 0
+  2025-10    $10,500,645.36
+  2025-11    $10,313,814.24

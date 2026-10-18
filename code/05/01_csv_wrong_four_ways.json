@@ -1,0 +1,12 @@
+{
+ "line": "2485;Easby Dental;Northeast;Mid-market;Tom Ashby;04/01/2022;1498;N;Active;;Brennan, Zoë;zoe.brennan@easby-dental.example;(973) 555-0191",
+ "comma_fields": [
+  "2485;Easby Dental;Northeast;Mid-market;Tom Ashby;04/01/2022;1498;N;Active;;Brennan",
+  " Zoë;zoe.brennan@easby-dental.example;(973) 555-0191"
+ ],
+ "loaded": 2830,
+ "rows": 5188,
+ "since": "2022-01-04",
+ "zip": 1498,
+ "utf8_at": 86
+}

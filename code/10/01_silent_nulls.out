@@ -1,0 +1,20 @@
+suppliers.price_lists.2026-01-04.1  succeeded
+  rows read 2,034, the files hold 2,034, written 2,034
+
+Pemberton's lists in raw:
+  Jan 2022 to Jun 2024  30 lists  126 rows    0 with no cost
+  Jul 2024 to Dec 2025  18 lists  108 rows  108 with no cost
+
+month            sales   margin, report    margin, true
+2024-05    $9,464,413 $2,967,701 31.4% $2,967,701 31.4%
+2024-06    $9,348,869 $2,919,529 31.2% $2,919,529 31.2%
+2024-07    $9,727,683 $3,645,505 37.5% $3,137,708 32.3%
+2024-08    $9,522,285 $3,595,255 37.8% $3,072,334 32.3%
+2024-09    $9,721,145 $3,672,647 37.8% $3,131,956 32.2%
+2024-10    $9,373,370 $3,430,333 36.6% $2,909,458 31.0%
+2024-11    $9,579,558 $3,504,987 36.6% $2,969,956 31.0%
+2024-12    $9,888,369 $3,591,244 36.3% $3,059,952 30.9%
+Jul to Dec 2024: margin overstated by $3,158,607
+Jul 2024 to Dec 2025: report $67,901,197, true $57,440,679
+  overstated by $10,460,518 in 18 months
+  $14,994,602 of sales had no cost

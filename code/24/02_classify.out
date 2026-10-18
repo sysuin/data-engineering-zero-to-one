@@ -1,0 +1,24 @@
+layer          personal  confidential  public   all
+raw                  13            33     192   238
+staging              11            27     106   144
+intermediate          2             8      24    34
+marts                 2            25     116   143
+all                  28            93     438   559
+
+personal by what it holds, not by its name: 3
+  raw.frontline_ticket_comments.body              871 rows
+  raw.frontline_tickets.payload                21,668 rows
+  staging.stg_frontline__ticket_comments.body     871 rows
+no rule, confidential until reviewed: 2
+  raw.ledger_gl_revenue.gl_account
+  staging.stg_ledger__gl_revenue.gl_account
+
+relations holding customers' personal data: 8
+  marts.fct_portal_sessions               1 column
+  raw.frontline_ticket_comments           2 columns
+  raw.frontline_tickets                   3 columns
+  raw.portal_events                       2 columns
+  raw.relay_accounts                      3 columns
+  staging.stg_frontline__ticket_comments  2 columns
+  staging.stg_frontline__tickets          2 columns
+  staging.stg_relay__accounts             3 columns

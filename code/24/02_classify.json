@@ -1,0 +1,60 @@
+{
+ "layers": {
+  "raw": {
+   "personal": 13,
+   "confidential": 33,
+   "public": 192
+  },
+  "staging": {
+   "personal": 11,
+   "confidential": 27,
+   "public": 106
+  },
+  "intermediate": {
+   "personal": 2,
+   "confidential": 8,
+   "public": 24
+  },
+  "marts": {
+   "personal": 2,
+   "confidential": 25,
+   "public": 116
+  }
+ },
+ "customer": {
+  "marts.fct_portal_sessions": [
+   "session_id"
+  ],
+  "raw.frontline_ticket_comments": [
+   "author",
+   "body"
+  ],
+  "raw.frontline_tickets": [
+   "requester_name",
+   "requester_email",
+   "payload"
+  ],
+  "raw.portal_events": [
+   "session_id",
+   "user_id"
+  ],
+  "raw.relay_accounts": [
+   "contact_name",
+   "contact_email",
+   "contact_phone"
+  ],
+  "staging.stg_frontline__ticket_comments": [
+   "author",
+   "body"
+  ],
+  "staging.stg_frontline__tickets": [
+   "requester_name",
+   "requester_email"
+  ],
+  "staging.stg_relay__accounts": [
+   "contact_name",
+   "contact_email",
+   "contact_phone"
+  ]
+ }
+}

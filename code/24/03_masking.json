@@ -1,0 +1,15 @@
+{
+ "email": "kevin.anderson@bexham-estates.example",
+ "phone": "(214) 555-0152",
+ "comment": "Chasing this again. My direct line is (214) 555-0152, ask for Kevin.",
+ "shown": {
+  "as held": "kevin.anderson@bexham-estates.example",
+  "redacted": "[email]",
+  "masked": "k***@bexham-estates.example",
+  "sha-256": "66df427870a279c9...",
+  "keyed": "08c0f0420461f252",
+  "token": "tok_000001"
+ },
+ "comment_redacted": "Chasing this again. My direct line is [phone], ask for Kevin.",
+ "phone_masked": "(***) ***-0152"
+}

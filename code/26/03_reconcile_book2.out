@@ -1,0 +1,21 @@
+compat against meridian_ml.db, every row and value
+table                 Book 2  Groundwork  differing
+regions                    5           5          0
+suppliers                 20          20          0
+products                  48          48          0
+accounts               6,270       6,270          0
+contracts             19,220      19,220          0
+orders               478,242     478,242          0
+order_lines        1,229,062   1,229,062          0
+tickets               21,668      21,668          0
+price_events               3           3          0
+v_sales            1,229,062   1,229,062          0
+10 relations, 2,983,600 rows a side, 0 differing
+
+account_history: Book 2 9,910 rows, Groundwork 9,891
+  as a CRM could have recorded it      9,891
+  began before the first export          208
+  changed nothing                         17
+  lasted no time                           2
+  lost a segment change                    2
+  differing from Groundwork                0

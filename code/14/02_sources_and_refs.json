@@ -1,0 +1,423 @@
+{
+ "kinds": {
+  "stg_ledger__gl_revenue": "model",
+  "stg_frontline__ticket_fields": "model",
+  "stg_frontline__ticket_comments": "model",
+  "stg_reference__price_events": "model",
+  "stg_frontline__ticket_versions": "model",
+  "stg_relay__migration_map": "model",
+  "stg_frontline__ticket_tags": "model",
+  "stg_relay__contracts": "model",
+  "stg_relay__field_history": "model",
+  "stg_relay__accounts": "model",
+  "stg_catalogue__products": "model",
+  "stg_suppliers__price_lists": "model",
+  "stg_frontline__tickets": "model",
+  "stg_tradeline__order_lines": "model",
+  "stg_reference__suppliers": "model",
+  "stg_tradeline__orders": "model",
+  "stg_reference__regions": "model",
+  "dim_product": "model",
+  "dim_supplier": "model",
+  "fct_contracts": "model",
+  "dim_account": "model",
+  "fct_tickets": "model",
+  "dim_region": "model",
+  "fct_order_lines": "model",
+  "fct_orders": "model",
+  "fct_contract_month": "model",
+  "dim_date": "model",
+  "int_product_costs": "model",
+  "int_account_versions": "model",
+  "int_account_changes": "model",
+  "int_order_lines": "model",
+  "int_account_identity": "model",
+  "snp_relay__accounts": "snapshot",
+  "region_codes": "seed",
+  "channel_codes": "seed",
+  "supplier_names": "seed",
+  "account_matches": "seed"
+ },
+ "levels": {
+  "stg_ledger__gl_revenue": 0,
+  "stg_frontline__ticket_fields": 0,
+  "stg_frontline__ticket_comments": 0,
+  "stg_reference__price_events": 0,
+  "stg_frontline__ticket_versions": 0,
+  "stg_relay__migration_map": 0,
+  "stg_frontline__ticket_tags": 0,
+  "stg_relay__contracts": 0,
+  "stg_relay__field_history": 0,
+  "stg_relay__accounts": 0,
+  "supplier_names": 0,
+  "stg_catalogue__products": 1,
+  "stg_suppliers__price_lists": 1,
+  "stg_frontline__tickets": 0,
+  "stg_tradeline__order_lines": 0,
+  "stg_reference__suppliers": 0,
+  "stg_tradeline__orders": 0,
+  "stg_reference__regions": 0,
+  "int_product_costs": 2,
+  "dim_product": 3,
+  "dim_supplier": 1,
+  "account_matches": 0,
+  "int_account_identity": 1,
+  "int_account_changes": 1,
+  "int_account_versions": 2,
+  "dim_account": 3,
+  "fct_contracts": 4,
+  "region_codes": 0,
+  "dim_region": 1,
+  "fct_tickets": 4,
+  "channel_codes": 0,
+  "int_order_lines": 2,
+  "fct_order_lines": 4,
+  "fct_orders": 5,
+  "fct_contract_month": 4,
+  "dim_date": 0,
+  "snp_relay__accounts": 1
+ },
+ "schema": {
+  "stg_ledger__gl_revenue": "staging",
+  "stg_frontline__ticket_fields": "staging",
+  "stg_frontline__ticket_comments": "staging",
+  "stg_reference__price_events": "staging",
+  "stg_frontline__ticket_versions": "staging",
+  "stg_relay__migration_map": "staging",
+  "stg_frontline__ticket_tags": "staging",
+  "stg_relay__contracts": "staging",
+  "stg_relay__field_history": "staging",
+  "stg_relay__accounts": "staging",
+  "stg_catalogue__products": "staging",
+  "stg_suppliers__price_lists": "staging",
+  "stg_frontline__tickets": "staging",
+  "stg_tradeline__order_lines": "staging",
+  "stg_reference__suppliers": "staging",
+  "stg_tradeline__orders": "staging",
+  "stg_reference__regions": "staging",
+  "dim_product": "marts",
+  "dim_supplier": "marts",
+  "fct_contracts": "marts",
+  "dim_account": "marts",
+  "fct_tickets": "marts",
+  "dim_region": "marts",
+  "fct_order_lines": "marts",
+  "fct_orders": "marts",
+  "fct_contract_month": "marts",
+  "dim_date": "marts",
+  "int_product_costs": "intermediate",
+  "int_account_versions": "intermediate",
+  "int_account_changes": "intermediate",
+  "int_order_lines": "intermediate",
+  "int_account_identity": "intermediate",
+  "snp_relay__accounts": "snapshots",
+  "region_codes": "seeds",
+  "channel_codes": "seeds",
+  "supplier_names": "seeds",
+  "account_matches": "seeds"
+ },
+ "refs": [
+  [
+   "account_matches",
+   "int_account_identity"
+  ],
+  [
+   "channel_codes",
+   "int_order_lines"
+  ],
+  [
+   "dim_account",
+   "fct_contract_month"
+  ],
+  [
+   "dim_account",
+   "fct_contracts"
+  ],
+  [
+   "dim_account",
+   "fct_order_lines"
+  ],
+  [
+   "dim_account",
+   "fct_tickets"
+  ],
+  [
+   "dim_product",
+   "fct_order_lines"
+  ],
+  [
+   "dim_product",
+   "fct_tickets"
+  ],
+  [
+   "dim_region",
+   "fct_order_lines"
+  ],
+  [
+   "dim_region",
+   "fct_tickets"
+  ],
+  [
+   "dim_supplier",
+   "fct_order_lines"
+  ],
+  [
+   "fct_order_lines",
+   "fct_orders"
+  ],
+  [
+   "int_account_changes",
+   "int_account_versions"
+  ],
+  [
+   "int_account_identity",
+   "fct_contract_month"
+  ],
+  [
+   "int_account_identity",
+   "fct_contracts"
+  ],
+  [
+   "int_account_identity",
+   "fct_tickets"
+  ],
+  [
+   "int_account_identity",
+   "int_order_lines"
+  ],
+  [
+   "int_account_versions",
+   "dim_account"
+  ],
+  [
+   "int_order_lines",
+   "fct_order_lines"
+  ],
+  [
+   "int_product_costs",
+   "dim_product"
+  ],
+  [
+   "region_codes",
+   "dim_region"
+  ],
+  [
+   "stg_catalogue__products",
+   "dim_product"
+  ],
+  [
+   "stg_frontline__ticket_comments",
+   "fct_tickets"
+  ],
+  [
+   "stg_frontline__ticket_fields",
+   "fct_tickets"
+  ],
+  [
+   "stg_frontline__ticket_versions",
+   "fct_tickets"
+  ],
+  [
+   "stg_frontline__tickets",
+   "fct_tickets"
+  ],
+  [
+   "stg_reference__regions",
+   "dim_account"
+  ],
+  [
+   "stg_reference__regions",
+   "dim_region"
+  ],
+  [
+   "stg_reference__regions",
+   "int_account_changes"
+  ],
+  [
+   "stg_reference__suppliers",
+   "dim_supplier"
+  ],
+  [
+   "stg_relay__accounts",
+   "dim_account"
+  ],
+  [
+   "stg_relay__accounts",
+   "int_account_changes"
+  ],
+  [
+   "stg_relay__accounts",
+   "int_account_identity"
+  ],
+  [
+   "stg_relay__accounts",
+   "int_account_versions"
+  ],
+  [
+   "stg_relay__accounts",
+   "snp_relay__accounts"
+  ],
+  [
+   "stg_relay__contracts",
+   "fct_contract_month"
+  ],
+  [
+   "stg_relay__contracts",
+   "fct_contracts"
+  ],
+  [
+   "stg_relay__field_history",
+   "int_account_changes"
+  ],
+  [
+   "stg_relay__migration_map",
+   "int_account_identity"
+  ],
+  [
+   "stg_suppliers__price_lists",
+   "int_product_costs"
+  ],
+  [
+   "stg_tradeline__order_lines",
+   "fct_order_lines"
+  ],
+  [
+   "stg_tradeline__order_lines",
+   "int_order_lines"
+  ],
+  [
+   "stg_tradeline__orders",
+   "fct_order_lines"
+  ],
+  [
+   "stg_tradeline__orders",
+   "int_order_lines"
+  ],
+  [
+   "supplier_names",
+   "stg_catalogue__products"
+  ],
+  [
+   "supplier_names",
+   "stg_suppliers__price_lists"
+  ]
+ ],
+ "sources": [
+  [
+   "audit.current_files",
+   "stg_catalogue__products"
+  ],
+  [
+   "audit.current_files",
+   "stg_ledger__gl_revenue"
+  ],
+  [
+   "audit.current_files",
+   "stg_reference__price_events"
+  ],
+  [
+   "audit.current_files",
+   "stg_reference__regions"
+  ],
+  [
+   "audit.current_files",
+   "stg_reference__suppliers"
+  ],
+  [
+   "audit.current_files",
+   "stg_relay__accounts"
+  ],
+  [
+   "audit.current_files",
+   "stg_relay__contracts"
+  ],
+  [
+   "audit.current_files",
+   "stg_relay__field_history"
+  ],
+  [
+   "audit.current_files",
+   "stg_relay__migration_map"
+  ],
+  [
+   "audit.current_files",
+   "stg_suppliers__price_lists"
+  ],
+  [
+   "raw.catalogue_products",
+   "stg_catalogue__products"
+  ],
+  [
+   "raw.frontline_ticket_comments",
+   "stg_frontline__ticket_comments"
+  ],
+  [
+   "raw.frontline_ticket_fields",
+   "stg_frontline__ticket_fields"
+  ],
+  [
+   "raw.frontline_ticket_tags",
+   "stg_frontline__ticket_tags"
+  ],
+  [
+   "raw.frontline_tickets",
+   "stg_frontline__ticket_fields"
+  ],
+  [
+   "raw.frontline_tickets",
+   "stg_frontline__ticket_tags"
+  ],
+  [
+   "raw.frontline_tickets",
+   "stg_frontline__ticket_versions"
+  ],
+  [
+   "raw.frontline_tickets",
+   "stg_frontline__tickets"
+  ],
+  [
+   "raw.ledger_gl_revenue",
+   "stg_ledger__gl_revenue"
+  ],
+  [
+   "raw.reference_price_events",
+   "stg_reference__price_events"
+  ],
+  [
+   "raw.reference_regions",
+   "stg_reference__regions"
+  ],
+  [
+   "raw.reference_suppliers",
+   "stg_reference__suppliers"
+  ],
+  [
+   "raw.relay_accounts",
+   "stg_relay__accounts"
+  ],
+  [
+   "raw.relay_contracts",
+   "stg_relay__contracts"
+  ],
+  [
+   "raw.relay_field_history",
+   "stg_relay__field_history"
+  ],
+  [
+   "raw.relay_migration_map",
+   "stg_relay__migration_map"
+  ],
+  [
+   "raw.suppliers_price_lists",
+   "stg_suppliers__price_lists"
+  ],
+  [
+   "raw.tradeline_order_lines_current",
+   "stg_tradeline__order_lines"
+  ],
+  [
+   "raw.tradeline_orders_current",
+   "stg_tradeline__orders"
+  ]
+ ]
+}

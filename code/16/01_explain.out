@@ -1,0 +1,20 @@
+as written: the logical plan
+  ORDER_BY  revenue, largest first
+    PROJECTION
+      AGGREGATE  one row per segment
+        FILTER  order_date in December
+          COMPARISON_JOIN  inner, on account_key
+            SEQ_SCAN  fct_order_lines: 18 of 18 columns
+            SEQ_SCAN  dim_account: 14 of 14 columns
+as it will run: the physical plan, projections not shown
+  ORDER_BY  revenue, largest first
+    HASH_GROUP_BY  one row per segment
+      HASH_JOIN  inner, on account_key
+        SEQ_SCAN  fct_order_lines: 2 of 18 columns, filtered
+        SEQ_SCAN  dim_account: 2 of 14 columns
+pushed into the scans, and the planner's estimates:
+  fct_order_lines: account_key, revenue
+    where order_date>='2025-12-01' AND order_date<'2026-01-01'
+    expects 245,812 of 1,229,062 rows
+  dim_account: account_key, segment
+    expects 11,340 of 11,340 rows

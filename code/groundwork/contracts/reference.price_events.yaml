@@ -1,0 +1,22 @@
+# raw.reference_price_events: the calendar of price changes.
+table: reference.price_events
+version: 1
+description: One row per price change Meridian made or was given.
+producer:
+  who: commercial team, by hand
+  contact: commercial@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per price change
+formats:
+  reference: [effective_on, scope, change_pct, note]
+columns:
+  effective_on: {type: date, format: '%Y-%m-%d'}
+  scope: {}
+  change_pct: {type: decimal, scale: 1, min: -50, max: 50,
+               unit: percent}
+  note: {nullable: true}
+policy:
+  bad_rows: fail
+changes:
+  - version: 1
+    note: first written

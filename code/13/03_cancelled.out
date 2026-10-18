@@ -1,0 +1,9 @@
+status       orders      lines           revenue
+placed      478,242  1,229,062    402,018,545.16
+cancelled     5,738     14,727      4,845,931.04
+the fact    478,242               402,018,545.16
+cancelled orders in the fact: 0
+
+Tradeline today 483,980 orders, raw current 483,980
+  only in raw 0, only in Tradeline 0
+ids run to 484,018: 38 ids missing, in 38 gaps

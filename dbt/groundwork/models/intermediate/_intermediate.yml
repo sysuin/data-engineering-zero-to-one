@@ -1,0 +1,43 @@
+# The intermediate models' documentation: each description is the
+# model's header comment, which says what one row is.
+version: 2
+
+models:
+  - name: int_account_changes
+    description: >
+      One row per change Relay's audit recorded to an account's
+      segment, owner, status or closing date, or its creation, dated
+      by the calendar of the account's depot.
+  - name: int_account_identity
+    description: >
+      One row per account id the CRM ever exported, and the Relay
+      account it belongs to. Relay's own ids map to themselves; the
+      old CRM's second records map through IT's migration map or,
+      where IT's map has no row, the matches sales operations
+      confirmed (seeds.account_matches). An id that resolves to
+      nothing keeps a NULL account_id, so a test can count it.
+  - name: int_account_versions
+    description: >
+      One row per account per version of its segment, owner and
+      status, rebuilt from Relay's audit. Today's export says where
+      each account stands; the audit, read backwards, says what it
+      was before each change. A version begins on the depot's date
+      of a change; two changes on one day leave the day's last
+      value. The first version begins when the account was created,
+      or on 1 January 2022, the first night anyone kept, for
+      accounts older than that.
+  - name: int_order_lines
+    description: >
+      One row per line of an order that was placed and not
+      cancelled, with its order's number, moment and channel, and
+      its account resolved to Relay's id. A cancelled order did not
+      happen, so its lines are not here; a test order was deleted in
+      Tradeline and never reaches raw's current view. updated_at is
+      the later of the order's and the line's, for loads that take
+      only what changed.
+  - name: int_product_costs
+    description: >
+      One row per SKU per cost version. A version begins on the
+      effective date of the first price list that changed the SKU's
+      cost, and ends when the next one begins; a list that repeats
+      the cost, or a month with no list, changes nothing.

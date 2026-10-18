@@ -1,0 +1,11 @@
+contracts ended Jan 2023 to Nov 2025: 10,778, not renewed 773
+filled in on the morning of the mark      today    then
+  outcome                                10,778       0
+  notice_date                               773       0
+  cancellation_reason                       773       0
+reasons typed 93 to 130 days after the mark, median 111
+a one-line rule for leaving     flags  right  found
+  reason is filled in (today)     773    773   100%
+  on the Retention desk (today)  1,117    576    75%
+  on the Retention desk (mark)      0      0     0%
+segment today differs from the mark's: 225 rows

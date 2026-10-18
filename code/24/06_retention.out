@@ -1,0 +1,26 @@
+policy            keep  owner
+portal_events      90d  web team
+frontline_pages     0d  data engineering
+relay_exports      30d  data engineering
+query_log         400d  security
+
+run as of 2026-01-05:
+policy          action    targets      rows      MB
+portal_events   deleted        98   374,081    16.3
+frontline_pages deleted         1       217    11.9
+relay_exports   exempt          2         2     0.2
+relay_exports   kept           12        28     2.3
+  exempt landed/relay/0af3f3c37f46:
+    the old CRM's 212 ids (Chapter 12)
+  exempt landed/relay/4b136e8bdc00:
+    the old CRM's contracts (Chapter 12)
+
+portal sessions raw can still count, by month received:
+  2025-07   15,344 ->       0
+  2025-08   15,367 ->       0
+  2025-09   15,046 ->       0
+  2025-10   15,372 ->  12,370
+  2025-11   15,035 ->  15,035
+  2025-12   15,370 ->  15,370
+  2026-01       82 ->      82
+due on a second run the same day: 0

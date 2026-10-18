@@ -1,0 +1,91 @@
+{
+ "systems": [
+  {
+   "name": "Meridian",
+   "rows_day": 30554.223773751655,
+   "peak_ratio": 2.5547214273691297,
+   "sent_bytes": 138.3906076734815,
+   "stored_bytes": 23.2825821113891,
+   "keep_days": 1461
+  },
+  {
+   "name": "Clicks",
+   "rows_day": 300000000.0,
+   "peak_ratio": 3,
+   "sent_bytes": 800,
+   "stored_bytes": 89.22822075401841,
+   "keep_days": 730
+  },
+  {
+   "name": "CDC",
+   "rows_day": 60000000.0,
+   "peak_ratio": 4,
+   "sent_bytes": 700,
+   "stored_bytes": 58.905322362010224,
+   "keep_days": 365
+  },
+  {
+   "name": "IoT",
+   "rows_day": 34560000000.0,
+   "peak_ratio": 1.2,
+   "sent_bytes": 40,
+   "stored_bytes": 3,
+   "keep_days": 90
+  },
+  {
+   "name": "Finance",
+   "rows_day": 3200000.0,
+   "peak_ratio": 5,
+   "sent_bytes": 400,
+   "stored_bytes": 33.660184206862986,
+   "keep_days": 2555
+  }
+ ],
+ "estimates": {
+  "Meridian": {
+   "rows a day": 30554.223773751655,
+   "peak rows/s": 0.9034436362434562,
+   "sent MB/day": 4.2284175950410265,
+   "stored MB/day": 0.7113812238621299,
+   "stored GB kept": 1.0393279680625718,
+   "backlog MB": 8.456835190082053,
+   "catch-up rows/s": 3.182731643099131
+  },
+  "Clicks": {
+   "rows a day": 300000000.0,
+   "peak rows/s": 10416.666666666666,
+   "sent MB/day": 240000.0,
+   "stored MB/day": 26768.466226205524,
+   "stored GB kept": 19540.980345130032,
+   "backlog MB": 480000.0,
+   "catch-up rows/s": 31250.0
+  },
+  "CDC": {
+   "rows a day": 60000000.0,
+   "peak rows/s": 2777.777777777778,
+   "sent MB/day": 42000.0,
+   "stored MB/day": 3534.3193417206135,
+   "stored GB kept": 1290.0265597280238,
+   "backlog MB": 84000.0,
+   "catch-up rows/s": 6250.0
+  },
+  "IoT": {
+   "rows a day": 34560000000.0,
+   "peak rows/s": 480000.0,
+   "sent MB/day": 1382400.0,
+   "stored MB/day": 103680.0,
+   "stored GB kept": 9331.2,
+   "backlog MB": 2764800.0,
+   "catch-up rows/s": 3600000.0
+  },
+  "Finance": {
+   "rows a day": 3200000.0,
+   "peak rows/s": 185.1851851851852,
+   "sent MB/day": 1280.0,
+   "stored MB/day": 107.71258946196156,
+   "stored GB kept": 275.20566607531174,
+   "backlog MB": 2560.0,
+   "catch-up rows/s": 333.33333333333337
+  }
+ }
+}

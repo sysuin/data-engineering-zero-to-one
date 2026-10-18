@@ -1,0 +1,144 @@
+# The marts: what each table is, and the first tests on it. Chapter 4
+# designed these tables and marts.sql declares them; Chapter 15 adds
+# the full quality suite and the reconciliations. The tests here are
+# the promises a reader would check first: every key is there and
+# unique, every fact's key is found in its dimension, and a column
+# that holds a short list of values holds only those.
+version: 2
+
+models:
+  - name: dim_date
+    description: >
+      One row per calendar day, 2021-01-01 to 2026-12-31. Built from
+      the calendar; no source sends it.
+    columns:
+      - name: date_key
+        description: The date as yyyymmdd, 20251231.
+        data_tests: [unique, not_null]
+
+  - name: dim_region
+    description: >
+      One row per region, with the ledger's code and the depot's
+      calendar, and the unknown member (region -1).
+    columns:
+      - name: region_key
+        data_tests: [unique, not_null]
+
+  - name: dim_supplier
+    description: >
+      One row per supplier on procurement's master list, and the
+      unknown member (supplier -1).
+    columns:
+      - name: supplier_key
+        data_tests: [unique, not_null]
+
+  - name: dim_product
+    description: >
+      One row per SKU per cost version (SCD Type 2 on unit_cost), and
+      the unknown member, SKU UNKNOWN.
+    columns:
+      - name: product_key
+        data_tests: [unique, not_null]
+
+  - name: dim_account
+    description: >
+      One row per account per version of its segment, owner and status
+      (SCD Type 2), rebuilt from Relay's audit; the other attributes
+      are today's (Type 1). Account -1 is the unknown member.
+    meta: {owner: data engineering, source_owner: sales operations}
+    columns:
+      - name: account_key
+        description: md5 of account_id and valid_from, 16 characters.
+        data_tests: [unique, not_null]
+      - name: segment
+        description: >
+          Sales' segment. A new one is a decision someone made in the
+          CRM, worth hearing about, not worth stopping the night for.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [Enterprise, Mid-market, Public sector,
+                         Small business, Unknown]
+              config:
+                severity: warn
+
+  - name: fct_order_lines
+    description: >
+      One row per line of a placed, not-cancelled order, dated by its
+      depot's day, every key the version valid that day. Revenue is
+      qty times the price charged after discount. Incremental.
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "order_id || '-' || line_no"
+    columns:
+      - name: order_id
+        data_tests: [not_null]
+      - name: account_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_account')
+                field: account_key
+      - name: product_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_product')
+                field: product_key
+      - name: date_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_key
+      - name: channel
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [Web, Telesales, Field sales, Partner]
+
+  - name: fct_orders
+    description: >
+      One row per placed, not-cancelled order, its lines rolled up.
+    columns:
+      - name: order_id
+        data_tests: [unique, not_null]
+      - name: account_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_account')
+                field: account_key
+
+  - name: fct_tickets
+    description: >
+      One row per ticket, its milestones as first seen by a pull (an
+      accumulating snapshot). first_reply_at is the first time a pull
+      saw the ticket open: the first touch, not the first reply.
+    columns:
+      - name: ticket_id
+        data_tests: [unique, not_null]
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [new, open, pending, solved, closed]
+
+  - name: fct_contracts
+    description: One row per contract, as today's export holds it.
+    columns:
+      - name: contract_id
+        data_tests: [unique, not_null]
+
+  - name: fct_contract_month
+    description: >
+      One row per contract per month end it is in force (a periodic
+      snapshot). contracts_in_force sums across contracts on one month
+      end, never across months.
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "contract_id || '-' || month_end_date_key"

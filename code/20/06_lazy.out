@@ -1,0 +1,10 @@
+pipeline built; rows read so far: 0
+asked for 3 lines over $1,000; rows read: 101
+
+TOP_N                         3 rows  <- waits for all input
+  HASH_GROUP_BY           3,454 rows  <- waits for all input
+    PROJECTION           31,503 rows
+      PARQUET_SCAN       31,503 rows
+        files 1/49, filter status='placed'
+rows in the dataset: 1,243,789
+top account: 20

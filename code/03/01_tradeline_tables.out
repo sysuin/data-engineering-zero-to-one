@@ -1,0 +1,13 @@
+_sim                      1 rows   key: -
+channels                  4 rows   key: code
+order_lines       1,243,789 rows   key: order_id, line_no
+orders              483,980 rows   key: id
+replication_log       4,405 rows   key: lsn
+orders: id INTEGER, order_number INTEGER, account_id INTEGER,
+  placed_at TEXT, channel TEXT, status TEXT, created_at TEXT,
+  updated_at TEXT
+order_lines: order_id INTEGER, line_no INTEGER, sku TEXT, qty
+  INTEGER, unit_price_cents INTEGER, discount_pct INTEGER,
+  created_at TEXT, updated_at TEXT
+channels: FLD=Field sales, PTR=Partner, TEL=Telesales, WEB=Web
+an attempt to write: attempt to write a readonly database

@@ -1,0 +1,20 @@
+raw.relay_accounts, account 2485:
+  29 Feb legacy 1498 | 04/01/2022 | N | Active | Brennan, Zoë
+  01 Mar relay  01498 | 2022-04-01 | false | active | Zoë Brennan
+staging.stg_relay__accounts, account 2485:
+  29 Feb legacy 01498 | 2022-04-01 | False | active | Zoë Brennan
+  01 Mar relay  01498 | 2022-04-01 | False | active | Zoë Brennan
+
+rows by night         raw   staging
+  2024-02-29      5,188     5,188
+  2024-03-01      5,037     5,037
+
+accounts in both exports: 4,976; agreeing column by column:
+  postcode              4,976 of 4,976
+  customer_since_date   4,976 of 4,976
+  is_key_account        4,976 of 4,976
+  status                4,976 of 4,976
+  closed_date           4,976 of 4,976
+  contact_name          4,976 of 4,976
+  account_name          4,976 of 4,976
+  customer_since as text in raw: 0 of 4,976

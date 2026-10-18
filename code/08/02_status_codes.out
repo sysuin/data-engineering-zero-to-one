@@ -1,0 +1,7 @@
+asked for           status  error         what to do
+a page of tickets      200  -             use it
+page number 0          400  bad_request   stop: a retry won't help
+no token               401  unauthorized  stop: a retry won't help
+a ticket that isn't    404  not_found     stop: a retry won't help
+the 5th request        429  rate_limited  wait 1 s, ask again
+the 6th request        503  unavailable   wait a while, ask again

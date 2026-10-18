@@ -1,0 +1,11 @@
+window    k  false alarms  25% short caught
+     7    3           126             86.8%
+     7    4            70             69.7%
+     7    5            40             52.5%
+    28    3            27             86.2%
+    28    4             6             58.6%
+    28    5             2             29.9%
+    56    3            20             81.5%
+    56    4             8             50.7%
+    56    5             0             20.2%
+quality.anomalies, 28 and 4, from night 56: 6

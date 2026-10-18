@@ -1,0 +1,17 @@
+raw holds two March costs for MRD-FAC-030:
+  loaded 2024-03-01   790.70  Mar 2024.xlsx
+  loaded 2024-03-04    79.07  Mar 2024 (corrected).xlsx
+
+March sales of MRD-FAC-030: 2,866 units, $311,726.17
+  at 790.70 a unit, margin -$1,954,420.03
+  at  79.07 a unit, margin    $85,111.55
+  joined to both: sales $623,452.34, margin -$1,869,308.48
+
+In force, by the ledger's rule (latest arrival wins):
+  Mar 2024 (corrected).xlsx, arrived 2024-03-04 23:15:54
+  Mar 2024.xlsx              first loaded at 02 Mar 06:00
+  Mar 2024 (corrected).xlsx  first loaded at 05 Mar 06:00
+
+resent unchanged on 6 Mar: duplicate
+  same bytes as Mar 2024.xlsx
+in force after it: Mar 2024 (corrected).xlsx

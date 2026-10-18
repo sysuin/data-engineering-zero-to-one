@@ -1,0 +1,13 @@
+Zoë in cp1252  5a 6f eb
+Zoë in utf-8   5a 6f c3 ab
+cp1252 bytes read as utf-8   'Zo�'
+utf-8 bytes read as cp1252   'ZoÃ«'
+
+2024-02-29  starts 41 63 63 74  CRLF 5,189  LF 5,189
+
+2026-01-04  starts ef bb bf 61  CRLF 0  LF 6,059
+utf-8      first column '\ufeffaccount_id'
+utf-8-sig  first column 'account_id'
+last field split on \n   '(614) 555-0141\r'
+today's file as cp1252:  fails at byte 0x81
+today's file as latin-1: no error, 3,338 x 'Ã'

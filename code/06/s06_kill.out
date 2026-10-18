@@ -1,0 +1,3 @@
+inside the transaction: 500000 (exit code 1)
+rows before 1,243,789, after reopening 1,243,789
+fingerprint unchanged: True

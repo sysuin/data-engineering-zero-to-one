@@ -1,0 +1,22 @@
+tradeline.orders             483,980 rows   8 columns
+  placed_at: timestamps held as text
+  created_at: timestamps held as text
+  updated_at: timestamps held as text
+tradeline.order_lines      1,243,789 rows   8 columns
+  created_at: timestamps held as text
+  updated_at: timestamps held as text
+relay.accounts                 6,058 rows  14 columns
+relay.contracts               19,220 rows  11 columns
+frontline.tickets             21,668 rows  13 columns
+  description: 10,019 in lower case, 721 in upper case
+suppliers, 13 alike               37 rows   5 columns
+suppliers, kestrel                 3 rows   3 columns
+suppliers, pemberton               6 rows   4 columns
+catalogue                         48 rows   7 columns
+  SKU: 1 in lower case, 47 in upper case
+  SKU: 2 with leading or trailing spaces
+  Supplier: 4 with leading or trailing spaces
+  List Price: money held as text
+ledger                           237 rows   7 columns
+reference.regions                  5 rows   4 columns
+reference.suppliers               20 rows   4 columns

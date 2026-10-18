@@ -1,0 +1,6 @@
+[('category', 113), ('desk', 113), ('region', 64)]
+113 tickets, one row each; the first and last two:
+   FT-020740 12-01T00:31 north_desk returns None
+   FT-020686 12-01T00:58 south_desk delivery None
+   FT-020642 12-03T04:39 south_desk billing Northeast
+   FT-020940 12-03T05:46 south_desk stock Northeast

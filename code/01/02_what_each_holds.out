@@ -1,0 +1,8 @@
+system     arrives as              holds
+Tradeline  a database              483,980 orders, 1,243,789 lines
+Relay      files, every night      6,058 accounts, 19,220 contracts
+Frontline  an API                  21,668 tickets
+Suppliers  files, by email         768 price lists from 16 suppliers
+Catalogue  one file, overwritten   48 products
+Portal     files, one an hour      4,445 hourly files
+Ledger     files, one a month      47 months, 2022-01 to 2025-11

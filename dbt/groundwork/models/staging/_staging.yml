@@ -1,0 +1,87 @@
+# The staging models' documentation: each description is the
+# model's header comment, which says what one row is.
+version: 2
+
+models:
+  - name: stg_catalogue__products
+    description: >
+      One row per product in the catalogue in force. SKUs are
+      written as Tradeline writes them; the supplier is
+      procurement's supplier_id, through the seed procurement keeps.
+  - name: stg_frontline__ticket_comments
+    description: >
+      One row per comment on a ticket, the latest copy any pull
+      fetched. Bodies are customers' words and some hold contact
+      details; they stay as sent (Chapter 24).
+  - name: stg_frontline__ticket_fields
+    description: >
+      One row per custom field of each ticket's latest version. The
+      semi join keeps only rows from the pull that holds that
+      version; it adds no column and no row.
+  - name: stg_frontline__ticket_tags
+    description: >
+      One row per tag of each ticket's latest version, in the order
+      the API listed them. Filtered as the fields are, by a semi
+      join to the pull that holds the latest version.
+  - name: stg_frontline__ticket_versions
+    description: >
+      One row per version of a ticket that some pull saw. Each
+      night's pull holds the tickets that changed, as they stood
+      then, so raw keeps a ticket once for every night it changed; a
+      version two overlapping pulls both saw is kept once, from the
+      first. What happened between two pulls is not here.
+  - name: stg_frontline__tickets
+    description: >
+      One row per ticket, its latest version across every pull. Each
+      pull holds the tickets that changed since the last one, so the
+      latest version is the one with the latest updated_at (on a
+      tie, the later pull). The JSON payload stays in raw.
+  - name: stg_ledger__gl_revenue
+    description: >
+      One row per journal line posted to sales revenue in a closed
+      month, from the month files in force, the amount in integer
+      cents.
+  - name: stg_reference__price_events
+    description: >
+      One row per price change the commercial team recorded, as they
+      wrote it.
+  - name: stg_reference__regions
+    description: >
+      One row per sales region, its depot and the time zone the
+      depot keeps, from the file operations maintains.
+  - name: stg_reference__suppliers
+    description: >
+      One row per supplier on procurement's master list, which owns
+      supplier_id.
+  - name: stg_relay__accounts
+    description: >
+      One row per account per night's export, from the files in
+      force. Raw keeps both CRMs' values as text; each era is read
+      its own way here, so a row means the same whichever wrote it.
+  - name: stg_relay__contracts
+    description: >
+      One row per contract per night's export, from the files in
+      force, both CRMs' values read into one vocabulary.
+  - name: stg_relay__field_history
+    description: >
+      One row per change Relay recorded to an account or contract
+      field, from the audit files in force.
+  - name: stg_relay__migration_map
+    description: >
+      One row per old CRM id that IT matched to a Relay account on 1
+      March 2024, as IT's file says.
+  - name: stg_suppliers__price_lists
+    description: >
+      One row per product on each supplier's price list in force,
+      its cost in integer cents whatever unit the supplier wrote,
+      and procurement's supplier_id for the sender.
+  - name: stg_tradeline__order_lines
+    description: >
+      One row per order line as it stands after the last load. The
+      price is integer cents, after the line's discount, as
+      Tradeline stores it.
+  - name: stg_tradeline__orders
+    description: >
+      One row per order in Tradeline as it stands after the last
+      load, deleted orders gone. Status and placed_at are kept
+      exactly as the source has them.

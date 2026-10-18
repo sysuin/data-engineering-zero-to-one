@@ -1,0 +1,12 @@
+fct_contracts 19,220, Book 2's contracts 19,220; differ 0
+contracts that began before any account history: 3,366
+
+fct_contract_month 195,635 rows, 2022-01-31 to 2025-12-31
+month end    in force  ending in 3 mo  avg discount
+2022-12-31      3,655             715         5.92%
+2023-12-31      4,035             811         6.00%
+2024-12-31      4,386             911         6.07%
+2025-12-31      4,651           1,036         6.12%
+
+2025, contracts in force: summed over twelve month ends 55,389
+  at the year end 4,651, the average month end 4,616

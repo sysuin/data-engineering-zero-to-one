@@ -1,0 +1,7 @@
+version  rows    cents          files (part-...)
+      0 1,117    37,044,036  66f77ceb
+      1 2,065    67,134,409  66f77ceb, d596e797
+      2 2,052    66,768,480  c22f0d16, d596e797
+      3 2,065    67,134,409  66f77ceb, d596e797
+data files unchanged: True
+v3 reads as v1: True

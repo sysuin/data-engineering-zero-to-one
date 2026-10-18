@@ -1,0 +1,25 @@
+July 2024: 31 nights, 19 signals on the first
+signal       subject                   measure         nights first
+freshness    tradeline.orders          days behind          0
+freshness    tradeline.order_lines     days behind          0
+freshness    relay.accounts            days behind          1 4 Jul
+freshness    relay.contracts           days behind          1 4 Jul
+freshness    suppliers.price_lists     days behind          0
+freshness    published                 days behind         14 2 Jul
+volume       tradeline.orders          rows                 0
+volume       tradeline.order_lines     rows                 0
+volume       relay.accounts            rows                 0
+volume       relay.contracts           rows                 0
+schema       suppliers.price_lists     batches changed     14 2 Jul
+distribution tradeline.orders_log      share cancelled      0
+distribution tradeline.order_lines_log median price         0
+distribution relay.accounts            share closed         0
+distribution suppliers.price_lists     share no cost        0
+schema       4 more tables: no change on any night
+
+in alarm on the night of 2 July, judged at 07:00 on the 3rd:
+  freshness published: newest 2024-07-01
+  schema suppliers.price_lists: PEMBERTON-PRICES-202407.csv:
+    header renamed?: expected pemberton's 'Cost (USD)', found
+    'Unit Cost USD'
+  but freshness suppliers.price_lists: ok, newest 2024-07-02

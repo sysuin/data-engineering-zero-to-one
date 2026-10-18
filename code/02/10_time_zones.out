@@ -1,0 +1,12 @@
+Tradeline stores '2025-12-09 06:50:44'
+  UTC        06:50 UTC  on Tue 09 Dec 2025   same instant: True
+  Newark     01:50 EST  on Tue 09 Dec 2025   same instant: True
+  Sacramento 22:50 PST  on Mon 08 Dec 2025   same instant: True
+TypeError: can't compare offset-naive and offset-aware datetimes
+length of a day in Newark:
+  2025-03-09  subtracted 1 day, 0:00:00   in UTC 23:00:00
+  2025-06-09  subtracted 1 day, 0:00:00   in UTC 1 day, 0:00:00
+  2025-11-02  subtracted 1 day, 0:00:00   in UTC 1 day, 1:00:00
+session UTC                 shows 2025-12-09 06:50:44+00
+session America/Los_Angeles shows 2025-12-08 22:50:44-08
+Sacramento's date, in SQL, any session: 2025-12-08

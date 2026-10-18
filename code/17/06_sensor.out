@@ -1,0 +1,16 @@
+wait_relay: every 10 min, for up to 6 h; both start at 03:15
+
+night 2025-11-01, export written 02 Nov 03:00
+  cron          found it
+  wait_relay    succeeded: 1 poke, waited 0 s
+  ingest_relay  started 03:15
+
+night 2025-11-02, export written 03 Nov 04:00
+  cron          found nothing
+  wait_relay    succeeded: 7 pokes, waited 1 h 00 min
+  ingest_relay  started 04:15
+
+night 2025-09-07, export never written
+  cron          found nothing
+  wait_relay    failed: nothing after 37 pokes, 6 h 00 min
+  ingest_relay  upstream_failed

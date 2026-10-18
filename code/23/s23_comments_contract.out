@@ -1,0 +1,22 @@
+comment_id:
+  type: integer
+ticket_id:
+  type: text
+created_at:
+  type: timestamp
+  format: '%Y-%m-%dT%H:%M:%SZ'
+  unit: UTC
+author:
+  type: text
+public:
+  type: boolean
+body:
+  type: text
+comment_id   empty in 0 of 5,414 rows
+ticket_id    empty in 0 of 5,414 rows
+created_at   empty in 0 of 5,414 rows
+author       empty in 0 of 5,414 rows
+public       empty in 0 of 5,414 rows
+body         empty in 0 of 5,414 rows
+contract for the table: frontline.ticket_comments
+bound with no uncontracted tables: 32 of 32

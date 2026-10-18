@@ -1,0 +1,11 @@
+# Lint settings for the repository, so `make lint` and CI agree with each other and with
+# nobody's personal configuration.
+target-version = "py312"
+line-length = 100
+
+# Book 1's dataset generator is carried over byte for byte, and its output must stay
+# byte-identical; tidying its style is a change it promises not to make.
+extend-exclude = ["code/meridian"]
+
+[lint]
+select = ["E4", "E7", "E9", "F"]

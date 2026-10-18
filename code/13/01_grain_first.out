@@ -1,0 +1,14 @@
+table               one row per ...
+fct_contract_month  contract per month end it is in force.
+fct_contracts       contract.
+fct_order_lines     line of a placed, not-cancelled order.
+fct_orders          placed, not-cancelled order.
+fct_tickets         ticket, from opened to closed.
+
+1,229,062 lines in 478,242 orders, 2.57 lines an order
+2025 revenue, summed at line grain     127,348,346.46
+order totals carried on each line      405,968,913.45
+overstated 3.19x
+
+account 2429, October to December 2025:
+  fct_orders 24 rows, fct_contract_month 3, fct_tickets 1

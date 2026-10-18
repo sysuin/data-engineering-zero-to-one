@@ -1,0 +1,32 @@
+{
+ "files": 768,
+ "rows": 2034,
+ "loaded": 1925,
+ "parked": 1,
+ "broken_rows": 108,
+ "runs": {
+  "broken": [
+   18,
+   108,
+   0
+  ],
+  "parked": [
+   1,
+   2,
+   1
+  ],
+  "passed": [
+   749,
+   1924,
+   0
+  ]
+ },
+ "broken_files": 18,
+ "quarantined": [
+  [
+   "suppliers/aldridge-co/Aldridge Trade Prices Mar 2024.xlsx",
+   1,
+   "cost: 790.7 is 10.0 times the last list's 79.07"
+  ]
+ ]
+}

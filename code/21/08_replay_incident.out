@@ -1,0 +1,22 @@
+PEMBERTON-PRICES-202407.csv arrived 2024-07-02 18:48 UTC, 6 rows
+
+unwatched:
+  nightly.2024-07-02.1, run at 06:00 on 3 Jul:
+  ingest_suppliers failed, fatal: header renamed?: expected
+    pemberton's 'Cost (USD)', found 'Unit Cost USD'
+  5 tasks never ran; nothing was published
+  4 Jul also: wait_relay failed, nothing after 37 pokes, 6 h 00 min
+  nights that failed: 14, 2 Jul to 15 Jul
+  furthest behind: 14 days, the morning after 15 Jul
+  rerun nightly.2024-07-15.2 at 15:00 on 16 Jul: succeeded
+
+watched:
+  4 Jul also: wait_relay failed, nothing after 37 pokes, 6 h 00 min
+  nights that failed: 2, 2 Jul, 4 Jul
+  first page reached data engineering 12:00 UTC on 3 Jul
+  furthest behind: 1 day, the morning after 2 Jul
+  rerun nightly.2024-07-02.2 at 15:00 on 3 Jul: succeeded
+
+Chapter 9's loader, no contract:
+  nights that failed: 0; Pemberton rows with no cost by 31 Jul: 6
+  2 Jul, share no cost: 40% (limit 0): alarm, severity error

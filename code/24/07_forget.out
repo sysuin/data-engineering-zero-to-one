@@ -1,0 +1,35 @@
+contact of account 3574: CRM ids [3574, 90056], names 2 ways,
+  1 email, 1 phone, 1 portal login, 29 tickets
+
+searching by email alone: 12 places, 150 rows or files
+tied to them                                    rows  then
+  landed/relay (account exports)                   5  redact
+  raw.relay_accounts                              16  redact
+  raw.frontline_tickets                           29  redact
+  raw.frontline_ticket_comments                   10  redact
+  raw.portal_events                              516  delete
+  raw pages 2026-01-04 attempt-1 (28 files)       29  redact
+  raw pages 2026-01-04 attempt-2 (28 files)       29  redact
+the old CRM's record, id 90056: 'Anderson, Kevin', email ''
+
+identifier      before   after
+email              150       0
+portal login       516       0
+phone              364     328
+name               312     148
+tied rows still holding anything: 0
+other contacts with his phone: 11; with his name: 3
+still in the sources' own files: relay: 14 files; portal: 72 files
+
+audit.forget_requests:
+  request_id    FR-2026-0001
+  received_at   2026-01-05 09:12:00
+  completed_at  2026-01-05 11:40:00
+  subject_ref   08c0f0420461f252
+  places        8
+  rows_redacted 118
+  rows_deleted  516
+  left_strong   0
+  left_weak     476
+  outside       relay: 14 files; portal: 72 files
+suppression list: 4 keyed hashes

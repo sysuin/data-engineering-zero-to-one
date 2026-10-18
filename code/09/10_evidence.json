@@ -1,0 +1,83 @@
+{
+ "sources": [
+  {
+   "source": "catalogue",
+   "loaded": 1,
+   "duplicate": 0,
+   "distinct": 1,
+   "rows": 48,
+   "bytes": 3284,
+   "kept": 983
+  },
+  {
+   "source": "ledger",
+   "loaded": 47,
+   "duplicate": 0,
+   "distinct": 47,
+   "rows": 237,
+   "bytes": 18685,
+   "kept": 12508
+  },
+  {
+   "source": "reference",
+   "loaded": 3,
+   "duplicate": 0,
+   "distinct": 3,
+   "rows": 28,
+   "bytes": 1139,
+   "kept": 967
+  },
+  {
+   "source": "relay",
+   "loaded": 78,
+   "duplicate": 0,
+   "distinct": 62,
+   "rows": 392826,
+   "bytes": 37578575,
+   "kept": 2646297
+  },
+  {
+   "source": "suppliers",
+   "loaded": 768,
+   "duplicate": 0,
+   "distinct": 768,
+   "rows": 2034,
+   "bytes": 212041,
+   "kept": 236173
+  }
+ ],
+ "sample": [
+  [
+   "suppliers/aldridge-co/Aldridge Trade Prices Mar 2024.xlsx",
+   "c4d025cbd665cd08256d44b442ae0c0f207b9078a885b57852b5a46d06ffb4b2",
+   "2024-03-01 21:15:54",
+   "loaded",
+   "aldridge-co/2024-03",
+   "2"
+  ],
+  [
+   "suppliers/aldridge-co/Aldridge Trade Prices Mar 2024 (corrected).xlsx",
+   "f0bf3c4646d4933d7304729d9a3ed54875693bf51521b5c47a4a7432e22af7dc",
+   "2024-03-04 23:15:54",
+   "loaded",
+   "aldridge-co/2024-03",
+   "2"
+  ],
+  [
+   "catalogue/catalogue.csv",
+   "90065f2737cf04124423be975a01f37caf871b9e079883eea913212f0cb2430a",
+   "2025-11-14 16:41:00",
+   "loaded",
+   "catalogue",
+   "48"
+  ],
+  [
+   "relay/2026-01-04/accounts.csv",
+   "119bfc430aa4c1ea226dbcbbdba1f367bcbcd3b54c36e3439b507354320bde4d",
+   "2026-01-05 04:00:00",
+   "loaded",
+   "2026-01-04",
+   "6058"
+  ]
+ ]
+}

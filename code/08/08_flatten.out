@@ -1,0 +1,26 @@
+received: 13 keys, 3 of them nested:
+  requester (dict), custom_fields (list), tags (list)
+tickets: 1 row, 15 columns
+  ticket_id            'FT-021198'
+  created_at           '2025-12-29T16:54:00Z'
+  updated_at           '2026-01-03T03:20:00Z'
+  status               'closed'
+  priority             'high'
+  channel              'web'
+  language             'fr'
+  requester_account_id 457
+  requester_name       'Ryan Scott'
+  requester_email      'ryan.scott@rockbrook-print.example'
+  assignee             'Eli R'
+  description          'Le produit MRD-CLE-010 est défect...'
+  sku                  'MRD-CLE-010'
+  _page                1
+  payload              563 characters of JSON
+ticket_fields: 2 rows, keyed by ticket_id and updated_at
+  FT-021198  360001  desk     north_desk
+  FT-021198  360002  category quality
+ticket_tags: 3 rows
+  FT-021198  0  quality
+  FT-021198  1  fr
+  FT-021198  2  sku:MRD-CLE-010
+payload read back equals what was sent: True

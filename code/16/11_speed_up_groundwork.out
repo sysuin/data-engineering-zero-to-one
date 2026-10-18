@@ -1,0 +1,13 @@
+1. fct_order_lines, built
+   hottest step before: PROJECTION of order_date, 92% of the work
+   before    6.9 s on the clock,   39.0 s of CPU
+   after     1.7 s on the clock,    6.3 s of CPU
+   less CPU after: True, about 6.2 times less
+   rows in one and not the other: 0
+2. sales operations' tile, December by segment
+   reads 1,229,062 rows of fct_order_lines before
+   reads   123,142 rows of fct_order_lines after
+3. dim_account, built
+   before account files read 16, rows parsed 96,058, 0.09 s
+   after  account files read  1, rows parsed  6,058, 0.07 s
+   rows in one and not the other: 0

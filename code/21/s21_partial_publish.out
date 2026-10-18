@@ -1,0 +1,17 @@
+if this fails      marts still sound  of 10
+ingest_catalogue                   6
+ingest_frontline                   9
+ingest_ledger                     10
+ingest_reference                   2
+ingest_relay                       4
+ingest_suppliers                   6
+ingest_tradeline                   8
+load_comments                      9
+
+when ingest_suppliers fails, still sound:
+  marts.dim_account
+  marts.dim_date
+  marts.dim_region
+  marts.dim_supplier
+  marts.fct_contract_month
+  marts.fct_contracts

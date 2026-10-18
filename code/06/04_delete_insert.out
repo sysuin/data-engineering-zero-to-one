@@ -1,0 +1,14 @@
+1 November, October's run:
+  load_orders 1: deleted 0, inserted 12,485
+  load_lines 1: deleted 0, inserted 32,434
+1 December, November's run:
+  load_orders 1: deleted 0, inserted 12,371
+  load_lines 1: deleted 0, inserted 31,965; timed out
+  load_lines 2: deleted 31,965, inserted 31,965
+  2025-10    $10,500,645.36
+  2025-11    $10,313,814.24
+the whole job again:
+  load_orders 1: deleted 12,371, inserted 12,371
+  load_lines 1: deleted 31,965, inserted 31,965
+  2025-10    $10,500,645.36
+  2025-11    $10,313,814.24

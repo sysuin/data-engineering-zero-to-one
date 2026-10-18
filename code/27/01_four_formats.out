@@ -1,0 +1,6 @@
+2025-12-31  source                   Python   DuckDB
+            Relay accounts.csv        6,058    6,058
+            portal *.jsonl.gz         2,738    2,738
+            Tradeline orders            381      381
+            accounts.parquet          6,058    6,058
+agree

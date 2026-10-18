@@ -1,0 +1,20 @@
+staging model                    raw     staged     second
+frontline__ticket_fields      43,336     43,336     43,336 =
+frontline__ticket_tags        28,394     28,394     28,394 =
+frontline__tickets            21,668     21,668     21,668 =
+ledger__gl_revenue               237        237        237 =
+reference__price_events            3          3          3 =
+reference__regions                 5          5          5 =
+reference__suppliers              20         20         20 =
+relay__accounts               90,000     90,000     90,000 =
+relay__contracts             276,453    276,453    276,453 =
+relay__field_history          42,517     42,517     42,517 =
+relay__migration_map             187        187        187 =
+tradeline__order_lines     1,243,789  1,243,789  1,243,789 =
+tradeline__orders            483,980    483,980    483,980 =
+catalogue__products               48         48         48 =
+suppliers__price_lists         2,033      2,032      2,032 =
+15 of 15 models agree with their second source
+staging's columns by type:
+  VARCHAR 76, BIGINT 13, INTEGER 13, DATE 12
+  TIMESTAMP 12, BOOLEAN 2, DECIMAL 1

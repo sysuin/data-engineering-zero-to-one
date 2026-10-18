@@ -1,0 +1,14 @@
+watermark on                created_at  updated_at
+rows read in all             1,574,851   1,575,169
+orders that differ                 349         119
+  deleted in Tradeline               4           4
+  cancelled since                  108           0
+  lines amended at 02:00           203         115
+  only updated_at differs           34           0
+  other                              0           0
+how Tradeline finds created_at > ?:
+  SCAN orders
+how Tradeline finds updated_at > ?:
+  SEARCH orders USING INDEX idx_orders_updated (updated_at>?)
+order 440930, line 1: created 2025-09-17 20:52:38
+  qty 4 -> 2, updated_at 2025-09-18 02:00:00, committed 02:10:47

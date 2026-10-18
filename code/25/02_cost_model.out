@@ -1,0 +1,20 @@
+a month              stored  queries     runs  compute   naive /
+                      GB-mo  TB read  TB read   core-h  designed
+Meridian naive         1.04     1.56   0.0312       53          
+Meridian designed      1.04    0.096    <0.01      3.2     16.5x
+Clicks naive          19.5k     117k    14.1k    4.38M          
+Clicks designed       19.5k    4.82k     3.21     161k     27.2x
+CDC naive             1.29k    11.6k    3.72k     511k          
+CDC designed          1.29k      954     1.06    31.8k       16x
+IoT naive             9.33k     700k      280    23.3M          
+IoT designed          9.33k     1.3k     9.33    43.5k      536x
+Finance naive           275      743     8.26      25k          
+Finance designed        275     9.02   0.0194      301     83.2x
+
+connectors   sources       build, days      run, days/mo     rows
+                      by hand      buy  by hand      buy     M/mo
+Meridian           7       70       34       14        7    0.917
+Clicks             3       30       12        6      2.5       9k
+CDC               40      400       40       80       10     1.8k
+IoT                2       20       20        4        4    1.04M
+Finance            6       60       24       12        5       96

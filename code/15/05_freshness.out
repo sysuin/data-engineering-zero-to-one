@@ -1,0 +1,17 @@
+Mon 05 Jan 07:00: 8 of 8 fresh
+freshness  tradeline.orders         error
+    none, due 2026-01-04; no load ran
+freshness  tradeline.order_lines    error
+    none, due 2026-01-04; no load ran
+freshness  relay.accounts           warn
+    2026-01-03, due 2026-01-04; relay.accounts.2026-01-04.1 failed:
+    MissingFile: no accounts.csv for 2026-01-04
+freshness  relay.contracts          pass  2026-01-04, due 2026-01-04
+freshness  frontline.tickets        warn
+    none, due 2026-01-04; frontline.tickets.2026-01-04.1 running
+Tue 06 Jan: ledger pass, 2025-11, due 2025-11, tell finance
+Thu 08 Jan: ledger warn, 2025-11, due 2025-12, tell finance
+
+Relay, 2022-01-01 to 2026-01-04: 1,465 nights, 8 with no export
+freshness alarms: 8; on exactly those nights: True
+each cleared the next morning: True

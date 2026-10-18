@@ -1,0 +1,31 @@
+built   staging.stg_frontline__ticket_fields  view       43,336
+built   staging.stg_frontline__ticket_tags    view       28,394
+built   staging.stg_frontline__tickets        view       21,668
+built   staging.stg_ledger__gl_revenue        view          237
+built   staging.stg_reference__price_events   view            3
+built   staging.stg_reference__regions        view            5
+built   staging.stg_reference__suppliers      view           20
+built   staging.stg_relay__accounts           view       90,000
+built   staging.stg_relay__contracts          view      276,453
+built   staging.stg_relay__field_history      view       42,517
+built   staging.stg_relay__migration_map      view          187
+built   staging.stg_tradeline__order_lines    view    1,243,789
+built   staging.stg_tradeline__orders         view      483,980
+built   seeds.supplier_names                  seed           32
+built   pack.int_pack__lines                  view    1,243,789
+built   staging.stg_catalogue__products       view           48
+built   staging.stg_suppliers__price_lists    view        2,032
+built   pack.pack_category                    table         218
+built   pack.pack_channel                     table         195
+built   pack.pack_realisation                 table         218
+built   pack.pack_supplier                    table         637
+
+The pack's grand totals, from the models:
+  section              lines               sales
+  channel          1,243,789     $406,864,476.20
+  category         1,243,789     $406,864,476.20
+  supplier           961,850     $302,341,278.21
+  realisation              -     $406,864,476.20
+
+audit.model_runs:
+  run 1: 21 built, started 06:30, 0 errors

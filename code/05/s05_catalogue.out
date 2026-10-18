@@ -1,0 +1,3 @@
+catalogue.csv: 48 rows, 7 columns
+  CSV         3,284 bytes
+  Parquet     2,325 bytes  71% of the CSV

@@ -1,0 +1,14 @@
+region      zips  4 digits  lowest  highest
+Midwest      816         0   40037    49996
+Northeast  1,296     1,296    1000     1999
+Southeast    996         0   30003    39991
+Southwest  1,283         0   70002    79997
+West         797         0   90018    99986
+
+column          filled  both parts <= 12
+Customer Since   5,188             5,188
+Closed Date        894                 0
+guessed types:  Customer Since DATE, Closed Date VARCHAR
+
+9007199254740993 as a double: 9007199254740992
+40000000000000123 as a double: 40000000000000120

@@ -1,0 +1,17 @@
+no at        user    role       rows  read
+ 1 Mon 09:40 tomas   analyst      48  fct_orders
+ 2 Mon 10:05 ada.k   support      29  stg_frontline__tickets
+ 3 Tue 14:20 tomas   analyst  denied  raw.frontline_ticket_comments
+ 4 Tue 14:31 tomas   analyst       1  stg_frontline__ticket_comments
+ 5 Wed 08:55 jo.f    finance       1  stg_ledger__gl_revenue
+ 6 Thu 02:47 sam.eng engineer     20  raw.frontline_ticket_comments
+ 7 Thu 11:02 ada.k   support       1  stg_frontline__ticket_comments
+
+who read customers' personal data, 5 to 9 January:
+  ada.k   staging.stg_frontline__ticket_comments 1
+  ada.k   staging.stg_frontline__tickets         1
+  sam.eng raw.frontline_ticket_comments          1  break-glass
+
+what the log kept of query 2:
+  SELECT ticket_id, status FROM
+  role_support.stg_frontline__tickets WHERE requester_email = '?'

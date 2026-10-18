@@ -1,0 +1,9 @@
+raises on any error:
+  HTTPStatusError: Client error '429 Too Many Requests'
+  the server answered:
+    200 200 200 429
+honours Retry-After:
+  285 tickets, 3 s spent waiting
+  the server answered:
+    200 200 200 429 200 200 200 429 200 200 200 429
+    200 200 200

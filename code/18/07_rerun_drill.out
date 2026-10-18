@@ -1,0 +1,29 @@
+day            raw      rows   facts  snapshot  verdict
+2024-12-20       9    22,127   1,444         0  same
+2024-12-25       7     1,804   1,370         0  same
+2024-12-31      10    22,691   1,304        42  same
+2025-01-02      11    22,588   1,237         0  same
+2025-01-04      10    22,793   1,340         0  same
+2025-01-08      10    22,527   1,162         0  same
+2025-01-09       9    22,034   1,285         0  same
+2025-01-12       9    22,025   1,274         0  same
+2025-01-15       9    22,139   1,384         0  same
+2025-01-26       9    22,093   1,325         0  same
+2025-01-28       9    22,007   1,296         0  same
+2025-01-31      10    23,143   1,430        42  same
+2025-02-02      11    23,103   1,466         0  same
+2025-02-04       9    22,578   1,420         0  same
+2025-02-13      10    23,209   1,551         0  same
+2025-02-21      10    23,099   1,440         0  same
+2025-02-28      10    23,723   1,677        56  same
+2025-03-02      10    22,775   1,258         0  same
+2025-03-06      10    23,350   1,298         0  same
+2025-03-12      10    23,416   1,367         0  same
+20 of 20 days rebuilt the same
+
+the same drill on a copy with one quantity changed on 2024-12-20:
+day            raw      rows   facts  snapshot  verdict
+2024-12-20       9    22,127   1,444         0  DIFFERS
+  tradeline.order_lines_log: 2 of 1,084 rows differ
+  fct_order_lines: 2 of 1,055 rows differ
+0 of 1 days rebuilt the same

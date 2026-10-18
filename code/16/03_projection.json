@@ -1,0 +1,22 @@
+{
+ "SELECT *": {
+  "bytes": 9727103,
+  "uncompressed": 64481791
+ },
+ "sum, all rows": {
+  "bytes": 2218460,
+  "uncompressed": 2587988
+ },
+ "sum, order_id >= 450000": {
+  "bytes": 712640,
+  "uncompressed": 1395467
+ },
+ "sum, created_at >= Dec": {
+  "bytes": 821908,
+  "uncompressed": 3450350
+ },
+ "sum, left(created_at,7)": {
+  "bytes": 4466750,
+  "uncompressed": 28384419
+ }
+}

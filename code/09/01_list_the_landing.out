@@ -1,0 +1,17 @@
+folder                   files     MB  first and last arrival (UTC)
+catalogue                    1    0.0  2025-11-14  2025-11-14 16:41
+ledger                      47    0.0  2022-02-07  2025-12-05 22:00
+portal                   4,445   35.1  2025-07-01  2026-01-03 21:05
+relay/<night>               28   35.0  2025-12-23  2026-01-05 04:00
+relay/audit                 49    2.6  2022-02-01  2026-01-05 04:00
+relay/migration_map.csv      1    0.0  2024-03-01  2024-03-01 14:30
+suppliers                  768    0.2  2022-01-01  2025-12-03 21:47
+
+supplier file names, 5 patterns:
+  13  <supplier>_<date>.csv
+   1  kestrel_<date>.csv
+   1  PEMBERTON-PRICES-<date>.csv
+   1  Aldridge Trade Prices <date>.xlsx
+   1  Aldridge Trade Prices <date> (corrected).xlsx
+
+by 2024-03-05 06:00: 432 supplier files, 17 of them for March 2024

@@ -1,0 +1,12 @@
+snapshot at 2025-08-20 02:05: 1,530,159 rows
+30 nights to 2025-09-19 02:05: 1,574,851 rows read in all
+orders that differ from Tradeline: 349
+  deleted in Tradeline           4
+  cancelled since              108
+  lines amended at 02:00       203
+  only updated_at differs       34
+  other                          0
+order 440930 in the copy:
+  line 1 qty 4  created 09-17 20:52:38  updated 09-17 20:52:38
+order 440930 in Tradeline:
+  line 1 qty 2  created 09-17 20:52:38  updated 09-18 02:00:00

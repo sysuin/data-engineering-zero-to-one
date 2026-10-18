@@ -1,0 +1,23 @@
+2022-01-01 to 2025-12-31: 1,461 nights, 184 to 486 orders a night
+                   alarms  a year   first three
+mean +/- 3 sd          16     4.1   01 Feb 22, 08 Feb 22, 08 Apr 22
+median +/- 4 MAD        6     1.5   16 Jul 22, 02 Jan 23, 01 Mar 23
+median +/- 4 MAD, every alarm:
+  Sat 16 Jul 2022   273 orders, band 199 to 271
+  Mon 02 Jan 2023   330 orders, band 193 to 318
+  Wed 01 Mar 2023   299 orders, band 304 to 392
+  Sat 04 Mar 2023   297 orders, band 300 to 394
+  Mon 06 Mar 2023   263 orders, band 297 to 397
+  Sun 04 Jun 2023   375 orders, band 274 to 357
+
+nights short by p%, caught by each (1,433 nights each)
+    p       mean +/- 3 sd    median +/- 4 MAD
+   2%                0.8%                0.6%
+  10%               10.7%                3.6%
+  25%               86.8%               57.5%
+  50%              100.0%               98.5%
+ 100%              100.0%              100.0%
+
+half a night, within four weeks of an empty one (5,427 trials)
+  mean +/- 3 sd        0.0% caught
+  median +/- 4 MAD    98.3% caught

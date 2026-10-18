@@ -1,0 +1,418 @@
+{
+ "tables": [
+  {
+   "name": "intermediate.int_account_changes",
+   "rows_a": 9153,
+   "rows_b": 9153,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "intermediate.int_account_identity",
+   "rows_a": 6270,
+   "rows_b": 6270,
+   "key": [
+    "crm_id"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "intermediate.int_account_versions",
+   "rows_a": 11339,
+   "rows_b": 11339,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "intermediate.int_order_lines",
+   "rows_a": 1229062,
+   "rows_b": 1229062,
+   "key": [
+    "order_id",
+    "line_no"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "intermediate.int_product_costs",
+   "rows_a": 52,
+   "rows_b": 52,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "marts.dim_account",
+   "rows_a": 11340,
+   "rows_b": 11340,
+   "key": [
+    "account_key"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "marts.dim_date",
+   "rows_a": 2191,
+   "rows_b": 2191,
+   "key": [
+    "date_key"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "marts.dim_product",
+   "rows_a": 53,
+   "rows_b": 53,
+   "key": [
+    "product_key"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "marts.dim_region",
+   "rows_a": 6,
+   "rows_b": 6,
+   "key": [
+    "region_key"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "marts.dim_supplier",
+   "rows_a": 21,
+   "rows_b": 21,
+   "key": [
+    "supplier_key"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "marts.fct_contract_month",
+   "rows_a": 195635,
+   "rows_b": 195635,
+   "key": [
+    "contract_id",
+    "month_end_date_key"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 40258,
+   "columns": {
+    "discount_pct": 40258
+   },
+   "schema": []
+  },
+  {
+   "name": "marts.fct_contracts",
+   "rows_a": 19220,
+   "rows_b": 19220,
+   "key": [
+    "contract_id"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 4010,
+   "columns": {
+    "discount_pct": 4010
+   },
+   "schema": []
+  },
+  {
+   "name": "marts.fct_order_lines",
+   "rows_a": 1229062,
+   "rows_b": 1229062,
+   "key": [
+    "order_id",
+    "line_no"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "marts.fct_orders",
+   "rows_a": 478242,
+   "rows_b": 478242,
+   "key": [
+    "order_id"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "marts.fct_portal_sessions",
+   "rows_a": 0,
+   "rows_b": 0,
+   "key": [
+    "session_id"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "marts.fct_tickets",
+   "rows_a": 21668,
+   "rows_b": 21668,
+   "key": [
+    "ticket_id"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_catalogue__products",
+   "rows_a": 48,
+   "rows_b": 48,
+   "key": [
+    "sku"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_frontline__ticket_comments",
+   "rows_a": 5414,
+   "rows_b": 5414,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_frontline__ticket_fields",
+   "rows_a": 43336,
+   "rows_b": 43336,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_frontline__ticket_tags",
+   "rows_a": 28394,
+   "rows_b": 28394,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_frontline__ticket_versions",
+   "rows_a": 21668,
+   "rows_b": 21668,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_frontline__tickets",
+   "rows_a": 21668,
+   "rows_b": 21668,
+   "key": [
+    "ticket_id"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_ledger__gl_revenue",
+   "rows_a": 237,
+   "rows_b": 237,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_reference__price_events",
+   "rows_a": 3,
+   "rows_b": 3,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_reference__regions",
+   "rows_a": 5,
+   "rows_b": 5,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_reference__suppliers",
+   "rows_a": 20,
+   "rows_b": 20,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_relay__accounts",
+   "rows_a": 90000,
+   "rows_b": 90000,
+   "key": [
+    "account_id",
+    "snapshot_date"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_relay__contracts",
+   "rows_a": 276453,
+   "rows_b": 276453,
+   "key": [
+    "contract_id",
+    "snapshot_date"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 59278,
+   "columns": {
+    "discount_pct": 59278
+   },
+   "schema": []
+  },
+  {
+   "name": "staging.stg_relay__field_history",
+   "rows_a": 42517,
+   "rows_b": 42517,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_relay__migration_map",
+   "rows_a": 187,
+   "rows_b": 187,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_suppliers__price_lists",
+   "rows_a": 2032,
+   "rows_b": 2032,
+   "key": [],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_tradeline__order_lines",
+   "rows_a": 1243789,
+   "rows_b": 1243789,
+   "key": [
+    "order_id",
+    "line_no"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  },
+  {
+   "name": "staging.stg_tradeline__orders",
+   "rows_a": 483980,
+   "rows_b": 483980,
+   "key": [
+    "order_id"
+   ],
+   "added": 0,
+   "removed": 0,
+   "changed": 0,
+   "columns": {},
+   "schema": []
+  }
+ ],
+ "rows": 5473065
+}

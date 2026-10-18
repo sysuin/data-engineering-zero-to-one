@@ -1,0 +1,6 @@
+raw.relay_accounts: 15 nights, 3,332,116 bytes
+query                     files opened       bytes  rows read
+every night                         15   3,332,116     90,000
+one night, a constant                1     226,069      6,058
+latest, from itself                 15   3,332,116     90,000
+latest, from the ledger              1     226,069      6,058

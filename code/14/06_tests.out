@@ -1,0 +1,13 @@
+dbt test on the build: 29 tests
+  accepted_values     3 pass
+  not_null           11 pass
+  relationships       4 pass
+  singular            1 pass
+  unique             10 pass
+
+after four changes: dbt test succeeded: False
+fail 3, pass 25, warn 1
+  warn   1  accepted_values dim_account.segment
+  fail   1  accepted_values fct_order_lines.channel
+  fail   1  relationships   fct_order_lines.account_key
+  fail   1  unique          fct_orders.order_id

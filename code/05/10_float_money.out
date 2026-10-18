@@ -1,0 +1,14 @@
+0.1 + 0.2 = 0.30000000000000004
+
+DOUBLE    406864476.19991916
+cents     40,686,447,620
+DECIMAL   406864476.20
+DOUBLE equals the cents? False
+  qty * unit_price_cents / 100.0                DOUBLE
+  (qty * unit_price_cents)::DECIMAL(18,2) / 100 DOUBLE
+  qty * unit_price_cents * 0.01                 DECIMAL(22,2)
+
+in order_id order   406864476.19991916
+largest first       406864476.1994272
+smallest first      406864476.2001036
+math.fsum           406864476.2

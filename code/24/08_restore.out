@@ -1,0 +1,8 @@
+after the request, rows on the suppression list: 0
+restored relay/accounts and frontline/tickets from the backup
+  raw.relay_accounts        15 rows came back
+  raw.frontline_tickets     29 rows came back
+  raw.portal_events          0 rows came back
+forgotten again: 45 raw rows redacted
+on the list now: 0
+what the list holds for the email: 08c0f0420461f252

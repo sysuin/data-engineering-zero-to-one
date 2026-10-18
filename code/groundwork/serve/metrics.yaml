@@ -1,0 +1,130 @@
+# Meridian's metrics, each defined once. Every dashboard, the metrics
+# API, Clarity and the reverse-ETL jobs read these definitions; none of
+# them writes its own. A change here is a change to every number that
+# uses the metric, so each has an owner who agrees to it.
+#
+#   table      the mart the metric is computed from (alias f)
+#   time       the column that dates a row (the depot's calendar)
+#   measure    the aggregate, in SQL over f and the joined dimensions
+#   filter     rows the metric always leaves out, whoever asks
+#   kind       sum: adds up across every dimension and period
+#              ratio: never summed; recomputed from its parts
+#              snapshot: adds up across dimensions, not across time;
+#                        a period's value is its last snapshot
+#   loads      the source loads it depends on, for freshness
+
+joins:
+  region: JOIN marts.dim_region AS r ON r.region_key = f.region_key
+  account: JOIN marts.dim_account AS a ON a.account_key = f.account_key
+  product: JOIN marts.dim_product AS p ON p.product_key = f.product_key
+
+dimensions:
+  region: {sql: r.region_name, join: region}
+  segment: {sql: a.segment, join: account}
+  channel: {sql: f.channel}
+  category: {sql: p.category, join: product}
+
+metrics:
+  revenue:
+    label: Revenue
+    owner: finance
+    description: >-
+      Quantity times the price charged after the line's discount, over
+      lines of orders placed and not cancelled, dated by the depot's
+      local date. Equals the ledger's sales journal to the cent.
+    table: marts.fct_order_lines
+    time: f.order_date
+    measure: sum(f.revenue)
+    kind: sum
+    dimensions: [region, segment, channel, category]
+    loads: [tradeline.orders, tradeline.order_lines]
+
+  orders:
+    label: Orders
+    owner: finance
+    description: >-
+      Orders placed and not cancelled, dated by the depot's local date.
+      An order is one row however many lines it has.
+    table: marts.fct_orders
+    time: f.order_date
+    measure: count(*)
+    kind: sum
+    dimensions: [region, segment, channel]
+    loads: [tradeline.orders, tradeline.order_lines]
+
+  gross_margin:
+    label: Gross margin
+    owner: finance
+    description: >-
+      Revenue less the cost of the goods, each line costed at the price
+      list in force on the order's day.
+    table: marts.fct_order_lines
+    time: f.order_date
+    measure: sum(f.gross_margin)
+    kind: sum
+    dimensions: [region, segment, channel, category]
+    loads: [tradeline.orders, tradeline.order_lines]
+
+  margin_pct:
+    label: Gross margin %
+    owner: finance
+    description: >-
+      Gross margin as a percentage of the revenue of the lines that
+      have a cost. A ratio of sums, never an average of percentages.
+    table: marts.fct_order_lines
+    time: f.order_date
+    measure: >-
+      round(100 * sum(f.gross_margin)
+      / sum(f.revenue) FILTER (f.cost IS NOT NULL), 2)
+    kind: ratio
+    dimensions: [region, segment, channel, category]
+    loads: [tradeline.orders, tradeline.order_lines]
+
+  active_accounts:
+    label: Active accounts
+    owner: sales operations
+    description: >-
+      Accounts with a contract in force at the month end. Not accounts
+      that ordered lately, and not accounts the CRM marks active: those
+      are different questions, with different names.
+    table: marts.fct_contract_month
+    time: f.month_end
+    measure: count(DISTINCT a.account_id)
+    kind: snapshot
+    joins: [account]
+    dimensions: [region, segment]
+    loads: [relay.accounts, relay.contracts]
+
+  not_renewed_rate:
+    label: Not-renewed rate (churn)
+    owner: sales operations
+    description: >-
+      Of the contracts that ended in the period, the percentage that
+      were not renewed. Dated by the contract's last day; a contract
+      still in force has no outcome and is not counted.
+    table: marts.fct_contracts
+    time: f.end_date
+    filter: f.outcome IS NOT NULL
+    measure: >-
+      round(100.0 * count(*) FILTER (f.outcome = 'not_renewed')
+      / count(*), 2)
+    kind: ratio
+    dimensions: [region, segment]
+    loads: [relay.contracts]
+
+  portal_conversion:
+    label: Portal conversion %
+    owner: the portal team
+    description: >-
+      Of the portal's sessions, the percentage that submitted an order.
+      Bot sessions are left out. Submitted orders include ones later
+      cancelled, so they will not match the orders metric.
+    table: marts.fct_portal_sessions
+    time: strptime(CAST(f.date_key AS VARCHAR), '%Y%m%d')::DATE
+    filter: NOT f.is_bot
+    measure: >-
+      round(100.0 * count(*) FILTER (f.orders_submitted > 0)
+      / count(*), 2)
+    kind: ratio
+    dimensions: [region]
+    loads: []

@@ -1,0 +1,27 @@
+tradeline.order_lines.unit_price_cents
+  values only: 9 columns in 6 relations, 4 tests
+    marts.fct_order_lines: gross_margin, revenue, unit_price
+    marts.fct_orders: gross_margin, revenue
+    read by fct_orders_are_their_lines, order_lines_are_in_range,
+      orders_tie_to_staging, revenue_ties_to_the_sales_journal
+  values and rows: 9 columns in 6 relations, 4 tests
+    marts.fct_order_lines: gross_margin, revenue, unit_price
+    marts.fct_orders: gross_margin, revenue
+  tell: Tradeline (orders team),
+        orders-team@meridian.example
+
+suppliers.price_lists.cost
+  values only: 9 columns in 6 relations, 1 test
+    marts.dim_product: unit_cost
+    marts.fct_order_lines: cost, gross_margin, unit_cost
+    marts.fct_orders: cost, gross_margin
+    read by order_lines_are_in_range
+  values and rows: 19 columns in 7 relations, 8 tests
+    marts.dim_product: is_current, product_key, sku, unit_cost,
+      valid_from, valid_to
+    marts.fct_order_lines: cost, gross_margin, product_key,
+      unit_cost
+    marts.fct_orders: cost, gross_margin
+    marts.fct_tickets: product_key
+  tell: sixteen suppliers, saved by procurement,
+        procurement@meridian.example

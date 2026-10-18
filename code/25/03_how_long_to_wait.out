@@ -1,0 +1,12 @@
+events: 715,444   desktop: 503,589   mobile: 211,855
+received before they happened: desktop: 0   mobile: 2,141
+
+close a window after    still to come, per million
+                             all   desktop    mobile
+10 seconds                23,240    11,660    50,766
+1 minute                  21,257     9,651    48,845
+1 hour                    11,653         0    39,352
+6 hours                   10,462         0    35,331
+1 day                      6,248         0    21,099
+3 days                         4         0        14
+7 days                         0         0         0

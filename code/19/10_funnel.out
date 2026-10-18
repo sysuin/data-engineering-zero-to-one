@@ -1,0 +1,29 @@
+Every portal session since launch, bots left out
+  sessions              91,296  100.0%
+  added to a cart       55,218   60.5%
+  started checkout      44,331   48.6%
+  submitted an order    39,694   43.5%
+
+Orders in the sessions, summed        39,694
+order_submitted events                39,694
+Tradeline's web orders since launch   39,694
+  only in the portal 0, only in Tradeline 0
+  cancelled since in Tradeline: 486 (the first, order 67282)
+  web orders on 1 July before 04:00 UTC (30 June in Newark): 24
+Schema 2 orders with a value: 17,321; equal to the sum of their
+  lines in Tradeline: 17,321
+
+Carts abandoned in the hour to the watermark, 9 December
+  read to  watermark (Newark)   cold  warm  final
+  13:00    12:54:56 (07:54)      3     3      3
+  14:00    13:54:57 (08:54)      3     2      2
+  15:00    14:54:52 (09:54)      6     6      6
+  16:00    15:54:20 (10:54)      4     4      4
+  17:00    16:54:24 (11:54)      2     2      2
+  18:00    17:54:55 (12:54)      6     6      6
+  19:00    18:54:08 (13:54)      3     3      3
+  20:00    19:54:56 (14:54)      1     1      1
+  21:00    20:54:46 (15:54)      7     7      7
+  22:00    21:54:04 (16:54)      3     2      2
+December, 744 hours, 2,678 carts abandoned in all
+  live above final in 51 hours (by 54), below it in 16 (by 16)

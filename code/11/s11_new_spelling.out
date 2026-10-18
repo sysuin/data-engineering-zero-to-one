@@ -1,0 +1,8 @@
+the new product in staging:
+  ('MRD-SAN-049', 'Thorne Chem.', None, 6120)
+the check, products with no supplier:
+  [('MRD-SAN-049', 'Thorne Chem.')]
+after one row in the seed, rebuilt:
+  supplier_names, stg_catalogue__products,
+  stg_suppliers__price_lists
+the check: []

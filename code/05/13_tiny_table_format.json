@@ -1,0 +1,35 @@
+{
+ "log": [
+  {
+   "version": 0,
+   "op": "append 1 Dec",
+   "add": [
+    "part-66f77ceb.parquet"
+   ],
+   "remove": []
+  },
+  {
+   "version": 1,
+   "op": "append 2 Dec",
+   "add": [
+    "part-d596e797.parquet"
+   ],
+   "remove": []
+  },
+  {
+   "version": 2,
+   "op": "rewrite 1 Dec, less cancelled",
+   "add": [
+    "part-c22f0d16.parquet"
+   ],
+   "remove": [
+    "part-66f77ceb.parquet"
+   ]
+  }
+ ],
+ "disk": [
+  "part-66f77ceb.parquet",
+  "part-c22f0d16.parquet",
+  "part-d596e797.parquet"
+ ]
+}

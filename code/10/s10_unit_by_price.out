@@ -1,0 +1,8 @@
+layout     lists  fail  cost/price, min to max
+aldridge      49     1  0.67 to 3.98
+kestrel       48    48  80.76 to 80.76
+pemberton     30     0  0.66 to 0.71
+standard     623     0  0.61 to 0.81
+
+with the declared unit: 750 lists, 1 above 1:
+  Aldridge Trade Prices Mar 2024.xlsx  3.98

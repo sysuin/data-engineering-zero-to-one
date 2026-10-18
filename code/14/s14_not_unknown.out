@@ -1,0 +1,6 @@
+fct_order_lines.account_key   pass       0 on the unknown member
+fct_tickets.account_key       pass       0 on the unknown member
+fct_tickets.product_key       warn     567 on the unknown member
+
+those tickets name 10 SKUs launched 2024-04-01, and were opened
+from 2022-01-01 to 2024-03-29

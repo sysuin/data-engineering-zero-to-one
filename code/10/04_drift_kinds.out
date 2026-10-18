@@ -1,0 +1,7 @@
+change     by name            by position        declared
+as sent    right 6 of 6       right 6 of 6       right 6 of 6
+added      right 6 of 6       stops InvalidInput stops ValueError
+removed    wrong 0 of 6       stops InvalidInput stops ValueError
+renamed    wrong 0 of 6       right 6 of 6       stops ValueError
+reordered  right 6 of 6       wrong 0 of 6       right 6 of 6
+retyped    wrong 0 of 6       stops Conversion   stops Conversion

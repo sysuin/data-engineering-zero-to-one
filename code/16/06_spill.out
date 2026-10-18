@@ -1,0 +1,9 @@
+job                    limit spill  outcome        seconds  spilled
+sort the lines by day    2GB    on  finished           0.9     0 MB
+                       250MB   off  out of memory
+                       250MB    on  finished           2.6   135 MB
+                     spilling slower than not: True
+fct_orders' GROUP BY     2GB    on  finished           0.4     0 MB
+                       120MB   off  out of memory
+                       120MB    on  finished           0.8    20 MB
+                     spilling slower than not: True

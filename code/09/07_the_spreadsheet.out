@@ -1,0 +1,19 @@
+pandas: 5 rows, and these columns:
+  'Aldridge & Co — Trade Price List'
+  'Unnamed: 1'
+  'Unnamed: 2'
+first row: ['Prices valid from 1 March 2024', nan, nan]
+
+openpyxl, every cell that holds something:
+  A1='Aldridge & Co — Trade Price List'
+  A2='Prices valid from 1 March 2024'
+  A4='Product Code'  B4='Description'  C4='Trade Price'
+  A5='MRD-FAC-030'  B5='Facilities item 1'  C5=790.7
+  A6='MRD-SAF-015'  B6='Safety item 5'  C6=94.74
+
+Groundwork's reader: key aldridge-co/2024-03, 2 rows
+  MRD-FAC-030   790.7  1 March 2024
+  MRD-SAF-015   94.74  1 March 2024
+
+49 files; sheets, merged ranges, header row, date in banner:
+  49 x (('Trade prices',), 0, 4, True)

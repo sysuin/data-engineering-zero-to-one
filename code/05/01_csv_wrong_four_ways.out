@@ -1,0 +1,11 @@
+accounts.csv: 788,724 bytes, 5,188 data rows
+  2485;Easby Dental;Northeast;Mid-market;Tom Ashby;04/01/2022;
+  1498;N;Active;;
+  Brennan, Zoë;zoe.brennan@easby-dental.example;(973) 555-0191
+
+1 comma: 2 fields, split at ';Brennan' | ' Zoë;'
+2 utf-8: byte 0xeb at 86: invalid continuation byte
+  with ignore_errors: 2,830 rows loaded of 5,188
+3 dates: 04/01/2022 read as 2022-01-04 (format %d/%m/%Y)
+4 zip:   read as 1498, a Python int
+  dates wrong: 4,713; zips under five digits: 1,296

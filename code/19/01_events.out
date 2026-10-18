@@ -1,0 +1,35 @@
+From portal/2025/09/16/14.jsonl.gz:
+  event_id        "2afe81cc-ace3-4a15-bb54-ac7fbe960a24"
+  event_type      "add_to_cart"
+  schema_version  1
+  occurred_at     "2025-09-16T14:00:03.678Z"
+  session_id      "s-70496781d405"
+  account_id      4640
+  user_id         "u-004640-1"
+  device          "mobile"
+  user_agent      "MeridianApp/3.4 (Android 15)"
+  properties      {"sku": "MRD-SAF-011", "qty": 11}
+  received_at     "2025-09-16T14:00:05.380Z"
+
+An add_to_cart from portal/2025/12/09/14.jsonl.gz:
+  schema_version  2
+  properties.qty                2
+  properties.product_sku        "MRD-SAF-017"
+  properties.cart_value_cents   16410
+
+Events by schema version, by month on the device's clock
+  month     desktop v1  desktop v2  mobile v1  mobile v2
+  2025-07       81,462           0     36,115          0
+  2025-08       82,161           0     35,595          0
+  2025-09       81,057           0     34,748          0
+  2025-10            0      81,588     35,518          0
+  2025-11            0      93,611      9,980     24,312
+  2025-12            0      83,387          0     35,409
+
+Product views, counted by properties.sku (the old name)
+  2025-07   49,268 views,  49,268 with a sku  (100%)
+  2025-08   49,269 views,  49,269 with a sku  (100%)
+  2025-09   48,322 views,  48,322 with a sku  (100%)
+  2025-10   49,383 views,  14,932 with a sku  (30%)
+  2025-11   60,363 views,   4,182 with a sku  (7%)
+  2025-12   49,717 views,       0 with a sku  (0%)

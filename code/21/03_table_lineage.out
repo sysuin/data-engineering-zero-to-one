@@ -1,0 +1,20 @@
+126 nodes: 47 test, 17 staging, 16 raw, 15 system, 10 marts,
+  8 task, 5 intermediate, 5 seed, 2 audit, 1 snapshot
+176 edges: 75 ref, 69 tests, 16 read by, 16 writes
+
+from suppliers.price_lists, one level at a time:
+  task:ingest_suppliers
+  raw.suppliers_price_lists
+  staging.stg_suppliers__price_lists
+  intermediate.int_product_costs
+  marts.dim_product
+  marts.fct_order_lines, marts.fct_tickets
+  marts.fct_orders
+  and 24 dbt tests on those relations
+
+marts: 10; built from the price lists: 4
+  not: dim_account, dim_date, dim_region, dim_supplier,
+       fct_contract_month, fct_contracts
+tasks the DAG stops when ingest_suppliers fails: 6
+  check_contracts, check_quality, dbt_build, observe,
+  publish, reconcile

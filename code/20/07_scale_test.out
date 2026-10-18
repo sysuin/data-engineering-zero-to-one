@@ -1,0 +1,27 @@
+machine: 8 GiB, 2.7 GiB free now; DuckDB given 1 GB
+revenue by month
+     1x     1,229,062 rows    0.01 s     154 MB
+    10x    12,290,620 rows    0.06 s     168 MB
+    20x    24,581,240 rows    0.12 s     158 MB
+    30x    36,871,860 rows    0.19 s     160 MB
+    50x    61,453,100 rows    0.31 s     158 MB
+   100x   122,906,200 rows    0.63 s     155 MB
+revenue per order
+     1x     1,229,062 rows    0.01 s     156 MB
+    10x    12,290,620 rows    0.11 s     368 MB
+    20x    24,581,240 rows    0.23 s     580 MB
+    30x    36,871,860 rows    0.35 s     812 MB
+    50x    61,453,100 rows     out of memory
+   100x   122,906,200 rows     out of memory
+gap since last order
+     1x     1,229,062 rows    0.05 s     223 MB
+    10x    12,290,620 rows    0.45 s     746 MB
+    20x    24,581,240 rows     out of memory
+    30x    36,871,860 rows     out of memory
+    50x    61,453,100 rows     out of memory
+   100x   122,906,200 rows     out of memory
+extrapolated from the last two that fitted, not run:
+  revenue by month: memory flat; 1,000x in about 6 s
+  revenue per order: all 8 GiB used at about 366x
+  gap since last order: all 8 GiB used at about 145x
+sandbox cleared: True

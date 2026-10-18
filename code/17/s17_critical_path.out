@@ -1,0 +1,8 @@
+one at a time: 26 min
+all at once:   15 min
+the critical path, first to last:
+  ingest_frontline  3 min, done at  3
+  check_contracts   6 min, done at  9
+  dbt_build         3 min, done at 12
+  reconcile         2 min, done at 14
+  publish           1 min, done at 15

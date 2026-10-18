@@ -1,0 +1,5 @@
+query         on disk  uncompr.  scanned/month busy core-h  billed
+SELECT *       9.7 MB   64.5 MB        46.4 GB        1.55    72.0
+two columns    2.2 MB    2.6 MB         1.9 GB        0.06    72.0
+runs a month: 720. Billed: one core, at least 60 s a start,
+plus 300 s idle before it suspends itself

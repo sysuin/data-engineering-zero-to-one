@@ -1,0 +1,12 @@
+as statements: a reader saw
+  before     1,243,789 lines   November  $10,313,814.24
+  emptied            0 lines   November           $0.00
+  batch 1      250,000 lines   November           $0.00
+  batch 2      500,000 lines   November           $0.00
+  after        500,000 lines   November           $0.00
+as transaction: a reader saw
+  before     1,243,789 lines   November  $10,313,814.24
+  emptied    1,243,789 lines   November  $10,313,814.24
+  batch 1    1,243,789 lines   November  $10,313,814.24
+  batch 2    1,243,789 lines   November  $10,313,814.24
+  after      1,243,789 lines   November  $10,313,814.24

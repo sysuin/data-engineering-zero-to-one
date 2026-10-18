@@ -1,0 +1,29 @@
+1. The night: nightly.2026-01-04.1
+   20 of 20 tasks succeeded at the first try; 4 January published
+   the tasks v1.0 added:
+   restore_old_crm  5,188 accounts restored
+   observe          26 signals, 0 in alarm
+   sessions         4,445 files, 95,943 rows written, 3 open
+   compat           11 views
+   serve            7 metrics, 12,097 feature rows
+   govern           548 columns, 0 retention due
+
+2. The proof
+   Book 2: 10 tables, 2,983,600 rows, and the history: 0 differ
+   Book 1: 6 tables and 12 quarters: 0 differ
+
+3. November 2025, every reader
+   the dashboard, as Chapter 1 found it      10468688.559999792
+   the metric layer                               10,336,385.82
+   the API, GET /metrics/revenue                    10336385.82
+   Book 2's v_sales, over compat                  10,336,385.82
+   the ledger, the number of record               10,323,985.82
+   the gap is finance's own journal: SW -12,400.00,
+     Q3 volume rebate, key accounts
+
+4. What it refuses
+   GET /metrics/revnue -> 404
+     no metric called 'revnue'
+   GET /metrics/revenue?by=colour -> 400
+     revenue cannot be broken down by 'colour'
+   build over a warehouse that exists -> refused

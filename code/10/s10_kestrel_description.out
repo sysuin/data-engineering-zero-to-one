@@ -1,0 +1,7 @@
+version 2: passed, 3 rows; added 'description': not loaded
+  description in raw: None
+version 2 to 3: [('nobody', 'format kestrel-2026 added')]
+version 3, with the column: passed, 3 rows, format kestrel-2026,
+  description 'Kestrel item 1'
+version 3, as sent today: passed, 3 rows, format kestrel,
+  description None

@@ -1,0 +1,58 @@
+[
+ {
+  "depth": 0,
+  "operator": "ORDER_BY",
+  "rows": 4,
+  "scanned": 0,
+  "estimate": 0,
+  "info": {}
+ },
+ {
+  "depth": 1,
+  "operator": "HASH_GROUP_BY",
+  "rows": 4,
+  "scanned": 0,
+  "estimate": 1646,
+  "info": {}
+ },
+ {
+  "depth": 2,
+  "operator": "HASH_JOIN",
+  "rows": 32232,
+  "scanned": 0,
+  "estimate": 425508,
+  "info": {
+   "Join Type": "INNER",
+   "Conditions": "account_key = account_key"
+  }
+ },
+ {
+  "depth": 3,
+  "operator": "SEQ_SCAN",
+  "rows": 32232,
+  "scanned": 1229062,
+  "estimate": 245812,
+  "info": {
+   "Table": "warehouse.marts.fct_order_lines",
+   "Projections": [
+    "account_key",
+    "revenue"
+   ],
+   "Filters": "order_date>='2025-12-01'::DATE AND order_date<'2026-01-01'::DATE"
+  }
+ },
+ {
+  "depth": 3,
+  "operator": "SEQ_SCAN",
+  "rows": 11340,
+  "scanned": 11340,
+  "estimate": 11340,
+  "info": {
+   "Table": "warehouse.marts.dim_account",
+   "Projections": [
+    "account_key",
+    "segment"
+   ]
+  }
+ }
+]

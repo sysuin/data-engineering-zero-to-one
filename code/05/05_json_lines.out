@@ -1,0 +1,23 @@
+19.jsonl.gz: 216 events, one JSON object a line
+  event_id        str   'fda7c022-e3f1-42ae-9549-1a92c8e6ed70'
+  event_type      str   'add_to_cart'
+  schema_version  int   1
+  occurred_at     str   '2025-07-17T19:00:17.177Z'
+  session_id      str   's-a55a401db379'
+  account_id      int   5744
+  user_id         str   'u-005744-1'
+  device          str   'mobile'
+  user_agent      str   'MeridianApp/3.4 (iOS 18.2)'
+  properties      dict  {'sku': 'MRD-FAC-034', 'qty': 6}
+  received_at     str   '2025-07-17T19:00:17.446Z'
+
+DuckDB's guesses:
+  occurred_at  TIMESTAMP
+  account_id   BIGINT
+  properties   STRUCT, the union of every event's keys:
+    sku VARCHAR
+    qty BIGINT
+    order_number BIGINT
+    line_count BIGINT
+    query VARCHAR
+event types this hour, each with its own keys: 6

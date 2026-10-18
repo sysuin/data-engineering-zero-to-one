@@ -1,0 +1,72 @@
+# raw.relay_accounts: a night's export of the CRM's accounts.
+table: relay.accounts
+version: 1
+description: >
+  One row per account in a night's export, every value as the CRM
+  wrote it. Before 1 March 2024 the old CRM wrote it, in its own
+  format; source_format says which.
+producer:
+  who: Relay, the CRM (sales operations); before March 2024 the old CRM
+  contact: sales-ops@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per account per night
+key: [account_id]
+formats:
+  relay: [account_id, account_name, region, segment, owner,
+          customer_since, postcode, key_account, status, closed_on,
+          contact_name, contact_email, contact_phone, updated_at]
+  legacy: [Acct ID, Account Name, Region, Segment, Owner,
+           Customer Since, Zip, Key Acct, Status, Closed Date,
+           Primary Contact, Contact Email, Contact Phone]
+columns:
+  account_id: {type: integer, min: 1}
+  account_name: {}
+  region: {allowed: [Northeast, Southeast, Midwest, Southwest, West]}
+  segment:
+    allowed: [Enterprise, Mid-market, Public sector, Small business]
+  owner: {}
+  customer_since:
+    type: date
+    when:
+      source_format:
+        relay: {format: '%Y-%m-%d'}
+        legacy: {format: '%m/%d/%Y'}
+  postcode:
+    when:
+      source_format:
+        relay: {pattern: '[0-9]{5}'}
+        legacy: {pattern: '[0-9]{4,5}'}
+  key_account:
+    when:
+      source_format:
+        relay: {allowed: ['true', 'false']}
+        legacy: {allowed: ['Y', 'N']}
+  status:
+    when:
+      source_format:
+        relay: {allowed: [active, closed]}
+        legacy: {allowed: [Active, Closed]}
+  closed_on:
+    type: date
+    nullable: true
+    when:
+      source_format:
+        relay: {format: '%Y-%m-%d'}
+        legacy: {format: '%m/%d/%Y'}
+  contact_name: {}
+  contact_email: {pattern: '[^@ ]+@[^@ ]+'}
+  contact_phone: {}
+  updated_at:
+    type: timestamp
+    format: '%Y-%m-%dT%H:%M:%SZ'
+    unit: UTC
+    when:
+      source_format:
+        legacy: {nullable: true}
+  source_format: {allowed: [relay, legacy]}
+policy:
+  bad_rows: quarantine
+  max_bad_share: 0.05       # a CRM export is all or nothing
+changes:
+  - version: 1
+    note: first written, from both formats and four years of exports

@@ -1,0 +1,5 @@
+July: 117,761 records; slow committed at 5,000
+retention dropped 3 segments; oldest offset now 30,000
+slow polls: offset 5000 is outside 30000..117761
+reset to 30,000; 25,000 records never seen
+next poll returns 100 records

@@ -1,0 +1,4 @@
+rows read 5,188; data lines in the file 5,188
+(2485, datetime.date(2022, 4, 1), '01498', 'Zoë Brennan')
+in both exports 4,976: postcode agrees 4,976, customer since 4,976,
+  contact name 4,976; ids only in the old export 212

@@ -1,0 +1,24 @@
+nightly.2026-01-04.1: 14 tasks, 14 succeeded, 14 tries
+task             start     secs  what it said
+wait_relay       06:00:00     0  1 poke, waited 0 s
+ingest_tradeline 06:00:00    15  1,727,769 rows, 2 tables
+ingest_frontline 06:00:14    24  93,398 rows, 3 tables
+ingest_suppliers 06:00:39     1  0 rows, 1 table
+ingest_catalogue 06:00:40     0  0 rows, 1 table
+ingest_ledger    06:00:40     1  0 rows, 1 table
+ingest_reference 06:00:41     1  0 rows, 3 tables
+ingest_relay     06:00:42     1  0 rows, 4 tables
+load_comments    06:00:42    37  5,414 comments
+check_contracts  06:01:20    31  827 batches, 1,849,396 rows
+check_quality    06:01:50     0  26 checks, no errors
+dbt_build        06:01:50    10  built, all tests passed
+reconcile        06:02:01     5  235 cells, 6 counts: all tie
+publish          06:02:06     0  2026-01-04 published
+
+dbt_build ran 86 nodes; its record is one line.
+loads for 2026-01-04 that started during ingest_tradeline: 4
+  tradeline.orders.2026-01-04.3
+  tradeline.order_lines.2026-01-04.1
+  tradeline.order_lines.2026-01-04.2
+  tradeline.order_lines.2026-01-04.3
+every load for 2026-01-04: 41, none naming the run that made it

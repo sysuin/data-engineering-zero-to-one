@@ -1,0 +1,3 @@
+(a) join on account_key        0 rows back   1,240,402 rows read
+(b) account_key unique         0 rows back      11,340 rows read
+(b) account_id unique       3283 rows back      11,340 rows read

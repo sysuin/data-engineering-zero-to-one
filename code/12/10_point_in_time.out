@@ -1,0 +1,8 @@
+placed orders 478,242
+join                                  none       one     two
+valid_from <= day < valid_to             0   478,242       0
+ASOF JOIN                                0   478,242       0
+day <= valid_to (inclusive end)          0   477,988     254
+the UTC date, not the depot's            0   478,242       0
+orders the UTC date joins to another version: 34
+account 1130: 24 orders, last on 2024-07-01

@@ -1,0 +1,14 @@
+Two names, the same size, different contents:
+  Mar 2024                  1,749 bytes  c4d025cbd665cd08
+  Mar 2024 (corrected)      1,749 bytes  f0bf3c4646d4933d
+
+Fourteen nights of Relay, fewer distinct files:
+  accounts.csv   14 nights, 3 distinct fingerprints
+  contracts.csv  14 nights, 9 distinct fingerprints
+
+A copy, a new time, one changed byte:
+  copied                    1,749 bytes  c4d025cbd665cd08
+  touched                  2026-01-05 06:00  c4d025cbd665cd08
+  one bit flipped           1,749 bytes  50c5ae2b7f1d9662
+
+SHA-256 of an empty file: e3b0c44298fc1c14

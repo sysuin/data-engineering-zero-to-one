@@ -1,0 +1,14 @@
+{
+ "checks": 26,
+ "tally": {
+  "pass": 24,
+  "skip": 2
+ },
+ "tests": 19,
+ "rows": {
+  "quality_checks": 26,
+  "reconciliations": 247
+ },
+ "cells": 235,
+ "exit": 0
+}

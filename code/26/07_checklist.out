@@ -1,0 +1,28 @@
+Run    One command builds Groundwork from nothing  yes
+Run    Every batch held to its contract            yes
+Run    The cron line runs v1.0's night             no
+Run    Published by 07:00 UTC (the freshness SLO)  yes
+Run    A failed night reaches a person by 08:00    no
+Run    Raw, landed and the snapshot backed up      no
+Prove  The ledger ties, every region and month     yes
+Prove  Books 1 and 2 reconcile                     yes
+Prove  Chapter 15's checks: no errors              yes
+Prove  A change is diffed before it merges         yes
+Prove  make test passes                            by hand
+Serve  The stream has read everything that arrived yes
+Serve  Every session points at an account version  yes
+Govern No role reads what it should not            yes
+Govern Every column classified by a rule           no
+Govern The pseudonym key is a real secret          no
+Govern Retention's owners agree; --retain is on    by hand
+Own    Every source and check has an owner         yes
+Own    Each owner has read their contract          by hand
+Own    Someone else builds it from a clean clone   by hand
+20 lines: 11 yes, 5 no, 4 by hand
+
+the noes:
+  The cron line runs v1.0's night: names v0.8's night
+  A failed night reaches a person by 08:00: audit.notifications only
+  Raw, landed and the snapshot backed up: no job copies them
+  Every column classified by a rule: 4 columns await their owner
+  The pseudonym key is a real secret: the example's value

@@ -1,0 +1,28 @@
+{
+ "contract": {
+  "as sent": [
+   "passed",
+   "6 rows"
+  ],
+  "added": [
+   "passed",
+   "added 'Pack Size': not loaded"
+  ],
+  "removed": [
+   "broken",
+   "header removed: pemberton's 'Item' missing"
+  ],
+  "renamed": [
+   "broken",
+   "header renamed?: expected pemberton's 'Cost (USD)', found 'Unit Cost USD'"
+  ],
+  "reordered": [
+   "passed",
+   "columns in a new order"
+  ],
+  "retyped": [
+   "broken",
+   "6 of 6 rows fail (over 50%), most often cost: type"
+  ]
+ }
+}

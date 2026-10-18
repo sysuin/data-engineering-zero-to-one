@@ -1,0 +1,6 @@
+2,034 rows from every price list on disk
+pydantic: 108 rows fail; {'cost': 108}
+SQL:      108 rows fail; {'cost': 108}
+the same rows: True
+failing rows by supplier: {'pemberton-mills': 108}
+Kestrel's rows above $1,000 if its cents were dollars: 144 of 144

@@ -1,0 +1,7 @@
+snapshot 2025-08-20 02:05, at lsn 1,553,308
+30 nights of the log, to lsn 1,598,738: 44,730 I, 689 U, 11 D
+rows that differ from Tradeline, 2025-09-19: 0
+  the same entries applied newest first: 1,329
+away until 2025-09-28 02:05: the log now starts at lsn 1,601,771
+  3,032 changes after lsn 1,598,738 are gone from it
+  a new snapshot at lsn 1,612,497; rows that differ: 0

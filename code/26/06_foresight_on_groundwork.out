@@ -1,0 +1,15 @@
+Book 2's training table, by Book 2's rules
+  rows from meridian_ml.db 11,200, from compat 11,200
+  rows that differ in     compat  features
+  account                      0         0
+  days since order             0         0
+  orders, 90 days              0         0
+  orders, 90 before            0         0
+  spend, a year                0         0
+  tickets, 90 days             0         0
+  tenure                       0         0
+  segment                      0         0
+  label                        0         0
+features.renewal_snapshot: 12,097 rows
+  labelled 11,200, still open 897
+  not renewed: 814 here, 814 in Book 2's

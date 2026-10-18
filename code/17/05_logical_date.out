@@ -1,0 +1,19 @@
+logical date   Fri 14 Mar 2025
+run due        Sat 15 Mar 2025 06:00 UTC
+Relay export   relay/2025-03-14/, written 15 Mar 03:00 UTC
+Tradeline      as it stands at 06:00 on the 15th
+dbt vars       night=2025-03-14, since=<the last read a build used>
+
+the day a script picks for itself, and the export for it:
+  today     UTC         15 Mar 06:00  2025-03-15  WRONG  not yet
+  yesterday UTC         15 Mar 06:00  2025-03-14  right  there
+  yesterday New York    15 Mar 02:00  2025-03-14  right  there
+  yesterday Los Angeles 14 Mar 23:00  2025-03-13  WRONG  there
+  yesterday UTC, rerun  20 Mar 09:00  2025-03-19  WRONG  there
+
+orders placed after 06:00 UTC on the day after their depot day:
+  1,180 of 478,242, on 756 logical dates
+
+snapshots.snp_relay__accounts after dbt snapshot, night=
+  2026-01-04  the logical date   6,058 current      0 closed
+  2026-01-05  the run date           0 current  6,058 closed

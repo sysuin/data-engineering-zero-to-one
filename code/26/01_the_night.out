@@ -1,0 +1,25 @@
+nightly: 14 tasks in Chapter 17, 20 now
+level  task              waits for
+  0     wait_relay       -
+  0     ingest_tradeline -
+  0     ingest_frontline -
+  0     ingest_suppliers -
+  0     ingest_catalogue -
+  0     ingest_ledger    -
+  0     ingest_reference -
+  0   + restore_old_crm  -
+  1     ingest_relay     wait_relay
+  1     load_comments    ingest_frontline
+  2     check_contracts  every ingest
+  2     check_quality    every ingest
+  3     dbt_build        check_contracts, check_quality,
+                         load_comments, restore_old_crm
+  4     reconcile        dbt_build
+  4   + observe          dbt_build
+  4   + sessions         dbt_build
+  4   + compat           dbt_build
+  5   + serve            sessions
+  6   + govern           compat, observe, serve
+  7     publish          compat, govern, observe, reconcile,
+                         serve, sessions
++ added at v1.0: 6; levels 8, edges 34

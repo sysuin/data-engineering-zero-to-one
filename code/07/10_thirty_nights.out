@@ -1,0 +1,13 @@
+load dates        incremental: read  agreed   cdc: read  agreed
+19 Aug snapshot           1,530,159  1 of 1   1,530,159  1 of 1
+20 Aug-26 Aug                10,699  7 of 7      10,443  7 of 7
+27 Aug-02 Sep                10,984  1 of 7      10,750  7 of 7
+03 Sep-09 Sep                10,940  0 of 7      10,714  7 of 7
+10 Sep-16 Sep                10,955  0 of 7      10,673  7 of 7
+17 Sep-18 Sep                 2,892  0 of 2       2,850  2 of 2
+row by row against Tradeline at 2025-09-19 02:05:
+  incremental  extra: 4 orders, 7 lines; missing: 0 orders, 0 lines
+  cdc          extra: 0 orders, 0 lines; missing: 0 orders, 0 lines
+load date 2025-09-18 run again:
+  incremental  attempt 2, copy unchanged; next 2025-09-19 02:00:41
+  cdc          attempt 2, copy unchanged; next lsn 1,598,738

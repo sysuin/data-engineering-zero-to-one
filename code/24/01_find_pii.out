@@ -1,0 +1,16 @@
+pattern       comments  descriptions
+loose phone        586         6,337
+phone              586             0
+email              285             0
+
+a loose hit:
+  'Hi, where is the credit for the return on 1000195 cheers'
+loose phone over all free text: 6,923 flagged, 586 right (8.5%)
+
+comments flagged 871 of 5,414: 285 emails, 586 phones
+hits that are the requester's own: 871 of 871 (100.0%)
+planted (by the fictional ranges) 871; found 871;
+  missed 0; extra 0
+
+descriptions naming a person: 409, for example
+  'please remove Alex from our account asap!!'

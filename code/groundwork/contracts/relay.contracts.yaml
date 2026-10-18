@@ -1,0 +1,69 @@
+# raw.relay_contracts: a night's export of the CRM's contracts.
+table: relay.contracts
+version: 1
+description: >
+  One row per contract in a night's export, every value as the CRM
+  wrote it; source_format says which system wrote it.
+producer:
+  who: Relay, the CRM (sales operations); before March 2024 the old CRM
+  contact: sales-ops@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per contract per night
+key: [contract_id]
+formats:
+  relay: [contract_id, account_id, start_date, end_date, term_months,
+          legacy_terms, discount_pct, outcome, notice_date,
+          cancellation_reason, updated_at]
+  legacy: [Contract ID, Acct ID, Start, End, Term (months),
+           Legacy Terms, Discount %, Outcome, Notice Date,
+           Cancellation Reason]
+columns:
+  contract_id: {type: integer, min: 1}
+  account_id: {type: integer, min: 1}
+  start_date:
+    type: date
+    when:
+      source_format:
+        relay: {format: '%Y-%m-%d'}
+        legacy: {format: '%m/%d/%Y'}
+  end_date:
+    type: date
+    when:
+      source_format:
+        relay: {format: '%Y-%m-%d'}
+        legacy: {format: '%m/%d/%Y'}
+  term_months: {type: integer, allowed: ['12', '24']}
+  legacy_terms:
+    when:
+      source_format:
+        relay: {allowed: ['true', 'false']}
+        legacy: {allowed: ['Y', 'N']}
+  discount_pct: {type: integer, nullable: true, min: 0, max: 100}
+  outcome:
+    nullable: true
+    when:
+      source_format:
+        relay: {allowed: [renewed, not_renewed]}
+        legacy: {allowed: [Renewed, Not renewed]}
+  notice_date:
+    type: date
+    nullable: true
+    when:
+      source_format:
+        relay: {format: '%Y-%m-%d'}
+        legacy: {format: '%m/%d/%Y'}
+  cancellation_reason: {nullable: true}
+  updated_at:
+    type: timestamp
+    format: '%Y-%m-%dT%H:%M:%SZ'
+    unit: UTC
+    when:
+      source_format:
+        legacy: {nullable: true}
+  source_format: {allowed: [relay, legacy]}
+policy:
+  bad_rows: quarantine
+  max_bad_share: 0.05
+changes:
+  - version: 1
+    note: first written, from both formats and four years of exports

@@ -1,0 +1,50 @@
+# Groundwork's transformation layer, as a dbt project (Chapter 14).
+# The models are Chapters 11-13's, moved from code/groundwork/models/:
+# same SQL, same names, same schemas. What the hand-built runner read
+# from a header comment and a folder name is written down here.
+name: groundwork
+version: "0.6.0"
+config-version: 2
+profile: groundwork
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+clean-targets: ["target", "logs"]
+
+flags:
+  send_anonymous_usage_stats: false
+  use_colors: false
+
+vars:
+  # Incremental facts take again what changed since the last run read
+  # Tradeline, less this much (Chapters 7 and 13 chose an hour).
+  since: null
+  lookback_hours: 1
+  # The night a snapshot records, as YYYY-MM-DD; null means now.
+  night: null
+  fiscal_start_month: 1
+
+models:
+  groundwork:
+    # The folder is the schema, as it was for the runner; the macro
+    # generate_schema_name keeps dbt from prefixing it.
+    staging:
+      +schema: staging
+      +materialized: view
+    intermediate:
+      +schema: intermediate
+      +materialized: table
+    marts:
+      +schema: marts
+      +materialized: table
+
+seeds:
+  groundwork:
+    +schema: seeds
+
+snapshots:
+  groundwork:
+    +schema: snapshots

@@ -1,0 +1,30 @@
+# raw.catalogue_products: merchandising's catalogue, as saved.
+table: catalogue.products
+version: 1
+description: >
+  One row per product in a version of the catalogue file, with
+  merchandising's own column names and values.
+producer:
+  who: merchandising
+  contact: merchandising@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per product per catalogue version
+key: [SKU]
+formats:
+  catalogue: [SKU, Product Name, Category, Supplier, List Price,
+              Launched, Notes]
+columns:
+  SKU: {}
+  Product Name: {}
+  Category: {allowed: [Cleaning, Facilities, Packaging, Safety,
+                       Sanitation]}
+  Supplier: {}
+  List Price: {pattern: '\$[0-9]+\.[0-9]{2}', unit: USD}
+  Launched: {type: date, format: '%d-%b-%Y', nullable: true}
+  Notes: {nullable: true}
+policy:
+  bad_rows: quarantine
+  max_bad_share: 0.1
+changes:
+  - version: 1
+    note: first written

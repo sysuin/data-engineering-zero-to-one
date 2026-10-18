@@ -1,0 +1,15 @@
+types DuckDB inferred from the CSV:
+  account_id      BIGINT
+  customer_since  DATE
+  postcode        VARCHAR
+  key_account     BOOLEAN
+  closed_on       DATE
+portal events, July to September 2025: 351,089
+Tradeline orders in December 2025, by Relay's region:
+  Midwest     1,825
+  Northeast   2,980
+  Southeast   2,459
+  Southwest   3,495
+  West        1,856
+  sum        12,615   (Tradeline alone: 12,615)
+wrote accounts.parquet; it holds 6,058 rows

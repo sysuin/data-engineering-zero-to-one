@@ -1,0 +1,12 @@
+placed lines in staging  1,229,062
+rows in fct_order_lines  1,229,062
+key (order_id, line_no) unique: True
+
+order 60603 (Tradeline id 472232), Web
+  placed_at 2025-12-03 12:47:53 UTC, order_date 2025-12-03
+  date_key 20251203  account_key 9a502d2835754d67
+  region_key c81e728d9d4c2f63
+line product_key       qty   price    cost  revenue   margin
+   1 b6e4d387b805aa30    5   88.47   64.88   442.35   117.95
+   2 f4859a4a6b71a1da   11   56.53   35.05   621.83   236.28
+   3 52b0b9f4f2523ec7    2   21.24   14.02    42.48    14.44

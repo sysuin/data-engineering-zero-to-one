@@ -1,0 +1,6 @@
+             build  one read          stored
+view        0.002s    0.182s             0 B
+table       1.098s    0.003s    20,447,232 B
+a read of the view costs 54x a read of the table;
+building the table costs 327 reads of the table
+both give 48 SKUs, 40,686,447,620 cents

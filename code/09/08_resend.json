@@ -1,0 +1,29 @@
+{
+ "versions": [
+  {
+   "loaded": "2024-03-01",
+   "cents": 79070,
+   "name": "Aldridge Trade Prices Mar 2024.xlsx"
+  },
+  {
+   "loaded": "2024-03-04",
+   "cents": 7907,
+   "name": "Aldridge Trade Prices Mar 2024 (corrected).xlsx"
+  }
+ ],
+ "arrived": {
+  "Aldridge Trade Prices Mar 2024.xlsx": "2024-03-01 21:15:54",
+  "Aldridge Trade Prices Mar 2024 (corrected).xlsx": "2024-03-04 23:15:54",
+  "Aldridge Trade Prices Mar 2024 (2).xlsx": "2024-03-06 11:00:00"
+ },
+ "runs": [
+  "2024-03-01 06:00:00",
+  "2024-03-02 06:00:00",
+  "2024-03-03 06:00:00",
+  "2024-03-04 06:00:00",
+  "2024-03-05 06:00:00",
+  "2024-03-06 06:00:00"
+ ],
+ "qty": 2866,
+ "sales": 31172617
+}

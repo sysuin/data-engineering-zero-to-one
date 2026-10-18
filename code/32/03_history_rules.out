@@ -1,0 +1,8 @@
+Book 2's history rows             9,910
+  began before the first export     208
+  changed nothing                    17
+  lasted no time                      2
+  lost a segment change               2
+as a CRM could have recorded it   9,891
+rebuilt from Relay's audit        9,891
+rows that differ                      0

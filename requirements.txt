@@ -1,0 +1,37 @@
+# Everything the book runs on, grouped by the part that first needs it. Python 3.12.
+#
+# Lower bounds, not pins, as in Books 1 and 2. A pin in a book is a promise that expires;
+# a lower bound says what the code assumes. Pin in your own project, in a lockfile.
+# Appendix C lists the exact versions the book's printed output came from.
+
+# --- Part I: the analyst's tools, in Python
+duckdb>=1.1           # the warehouse: an analytical database in a file
+pandas>=2.2
+numpy>=2.0
+pyarrow>=17.0         # Parquet, from Chapter 5 on
+python-dotenv>=1.0    # .env, for Frontline's token
+pyyaml>=6.0           # contracts and configuration
+
+# --- Part II: getting data in
+httpx>=0.27           # Frontline's API, Chapter 8
+openpyxl>=3.1         # a supplier's spreadsheet, Chapter 9
+pydantic>=2.7         # row validation and contracts, Chapter 10
+
+# --- Part III: transforming data
+dbt-core>=1.8         # Chapter 14 onward, after the hand-built runner of Chapter 11
+dbt-duckdb>=1.8
+
+# --- Part IV and V: running, serving and governing
+sqlglot>=25.0         # column-level lineage, Chapter 21
+fastapi>=0.115        # the metrics API, Chapter 22
+uvicorn[standard]>=0.30
+psutil>=5.9           # memory and process measurements, Chapter 20
+
+# --- The toolchain the repository itself uses
+pytest>=8.0
+ruff>=0.6
+matplotlib>=3.9       # a few figures are plotted from listing output
+pypdf>=4.0            # the build's page count
+pdfplumber>=0.11      # check_release.py: margins, type size and index pages, measured
+fonttools>=4.50       # _lint_glyphs.py: what the mono font can actually print
+pillow>=10.4          # figlib.py measures text with the real fonts; cover.py, render_web.py

@@ -1,0 +1,72 @@
+# raw.suppliers_price_lists: what a supplier's price list promises.
+table: suppliers.price_lists
+version: 2
+description: >
+  One row per product on a supplier's monthly price list, kept as
+  the supplier wrote it, with the layout and unit it came in.
+producer:
+  who: sixteen suppliers, saved by procurement
+  contact: procurement@meridian.example
+owner: data engineering (Groundwork ingest)
+grain: one row per product per list file
+key: [file_sha256, sku]
+
+formats:                    # the headers a list may arrive with
+  standard: [sku, description, unit_cost, currency,
+             effective_from]
+  kestrel: [sku, cost_cents, effective]
+  pemberton: [Item Code, Item, Cost (USD), Valid From]
+  pemberton-2024: [Item Code, Item, Unit Cost USD,
+                   Valid From]
+  aldridge: [Product Code, Description, Trade Price]
+
+columns:
+  supplier:
+    allowed: [aldridge-co, brackley-plastics, halvard-group,
+              ingleby-works, kestrel-supply, marlowe-fabrication,
+              norfolk-paper, oakhurst-textiles, pemberton-mills,
+              penhale-rubber, quillon-metals, ravensworth-ltd,
+              tarbert-industries, ullswater-supply, voss-industrial,
+              wrenfield-products]
+  sku: {pattern: 'MRD-[A-Z]{3}-[0-9]{3}'}
+  description: {nullable: true}
+  cost:
+    type: decimal
+    when:
+      cost_unit:
+        dollars: {scale: 2, min: 0.50, max: 1000.00,
+                  unit: USD}
+        cents: {type: integer, min: 50, max: 100000,
+                unit: USD/100}
+  currency: {nullable: true, allowed: [USD]}
+  effective_from:
+    type: date
+    when:
+      layout:
+        standard: {format: '%Y-%m-%d'}
+        kestrel: {format: '%Y-%m-%d'}
+        pemberton: {format: '%d/%m/%Y'}
+        aldridge: {format: '%d %B %Y'}
+  cost_unit: {allowed: [dollars, cents]}
+  layout: {allowed: [standard, kestrel, pemberton, aldridge]}
+  file: {stamped: true}      # by the loader, from the file ledger
+  file_sha256: {stamped: true, pattern: '[0-9a-f]{64}'}
+
+history:                    # a cost against the last list's
+  value: cost
+  scale: {column: cost_unit, dollars: 1, cents: 0.01}
+  per: [supplier, sku]
+  order: effective_from
+  max_ratio: 3
+
+policy:
+  bad_rows: quarantine      # park them; load the rest of the list
+  max_bad_share: 0.5        # more than half failing: the file broke
+
+changes:
+  - version: 1
+    note: first written, from four years of lists
+  - version: 2
+    note: >
+      Pemberton's header from July 2024, "Unit Cost USD" for
+      "Cost (USD)", agreed with procurement; same columns in raw

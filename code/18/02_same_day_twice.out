@@ -1,0 +1,18 @@
+night 2024-02-29, its run due 2024-03-01 06:00
+raw table                       rows   again      today
+frontline.ticket_fields       19,822       0     24,086
+frontline.ticket_tags         12,801       0     15,977
+frontline.tickets              9,911       0     12,043
+relay.accounts                 4,976       0    missing
+relay.contracts               11,143       0    missing
+relay.field_history           21,799       0         38
+tradeline.order_lines        575,597       0    668,194
+tradeline.orders             225,568       0    258,416
+(rows in the first load; rows that differ from it)
+today's sources put 258,412 orders placed after the run was due
+into the night's partition, the last at 2026-01-01 06:50:33
+
+relay.accounts for 2024-02-29, against Chapter 9's load:
+  today's ingest  4,976 rows, 212 parked, 212 rows differ
+    parked because contact_email: is empty
+  the backfill's  5,188 rows, 0 parked, 0 rows differ

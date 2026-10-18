@@ -1,0 +1,11 @@
+built                        rows  second source              rows
+dim_date days               2,191  the calendar, 2021-2026   2,191 =
+dim_region regions              5  regions.csv                   5 =
+dim_supplier suppliers         20  suppliers.csv                20 =
+dim_product SKUs               48  the catalogue                48 =
+  list rows at their cost   2,032  price-list rows           2,032 =
+dim_account current         6,058  today's export            6,058 =
+ids resolved                6,270  ids ever exported         6,270 =
+segment and owner history   9,891  Book 2, four rules        9,891 =
+Book 2's history 9,910 rows; ours and the four rules' differ by 0
+dimensions.check: every promise kept
