@@ -38,7 +38,7 @@ jobs:
           python-version: "3.12"
           cache: pip
       - name: install
-        run: pip install -r requirements.txt
+        run: pip install -r requirements.txt && cp .env.example .env
       - name: lint
         run: python3 -m ruff check code/ tests/
       - name: nothing stale
@@ -99,7 +99,7 @@ jobs:
           python-version: "3.12"
           cache: pip
       - name: install
-        run: pip install -r requirements.txt
+        run: pip install -r requirements.txt && cp .env.example .env
       - name: generate and verify Meridian and its sources
         run: make data PY=python3
       - name: every test, every layer
