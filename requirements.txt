@@ -5,7 +5,8 @@
 # Appendix C lists the exact versions the book's printed output came from.
 
 # --- Part I: the analyst's tools, in Python
-duckdb>=1.1           # the warehouse: an analytical database in a file
+duckdb>=1.1,<2        # the warehouse: an analytical database in a file. Below 2: DuckDB 2.0
+                      # removed syntax and methods this book's code uses (Appendix C)
 pandas>=2.2
 numpy>=2.0
 pyarrow>=17.0         # Parquet, from Chapter 5 on
