@@ -32,7 +32,23 @@ from datetime import date, timedelta
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import generate_ml as g                                     # noqa: E402
 
-BOOK1_WAREHOUSE_SHA256 = "f0bbc0ccc14de01e2bc8c19456dd291154cc55fb11758a95fb0fd2fd4bfc3100"
+# A hash of Book 1's tables, row by row, not of its file: an SQLite file
+# records the library version that wrote it, so the same data has different
+# bytes on different machines.
+BOOK1_CONTENT_SHA256 = "48d50f14a65799254090114445b80edf427798a4320e48bdc3aa3b851e7f92c5"
+
+
+def content_digest(path: str) -> str:
+    """SHA-256 of every table's schema and rows, in a fixed order."""
+    h = hashlib.sha256()
+    con = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
+    for name, sql in con.execute("SELECT name, sql FROM sqlite_master "
+                                 "WHERE type = 'table' ORDER BY name"):
+        h.update(f"{name}\n{sql}\n".encode())
+        for row in con.execute(f'SELECT * FROM "{name}" ORDER BY rowid'):
+            h.update(repr(row).encode())
+    con.close()
+    return h.hexdigest()
 
 failures = []
 
@@ -107,9 +123,8 @@ def main() -> int:
     manifest = json.load(open(os.path.join(args.data, "manifest.json")))
 
     print("Book 1")
-    with open(os.path.join(args.book1, "warehouse", "meridian.db"), "rb") as f:
-        digest = hashlib.sha256(f.read()).hexdigest()
-    check(digest == BOOK1_WAREHOUSE_SHA256, "Book 1's warehouse is byte-identical")
+    digest = content_digest(os.path.join(args.book1, "warehouse", "meridian.db"))
+    check(digest == BOOK1_CONTENT_SHA256, "Book 1's warehouse holds exactly its data")
     check(one("SELECT COUNT(*) FROM orders WHERE order_id < 1000000") == 66_676,
           "the key accounts' 66,676 orders are carried over")
 

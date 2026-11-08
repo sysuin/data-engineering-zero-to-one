@@ -49,6 +49,11 @@ Or let the runner run a chapter and compare its output with what the book printe
 .venv/bin/python code/_runner.py --check --twice    # every capture current, every run repeatable
 ```
 
+The nightly CI job runs the same check with `--portable`, because GitHub's Linux machines
+are not the laptop the book's output was captured on: a listing that fails or disagrees
+with itself fails the job, and one whose output differs from the capture is listed in the
+log without failing it.
+
 `requirements.txt` gives lower bounds; Appendix C of the book lists the exact versions the
 printed output came from. A newer library can change the wording of an error or the order
 of rows a listing does not sort, but it should never change a total. If one does, please

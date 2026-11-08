@@ -18,7 +18,10 @@ single character of output differs.
     python3 code/_runner.py 02               # just chapter 02
     python3 code/_runner.py --check          # fail if any .out is stale (fast; runs nothing)
     python3 code/_runner.py --check --twice  # also run every listing twice, and fail if the
-                                             # two runs, or either and its .out, disagree (CI)
+                                             # two runs, or either and its .out, disagree
+    python3 code/_runner.py --check --twice --portable
+                                             # the same on another machine (CI): a capture
+                                             # whose last digit moved is listed, not failed
     python3 code/_runner.py --twice          # run what changed, twice each, and compare
 
 Conventions a listing may declare on its first few lines:
@@ -218,27 +221,31 @@ def run_one(path: str, spec: dict, twice: bool) -> dict:
     return result
 
 
-def check_twice(path: str, spec: dict) -> str | None:
+def check_twice(path: str, spec: dict, portable: bool = False) -> tuple[str | None, str | None]:
     """
     CI's determinism gate: run the listing twice without touching its .out, and compare
-    both runs with each other and with the capture the book prints. Returns a problem, or
-    None. A capture that no longer reproduces is exactly the drift this book promises
-    cannot happen.
+    both runs with each other and with the capture the book prints. Returns a problem
+    and a note, either of them None. On the machine that captured the book, a capture
+    that no longer reproduces is exactly the drift this book promises cannot happen.
+    On any other machine (`portable`), the last digit may move for the reasons in
+    Appendix C, so a difference from the capture is a note, not a problem.
     """
     first, code, _ = execute(path, spec)
     failed = code != 0
     if failed != spec["expect_fail"]:
-        return f"exit status {code}"
+        last = [line for line in first.splitlines() if line.strip()][-1:] or [""]
+        return f"exit status {code}: {last[0].strip()[:100]}", None
     second, _, _ = execute(path, spec)
     if first != second:
-        return f"two runs differ, {first_difference(first, second)}"
+        return f"two runs differ, {first_difference(first, second)}", None
     outfile = os.path.join(CODE, path[:-3] + ".out")
     if os.path.exists(outfile):
         with open(outfile) as f:
             captured = f.read()
         if captured != first:
-            return f"differs from its .out, {first_difference(captured, first)}"
-    return None
+            difference = f"differs from its .out, {first_difference(captured, first)}"
+            return (None, difference) if portable else (difference, None)
+    return None, None
 
 
 def _env_file() -> dict[str, str]:
@@ -310,6 +317,9 @@ def main() -> int:
                     help="fail if anything is stale; with --twice, also prove determinism")
     ap.add_argument("--twice", action="store_true",
                     help="run each listing twice and fail if the output differs")
+    ap.add_argument("--portable", action="store_true",
+                    help="with --check --twice on a machine other than the book's: "
+                         "list differences from the captures without failing on them")
     args = ap.parse_args()
 
     cache = {}
@@ -325,7 +335,7 @@ def main() -> int:
     if args.all and os.path.exists(USAGE):
         os.remove(USAGE)
 
-    stale, unstable, exempt = [], [], []
+    stale, unstable, exempt, moved_digits = [], [], [], []
     ran, skipped, failures = 0, 0, []
     total_time = 0.0
 
@@ -357,9 +367,11 @@ def main() -> int:
             if not fresh:
                 stale.append(path + (f"  (imports changed: {moved[0]})" if moved else ""))
             elif args.twice and not spec["nondeterministic"]:
-                problem = check_twice(path, spec)
+                problem, note = check_twice(path, spec, args.portable)
                 if problem:
                     unstable.append((path, problem))
+                if note:
+                    moved_digits.append((path, note))
             continue
         if fresh and not args.all:
             continue
@@ -391,11 +403,15 @@ def main() -> int:
             print(f"  STALE     {p}")
         for p, problem in unstable:
             print(f"  UNSTABLE  {p}: {problem}")
+        for p, note in moved_digits:
+            print(f"  differs   {p}: {note}")
         for p, reason in exempt:
             print(f"  exempt    {p}: {reason}")
         checked = len(listings) - skipped
         print(f"\n{len(stale)} stale of {checked}"
-              + (f", {len(unstable)} not reproducible" if args.twice else ""))
+              + (f", {len(unstable)} not reproducible" if args.twice else "")
+              + (f", {len(moved_digits)} differing from the book's capture on this"
+                 " machine (Appendix C)" if args.portable else ""))
         return 1 if stale or unstable else 0
 
     # Several runs can share one repository (a chapter's listings while another chapter's

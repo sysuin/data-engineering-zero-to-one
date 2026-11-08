@@ -105,4 +105,7 @@ jobs:
       - name: every test, every layer
         run: python3 -m pytest tests/ -q
       - name: every listing, twice
-        run: python3 code/_runner.py --check --twice
+        # The book's captures came from one Apple laptop. On this machine a last
+        # digit may differ for the reasons in Appendix C; those are listed, and
+        # only a listing that fails or disagrees with itself fails the job.
+        run: python3 code/_runner.py --check --twice --portable
