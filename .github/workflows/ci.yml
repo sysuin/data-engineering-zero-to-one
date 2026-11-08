@@ -103,11 +103,15 @@ jobs:
       - name: generate and verify Meridian and its sources
         run: make data PY=python3
       - name: build the warehouse the chapters build, from nothing
-        # data/groundwork for Chapters 11-24; Chapter 26's own from-nothing
+        # data/groundwork for Chapters 11-24: the v1.0 night, then the
+        # fortnight of Relay exports Chapter 9's Build box loads, then the
+        # night again so the marts hold it. Chapter 26's own from-nothing
         # build, which its listing 02 makes (it prints timings, so the check
         # below skips it) and its later listings read.
         run: |
           make warehouse PY=python3
+          python3 -m groundwork.ingest.relay --night 2025-12-22 --to 2026-01-04
+          python3 -m groundwork.nightly run --day 2026-01-04 --at 2026-01-05T06:00
           make warehouse PY=python3 FOLDER=data/sandbox/ch26/fresh
       - name: every test, every layer
         run: python3 -m pytest tests/ -q
