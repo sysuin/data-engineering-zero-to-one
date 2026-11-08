@@ -1,3 +1,4 @@
+# timeout: 900
 # The watch, run at 07:00 UTC every morning of July 2024 over the
 # replay: what fired on the quarantine's volume, who heard, and when.
 import json

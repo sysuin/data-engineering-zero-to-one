@@ -1,3 +1,4 @@
+# timeout: 900
 # The four signals for every night of July 2024, measured from the
 # records a replay of Groundwork's nightly run left behind.
 import json

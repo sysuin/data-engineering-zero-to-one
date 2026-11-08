@@ -1,3 +1,4 @@
+# timeout: 1800
 # Exercise 5: the freshness SLO at several targets over 30 days, for
 # the window ending 31 July 2024 in both replays.
 from dataclasses import replace

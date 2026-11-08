@@ -63,6 +63,9 @@ ROOT = os.path.dirname(CODE)
 REPORT = os.path.join(CODE, "_report.json")
 USAGE = os.path.join(CODE, "_usage.jsonl")
 DEFAULT_TIMEOUT = 120
+# A slower machine than the book's (a CI runner with two cores) needs more time for the
+# same listing; BOOK_TIMEOUT_SCALE multiplies every limit, the declared ones included.
+TIMEOUT_SCALE = float(os.environ.get("BOOK_TIMEOUT_SCALE", "1"))
 CHAPTER_DIR = re.compile(r"^\d{2}$")
 
 # Everything a listing inherits that could make two runs differ. Seeds are the listing's
@@ -172,7 +175,8 @@ def execute_recording(path: str, spec: dict) -> tuple[str, int, float, dict]:
     try:
         proc = subprocess.run(
             [sys.executable, os.path.join("code", path)],
-            cwd=ROOT, capture_output=True, text=True, timeout=spec["timeout"],
+            cwd=ROOT, capture_output=True, text=True,
+            timeout=spec["timeout"] * TIMEOUT_SCALE,
             env={**os.environ, **DETERMINISM_ENV,
                  "PYTHONUNBUFFERED": "1", "BOOK_RUN": "1", "COLUMNS": "88",
                  # sitecustomize.py counts model calls; only the build ever sees it.
@@ -184,7 +188,7 @@ def execute_recording(path: str, spec: dict) -> tuple[str, int, float, dict]:
         if proc.stderr.strip():
             body += ("\n" if body and not body.endswith("\n") else "") + proc.stderr
     except subprocess.TimeoutExpired:
-        body, code = f"TIMEOUT after {spec['timeout']}s\n", -9
+        body, code = f"TIMEOUT after {spec['timeout'] * TIMEOUT_SCALE:g}s\n", -9
     elapsed = time.time() - started
 
     # Tracebacks carry absolute paths. The book must not contain the author's home

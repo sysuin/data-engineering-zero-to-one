@@ -1,9 +1,10 @@
 """
-Chapter 21's sandbox: a copy of Groundwork today, the dbt project
-compiled against it, and replays of the summer of 2024.
+Chapter 21's sandbox: a copy of Groundwork as the chapter found it,
+the dbt project compiled against it, and replays of the summer of 2024.
 
     base()       a copy of the warehouse, raw and the landed archive,
-                 with raw's views pointed at the copy (kept)
+                 trimmed back to the chapter's start (below), with
+                 raw's views pointed at the copy (kept)
     compiled()   (manifest, schema): dbt compile into base/target, and
                  every relation's columns in the copy
     work(name)   a fresh copy of base for one listing; tidy(name)
@@ -25,6 +26,29 @@ Tradeline, Relay (with its sensor) and the suppliers run for real; the
 other tasks are stand-ins that succeed at once, so that each night
 takes a second or two. Every run is on a simulated clock that starts
 at 06:00 UTC on the morning after its logical day.
+
+Why base() trims its copy. The listings were captured when the real
+warehouse had run one night for 4 January 2026, nightly.2026-01-04.1.
+The real warehouse has run that night again since: Chapter 21 itself,
+at its end (nightly.2026-01-04.2, with the monitor and the first
+watch), and Chapter 26 (nightly.2026-01-04.3, with the sessions,
+compat, serve and govern tasks). Copied as it is today, it would give
+listing 02 those runs' loads to count and listing 09 a third run to
+number, so base() takes back out what those later runs left:
+
+    their dag_runs and task_runs, and the loads they made (the newest
+    load of 4 January for each table, one per later run), with those
+    loads' contract checks, ledger rows, quarantine and raw pages
+    audit.metrics, audit.alerts and audit.notifications (the monitor
+    and the watch first ran in the chapter's real night)
+    audit.published put back to the first run's publication
+    what Chapters 22 to 26 added: audit.book_reconciliations, the
+    compat, features, govern, metrics, masked and role_* schemas, and
+    the sessions Chapter 26's night wrote into marts.fct_portal_sessions
+    (empty when Chapter 21 began)
+
+The audit rows those runs replace rather than add (quality checks and
+reconciliations, keyed on their judging moment) come out the same.
 
 Not printed in the book.
 """
@@ -52,12 +76,19 @@ REAL = ("wait_relay", "ingest_relay", "ingest_tradeline",
 FIXES = {"unwatched": datetime(2024, 7, 16, 15, 0),
          "watched": datetime(2024, 7, 3, 15, 0), "chapter9": None}
 VERSION = "1"
+FIRST_RUN = "nightly.2026-01-04.1"    # the night the listings saw
+TRIM = "2"                            # base()'s version: rebuilt when changed
+LATER_SCHEMAS = ("compat", "features", "govern", "metrics", "masked",
+                 "role_analyst", "role_finance", "role_manager_southwest",
+                 "role_support")
 
 
 # ---------------------------------------------------------- today's copy
 def base() -> Path:
-    """The shared copy of Groundwork today, made the first time."""
-    if not (BASE / "warehouse.duckdb").exists():
+    """The shared copy of Groundwork as Chapter 21 found it, made the
+    first time."""
+    stamp = BASE / "trimmed"
+    if not (stamp.exists() and stamp.read_text() == TRIM):
         shutil.rmtree(BASE, ignore_errors=True)
         BASE.mkdir(parents=True)
         shutil.copy(WAREHOUSE, BASE / "warehouse.duckdb")
@@ -68,9 +99,57 @@ def base() -> Path:
             shutil.copytree(GROUNDWORK / part, BASE / part)
         con = duckdb.connect(str(BASE / "warehouse.duckdb"))
         con.execute("SET enable_progress_bar = false")
+        trim(con, BASE / "raw")
         storage.raw_views(con, (BASE / "raw").resolve())
+        con.execute("CHECKPOINT")
         con.close()
+        # Compile dbt now, while nothing holds the file: dbt opens it to
+        # write, and a listing that already has it open read-only (02
+        # does) would make dbt fail to take the lock.
+        lineage.compile_project(BASE / "warehouse.duckdb", BASE / "target")
+        stamp.write_text(TRIM)
     return BASE
+
+
+def trim(con, raw: Path) -> None:
+    """Take out of the copy what later runs and chapters left (see the
+    module's docstring)."""
+    day = FIRST_RUN.split(".")[1]
+    later = [r for (r,) in con.execute(
+        "SELECT run_id FROM audit.dag_runs WHERE run_id <> ? "
+        "ORDER BY run_id", [FIRST_RUN]).fetchall()]
+    loads = [x for (x,) in con.execute("""
+        SELECT load_id FROM (
+            SELECT load_id, row_number() OVER (
+                PARTITION BY source, table_name ORDER BY
+                CAST(split_part(load_id, '.', -1) AS INTEGER) DESC) AS k
+            FROM audit.load_log WHERE load_date = ?)
+        WHERE k <= ? ORDER BY load_id""", [day, len(later)]).fetchall()]
+    for table in ("dag_runs", "task_runs"):
+        con.execute(f"DELETE FROM audit.{table} WHERE run_id IN "
+                    f"(SELECT unnest(?))", [later])
+    for table in ("load_log", "contract_runs", "file_ledger",
+                  "quarantine"):
+        con.execute(f"DELETE FROM audit.{table} WHERE load_id IN "
+                    f"(SELECT unnest(?))", [loads])
+    pages = raw / "frontline" / "pages" / f"load_date={day}"
+    for x in loads:
+        if x.startswith("frontline.tickets."):
+            shutil.rmtree(pages / f"attempt-{x.rsplit('.', 1)[1]}",
+                          ignore_errors=True)
+    con.execute("""
+        UPDATE audit.published SET run_id = t.run_id,
+               published_at = t.finished_at
+        FROM audit.task_runs t
+        WHERE t.run_id = ? AND t.task = 'publish'
+          AND published.dag = t.dag
+          AND published.logical_date = t.logical_date""", [FIRST_RUN])
+    for table in ("metrics", "alerts", "notifications",
+                  "book_reconciliations"):
+        con.execute(f"DROP TABLE IF EXISTS audit.{table}")
+    for schema in LATER_SCHEMAS:
+        con.execute(f"DROP SCHEMA IF EXISTS {schema} CASCADE")
+    con.execute("DELETE FROM marts.fct_portal_sessions")
 
 
 def compiled():

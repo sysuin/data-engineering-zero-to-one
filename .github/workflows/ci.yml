@@ -102,10 +102,19 @@ jobs:
         run: pip install -r requirements.txt && cp .env.example .env
       - name: generate and verify Meridian and its sources
         run: make data PY=python3
+      - name: build the warehouse the chapters build, from nothing
+        # data/groundwork for Chapters 11-24; Chapter 26's own from-nothing
+        # build, which its listing 02 makes (it prints timings, so the check
+        # below skips it) and its later listings read.
+        run: |
+          make warehouse PY=python3
+          make warehouse PY=python3 FOLDER=data/sandbox/ch26/fresh
       - name: every test, every layer
         run: python3 -m pytest tests/ -q
       - name: every listing, twice
         # The book's captures came from one Apple laptop. On this machine a last
         # digit may differ for the reasons in Appendix C; those are listed, and
         # only a listing that fails or disagrees with itself fails the job.
+        env:
+          BOOK_TIMEOUT_SCALE: "4"
         run: python3 code/_runner.py --check --twice --portable

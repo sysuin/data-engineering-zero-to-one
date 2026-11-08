@@ -1,3 +1,4 @@
+# timeout: 2400
 # The Pemberton incident replayed three ways: with Chapter 9's loader,
 # with the contract and no watch, and with the watch.
 import json

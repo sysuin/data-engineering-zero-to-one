@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T16:06:17",
+  "generated": "2026-11-08T18:57:08",
   "listings": {
     "01/01_two_numbers.py": {
       "bytes": 77,
@@ -4360,10 +4360,21 @@
     "21/01_four_signals.py": {
       "bytes": 1426,
       "deps": {
-        "code/21/_sandbox.py": "7fcf8864f353858a",
+        "code/21/_sandbox.py": "2d48f04c16fcd58a",
         "code/groundwork/__init__.py": "9752bbb81cb0ebb8",
         "code/groundwork/config.py": "5277b4a762541287",
         "code/groundwork/contracts/__init__.py": "e72ae49e64412686",
+        "code/groundwork/contracts/check.py": "cd6fdcc6b0cc49b7",
+        "code/groundwork/ingest/__init__.py": "cb898693d41a4e70",
+        "code/groundwork/ingest/__main__.py": "19e6d7ba5af7c129",
+        "code/groundwork/ingest/catalogue.py": "38ed4a3e7c5f7a2d",
+        "code/groundwork/ingest/files.py": "ca1d6b72481655e5",
+        "code/groundwork/ingest/ledger.py": "5dc2a6b92c257af7",
+        "code/groundwork/ingest/price_lists.py": "a26fe5eaf7ff0dbc",
+        "code/groundwork/ingest/reference.py": "6e2adf301ab3059d",
+        "code/groundwork/ingest/relay.py": "15f0a5d1303be1c9",
+        "code/groundwork/ingest/suppliers.py": "8ecf2e82ac6711c9",
+        "code/groundwork/ingest/tradeline.py": "8e8a7de6ec97c5a5",
         "code/groundwork/loadlog.py": "6aa63297604f5666",
         "code/groundwork/observe/__init__.py": "179fdd6185d970f5",
         "code/groundwork/observe/lineage.py": "4ab2a69f8bbbdff8",
@@ -4379,16 +4390,16 @@
         "code/meridian/sources/tradeline.py": "923188c3ee95e6f4"
       },
       "expect_fail": false,
-      "hash": "1785b0b28bbd9207",
+      "hash": "6e56ef81397a7a0c",
       "ok": true,
       "out_hash": "d15812a86dee5b86",
       "returncode": 0,
-      "seconds": 33.4
+      "seconds": 186.82
     },
     "21/02_run_metadata.py": {
       "bytes": 1166,
       "deps": {
-        "code/21/_sandbox.py": "7fcf8864f353858a",
+        "code/21/_sandbox.py": "2d48f04c16fcd58a",
         "code/groundwork/__init__.py": "9752bbb81cb0ebb8",
         "code/groundwork/config.py": "5277b4a762541287",
         "code/groundwork/contracts/__init__.py": "e72ae49e64412686",
@@ -4411,12 +4422,12 @@
       "ok": true,
       "out_hash": "5efd1c1cdc20bdca",
       "returncode": 0,
-      "seconds": 35.76
+      "seconds": 12.74
     },
     "21/03_table_lineage.py": {
       "bytes": 723,
       "deps": {
-        "code/21/_sandbox.py": "7fcf8864f353858a",
+        "code/21/_sandbox.py": "2d48f04c16fcd58a",
         "code/groundwork/__init__.py": "9752bbb81cb0ebb8",
         "code/groundwork/config.py": "5277b4a762541287",
         "code/groundwork/contracts/__init__.py": "e72ae49e64412686",
@@ -4436,12 +4447,12 @@
       "ok": true,
       "out_hash": "b1cd39e22da04df2",
       "returncode": 0,
-      "seconds": 11.01
+      "seconds": 0.47
     },
     "21/04_column_lineage.py": {
       "bytes": 659,
       "deps": {
-        "code/21/_sandbox.py": "7fcf8864f353858a",
+        "code/21/_sandbox.py": "2d48f04c16fcd58a",
         "code/groundwork/__init__.py": "9752bbb81cb0ebb8",
         "code/groundwork/config.py": "5277b4a762541287",
         "code/groundwork/contracts/__init__.py": "e72ae49e64412686",
@@ -4461,12 +4472,12 @@
       "ok": true,
       "out_hash": "3f6e3604de7e8999",
       "returncode": 0,
-      "seconds": 47.98
+      "seconds": 3.55
     },
     "21/05_impact.py": {
       "bytes": 1177,
       "deps": {
-        "code/21/_sandbox.py": "7fcf8864f353858a",
+        "code/21/_sandbox.py": "2d48f04c16fcd58a",
         "code/groundwork/__init__.py": "9752bbb81cb0ebb8",
         "code/groundwork/config.py": "5277b4a762541287",
         "code/groundwork/contracts/__init__.py": "e72ae49e64412686",
@@ -4486,12 +4497,12 @@
       "ok": true,
       "out_hash": "6b237c4241b0194e",
       "returncode": 0,
-      "seconds": 35.98
+      "seconds": 3.58
     },
     "21/06_quarantine_alert.py": {
       "bytes": 1347,
       "deps": {
-        "code/21/_sandbox.py": "7fcf8864f353858a",
+        "code/21/_sandbox.py": "2d48f04c16fcd58a",
         "code/groundwork/__init__.py": "9752bbb81cb0ebb8",
         "code/groundwork/config.py": "5277b4a762541287",
         "code/groundwork/contracts/__init__.py": "e72ae49e64412686",
@@ -4511,19 +4522,30 @@
         "code/meridian/sources/tradeline.py": "923188c3ee95e6f4"
       },
       "expect_fail": false,
-      "hash": "004cf1e3e54b338f",
+      "hash": "8f7015f44764ed3e",
       "ok": true,
       "out_hash": "cb7bd00ff43d20cd",
       "returncode": 0,
-      "seconds": 99.2
+      "seconds": 5.66
     },
     "21/07_freshness_slo.py": {
       "bytes": 522,
       "deps": {
-        "code/21/_sandbox.py": "7fcf8864f353858a",
+        "code/21/_sandbox.py": "2d48f04c16fcd58a",
         "code/groundwork/__init__.py": "9752bbb81cb0ebb8",
         "code/groundwork/config.py": "5277b4a762541287",
         "code/groundwork/contracts/__init__.py": "e72ae49e64412686",
+        "code/groundwork/contracts/check.py": "cd6fdcc6b0cc49b7",
+        "code/groundwork/ingest/__init__.py": "cb898693d41a4e70",
+        "code/groundwork/ingest/__main__.py": "19e6d7ba5af7c129",
+        "code/groundwork/ingest/catalogue.py": "38ed4a3e7c5f7a2d",
+        "code/groundwork/ingest/files.py": "ca1d6b72481655e5",
+        "code/groundwork/ingest/ledger.py": "5dc2a6b92c257af7",
+        "code/groundwork/ingest/price_lists.py": "a26fe5eaf7ff0dbc",
+        "code/groundwork/ingest/reference.py": "6e2adf301ab3059d",
+        "code/groundwork/ingest/relay.py": "15f0a5d1303be1c9",
+        "code/groundwork/ingest/suppliers.py": "8ecf2e82ac6711c9",
+        "code/groundwork/ingest/tradeline.py": "8e8a7de6ec97c5a5",
         "code/groundwork/loadlog.py": "6aa63297604f5666",
         "code/groundwork/observe/__init__.py": "179fdd6185d970f5",
         "code/groundwork/observe/alerts.py": "7e62f3fdfa55af01",
@@ -4540,19 +4562,22 @@
         "code/meridian/sources/tradeline.py": "923188c3ee95e6f4"
       },
       "expect_fail": false,
-      "hash": "6967fff0498e7af2",
+      "hash": "15eeabe57846e60f",
       "ok": true,
       "out_hash": "6e399c256510da6e",
       "returncode": 0,
-      "seconds": 4.94
+      "seconds": 185.81
     },
     "21/08_replay_incident.py": {
       "bytes": 943,
       "deps": {
-        "code/21/_sandbox.py": "7fcf8864f353858a",
+        "code/21/_sandbox.py": "2d48f04c16fcd58a",
         "code/groundwork/__init__.py": "9752bbb81cb0ebb8",
         "code/groundwork/config.py": "5277b4a762541287",
         "code/groundwork/contracts/__init__.py": "e72ae49e64412686",
+        "code/groundwork/ingest/__init__.py": "cb898693d41a4e70",
+        "code/groundwork/ingest/files.py": "ca1d6b72481655e5",
+        "code/groundwork/ingest/suppliers.py": "8ecf2e82ac6711c9",
         "code/groundwork/loadlog.py": "6aa63297604f5666",
         "code/groundwork/observe/__init__.py": "179fdd6185d970f5",
         "code/groundwork/observe/alerts.py": "7e62f3fdfa55af01",
@@ -4569,16 +4594,16 @@
         "code/meridian/sources/tradeline.py": "923188c3ee95e6f4"
       },
       "expect_fail": false,
-      "hash": "c28dd8389c13dbed",
+      "hash": "265c2d1bbe8ca6f3",
       "ok": true,
       "out_hash": "d2bc9abc6a78f078",
       "returncode": 0,
-      "seconds": 8.8
+      "seconds": 51.16
     },
     "21/09_observed_night.py": {
       "bytes": 1521,
       "deps": {
-        "code/21/_sandbox.py": "7fcf8864f353858a",
+        "code/21/_sandbox.py": "2d48f04c16fcd58a",
         "code/groundwork/__init__.py": "9752bbb81cb0ebb8",
         "code/groundwork/config.py": "5277b4a762541287",
         "code/groundwork/contracts/__init__.py": "e72ae49e64412686",
@@ -4617,12 +4642,12 @@
       "ok": true,
       "out_hash": "403af52373fb3837",
       "returncode": 0,
-      "seconds": 474.37
+      "seconds": 286.21
     },
     "21/s21_partial_publish.py": {
       "bytes": 509,
       "deps": {
-        "code/21/_sandbox.py": "7fcf8864f353858a",
+        "code/21/_sandbox.py": "2d48f04c16fcd58a",
         "code/groundwork/__init__.py": "9752bbb81cb0ebb8",
         "code/groundwork/config.py": "5277b4a762541287",
         "code/groundwork/contracts/__init__.py": "e72ae49e64412686",
@@ -4642,12 +4667,12 @@
       "ok": true,
       "out_hash": "10b5aab764684211",
       "returncode": 0,
-      "seconds": 1.17
+      "seconds": 0.47
     },
     "21/s21_slo_targets.py": {
       "bytes": 276,
       "deps": {
-        "code/21/_sandbox.py": "7fcf8864f353858a",
+        "code/21/_sandbox.py": "2d48f04c16fcd58a",
         "code/groundwork/__init__.py": "9752bbb81cb0ebb8",
         "code/groundwork/config.py": "5277b4a762541287",
         "code/groundwork/contracts/__init__.py": "e72ae49e64412686",
@@ -4667,11 +4692,11 @@
         "code/meridian/sources/tradeline.py": "923188c3ee95e6f4"
       },
       "expect_fail": false,
-      "hash": "32ada275b1ef45e8",
+      "hash": "9a62f540a7d2c815",
       "ok": true,
       "out_hash": "8bf10f26429fba69",
       "returncode": 0,
-      "seconds": 2.19
+      "seconds": 0.84
     },
     "22/01_three_definitions.py": {
       "bytes": 566,

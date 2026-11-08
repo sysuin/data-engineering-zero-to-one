@@ -1,3 +1,4 @@
+# timeout: 1800
 # The freshness SLO and its error budget: what the sources alone
 # spend over four years, and what July 2024 spent, watched or not.
 from datetime import date, timedelta
