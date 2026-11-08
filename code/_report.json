@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18T13:16:08",
+  "generated": "2026-11-08T16:02:39",
   "listings": {
     "01/01_two_numbers.py": {
       "bytes": 77,
@@ -5609,15 +5609,15 @@
         "code/meridian/sources/frontline.py": "c1f08e3e1602e228",
         "code/meridian/sources/relay.py": "a843497c679e3f1c",
         "code/meridian/sources/tradeline.py": "923188c3ee95e6f4",
-        "code/meridian/verify_ml.py": "466ad8033cd3c154",
+        "code/meridian/verify_ml.py": "307b93b416413420",
         "code/meridian/verify_sources.py": "d7c0fadc2f0b4864"
       },
       "expect_fail": false,
       "hash": "3de361d52293a084",
       "ok": true,
-      "out_hash": "bd775f9efd153fe6",
+      "out_hash": "fcafc4e1ddf0f733",
       "returncode": 0,
-      "seconds": 666.74
+      "seconds": 277.42
     },
     "26/03_reconcile_book2.py": {
       "bytes": 996,
